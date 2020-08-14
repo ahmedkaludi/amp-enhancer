@@ -1,0 +1,129 @@
+.woocommerce-error li:first-child {
+    display: none;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item{
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.tab-hide-item {
+    display: none;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.tab-open:checked + .tab-hide-item {
+    display: block;
+    opacity: 100;
+    transition: opacity 0.6s ease-out;
+}
+
+.woocommerce-tabs .panel{
+    position: relative;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+html .single-product .product .woocommerce-product-gallery .flex-control-thumbs{
+	margin-top: 30px;  
+}
+.storefront-product-pagination{
+	display:none;
+}
+.carousel-indicators {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;    
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-bullet,.tab-bullet {
+    cursor: pointer;
+    display: inline;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+body .woocommerce-product-gallery{
+opacity: 100;
+}
+.woocommerce-message {
+    margin-top: 4em;
+}
+.woocommerce div.product form.cart .woocommerce-message .button{
+float: right;
+}
+.carousel-item {
+    margin-bottom: 1em;
+}
+.elementor-widget-container .elementor-accordion section {
+    padding: 0;
+    border-color: rgba(0,0,0,0.05);
+}
+.elementor-accordion section .elementor-tab-content{
+  border-color: rgba(0,0,0,0.05);  
+}
+.elementor-accordion h4 {
+    font-size: unset;
+}
+/*.elementor-accordion>section[expanded]>.elementor-accordion-title{
+    color: #61ce70;
+}*/
+.elementor-widget-container .elementor-accordion>section[expanded]>.elementor-accordion-title .elementor-accordion-icon-closed{
+   display: none;
+}
+.elementor-widget-container .elementor-accordion>section[expanded]>.elementor-accordion-title .elementor-accordion-icon-opened{
+   display: block;
+}
+.elementor-widget-container .elementor-toggle>section[expanded]>.elementor-toggle-title .elementor-toggle-icon-closed {
+    display: none;
+}
+.elementor-widget-container .elementor-toggle>section[expanded]>.elementor-toggle-title .elementor-toggle-icon-opened{
+    display: inline-block;
+}
+.elementor-toggle-icon-opened{
+  display: none;  
+}
+.elementor-widget-accordion .elementor-accordion .elementor-accordion-title{
+    background: transparent;
+    border:none;
+}
+body .elementor-toggle .elementor-tab-title,
+body .elementor-accordion .elementor-accordion-title{font-weight: 400;}
+
+.elementor-toggle-item h4{
+    text-transform: unset;
+    font-size: unset;
+}
+body .fa{font-size: 15px;}
+
+.ampcf7-response-output {
+    margin: 2em -0.5em 1em;
+    padding: 0.2em 1em;
+    border: 2px solid #46b450;
+}
