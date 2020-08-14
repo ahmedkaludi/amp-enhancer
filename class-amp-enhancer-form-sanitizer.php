@@ -323,16 +323,6 @@ class AMP_Enhancer_Form_Sanitizer extends AMP_Form_Sanitizer {
 	public function amp_contact_form_response( $small,$attribute ) {
 
                 $reason = ' ' . __( 'Thank you for your message. It has been sent.' );
-/*                //$small = $this->dom->createElement( 'div' );
-                //$small->setAttribute( 'data-test', $attribute );
-				$small->appendChild( $this->dom->createTextNode( ' ' ) );
-				$link = $this->dom->createElement( 'a' );
-				$link->setAttribute( 'class', 'button wc-forward' );
-				$link->setAttribute( 'href', $cart_url );
-				$link->setAttribute( 'tabindex', '1' );
-				$link->setAttribute( 'target', '_blank' );
-				$link->appendChild( $this->dom->createTextNode( __( 'View cart', 'amp' ) ) );
-				$small->appendChild( $link );*/
                 $small->setAttribute( 'class', 'ampcf7-response-output' );
 				$small->appendChild( $this->dom->createTextNode( $reason ) );
 
