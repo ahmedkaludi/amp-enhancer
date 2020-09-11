@@ -23,7 +23,7 @@ $applyCouponXhrUrl = preg_replace('#^https?:#', '', $submit_url);
 	$nonce 			= 	wp_create_nonce( 'amp_enhance_cart_wpnonce' );
 ?>
 
-<form class="woocommerce-cart-form" action-xhr="<?php echo esc_url( $applyCouponXhrUrl ); ?>" method="post">
+<form class="woocommerce-cart-form" action-xhr="<?php echo esc_url_raw( $applyCouponXhrUrl ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
@@ -146,7 +146,7 @@ $applyCouponXhrUrl = preg_replace('#^https?:#', '', $submit_url);
 						<div class="coupon">
 							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> 
 							<input type="hidden" name="coupon_method" value="apply_coupon"/>
-							<input type="hidden" id="amp_enhance_cart_wpnonce" name="amp_enhance_cart_wpnonce" value="<?php echo $nonce;?>">
+							<input type="hidden" id="amp_enhance_cart_wpnonce" name="amp_enhance_cart_wpnonce" value="<?php echo esc_attr($nonce);?>">
 						<!-- <input type="submit" class="button" name="apply_coupon" value="<?php //echo esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"> -->
 						 <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
 							<?php do_action( 'woocommerce_cart_coupon' ); ?>
