@@ -21,7 +21,14 @@ function amp_enhancer_add_custom_css(){
 	  		if($template_name == 'cart/cart.php'){
 			    $template = AMP_ENHANCER_PLUGIN_DIR.'templates/cart/cart.php';
 				}
-			}
+			if($template_name == 'loop/orderby.php'){
+			    $template = AMP_ENHANCER_PLUGIN_DIR.'templates/loop/orderby.php';
+			    }
+		    if($template_name == 'notices/error.php'){
+		        $template = AMP_ENHANCER_PLUGIN_DIR.'templates/notices/error.php';
+		    }
+			    
+		 }
 			return $template;
 
  }
