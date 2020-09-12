@@ -14,23 +14,23 @@ class Amp_Enhancer_Elementor_Widgets_Loading {
 
 	private function include_widgets_files() {
 
-     require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/amp-accordion.php' );
-     require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/amp-toggle.php' );
+	     require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/amp-accordion.php' );
+	     require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/amp-toggle.php' );
 	 }
 
-	 public function register_widgets($widgets_manager) {
+	public function register_widgets($widgets_manager) {
 		// Register Widgets
 		if ( (function_exists( 'is_amp_endpoint' ) && is_amp_endpoint()) ) {
 
 			$this->include_widgets_files();
 
-        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Amp_Accordion() );
-        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Amp_Toggle() );
+	        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Amp_Accordion() );
+	        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Amp_Toggle() );
 
 		}
 	}
 
-	 public function __construct() {
+	public function __construct() {
 		
 		// Register widgets		
 		//add_action( 'elementor/elements/elements_registered', [ $this, 'register_elements' ], 999999);

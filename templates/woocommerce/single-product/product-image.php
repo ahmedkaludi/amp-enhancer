@@ -36,61 +36,66 @@ $wrapper_classes   = apply_filters(
 	)
 );
 ?>
+
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="transition: opacity .25s ease-in-out;">
 	<figure class="woocommerce-product-gallery__wrapper carousel-inner">
-		<?php
-		if ( $product->get_image_id() ) {
-			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
-		} else {
-			$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
-			$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
-			$html .= '</div>';
+			<?php
+			if ( $product->get_image_id() ) {
+				$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
+			} else {
+				$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
+				$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
+				$html .= '</div>';
+			}
+	 
+
+		if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
+			return;
 		}
- 
 
-if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
-	return;
-}
-$gallery_ids = $product->get_gallery_image_ids();
-if(empty($gallery_ids)){
-	echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
-}
-$product_id = array($product->get_image_id());
-$attachment_ids = array_merge($product_id,$gallery_ids);
+		$gallery_ids = $product->get_gallery_image_ids();
 
-if ( !empty($gallery_ids) && $attachment_ids && $product->get_image_id() ) {
-	$i=1;
-  $ol_elements = '';
-	foreach ( $attachment_ids as $attachment_id ) {
-     $full_src  = wp_get_attachment_image_src( $attachment_id, 'full' );
-     $thumb_src  = wp_get_attachment_image_src( $attachment_id, 'thumbnail' );
+		if(empty($gallery_ids)){
+			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
+		}
 
-	$checked = '';	
-	if($i == 1){
-	 $checked = 'checked="checked"';
-	}
-	?>
-       <input class="carousel-open" type="radio" id="carousel-<?php echo esc_attr($i); ?>" name="carousel" aria-hidden="true" hidden="" <?php echo esc_attr($checked); ?> >
-		<div class="carousel-item ">
-		<img lightbox src="<?php echo esc_url($full_src[0]); ?>">
-		</div>
-		
-		
-	<?php
-	$ol_elements .= '
-		<li>
-		<label for="carousel-'.esc_attr($i).'" class="carousel-bullet"><img src="'.esc_url($thumb_src[0]).'" alt=""></label>
-		</li>
-		';
-	$i++;
-	}
-	if(!empty($gallery_ids)){
-	echo '<ol class="flex-control-nav flex-control-thumbs carousel-indicators">'.$ol_elements.'</ol>';
-     }
-}
+		$product_id = array($product->get_image_id());
+		$attachment_ids = array_merge($product_id,$gallery_ids);
 
+		if ( !empty($gallery_ids) && $attachment_ids && $product->get_image_id() ) {
 
-		//do_action( 'woocommerce_product_thumbnails' );
-		?>
+			$i=1;
+		    $ol_elements = '';
+
+			foreach ( $attachment_ids as $attachment_id ) {
+			     $full_src  = wp_get_attachment_image_src( $attachment_id, 'full' );
+			     $thumb_src  = wp_get_attachment_image_src( $attachment_id, 'thumbnail' );
+
+				 $checked = '';	
+				 if($i == 1){
+				    $checked = 'checked="checked"';
+				 }
+				 ?>
+			       <input class="carousel-open" type="radio" id="carousel-<?php echo esc_attr($i); ?>" name="carousel" aria-hidden="true" hidden="" <?php echo esc_attr($checked); ?> >
+					<div class="carousel-item ">
+						<img lightbox src="<?php echo esc_url($full_src[0]); ?>">
+					</div>
+					
+					
+				<?php
+					$ol_elements .= '
+						<li>
+						<label for="carousel-'.esc_attr($i).'" class="carousel-bullet"><img src="'.esc_url($thumb_src[0]).'" alt=""></label>
+						</li>
+						';
+			    $i++;
+			}
+
+			if(!empty($gallery_ids)){
+				echo '<ol class="flex-control-nav flex-control-thumbs carousel-indicators">'.$ol_elements.'</ol>';
+		    }
+		}
+			//do_action( 'woocommerce_product_thumbnails' );
+			?>
 	</figure>
 </div>

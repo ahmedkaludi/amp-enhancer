@@ -18,6 +18,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
 $all_notices  = WC()->session->get( 'wc_notices', array() );
 
 if ( ! $notices ||  isset($all_notices['success'])) {

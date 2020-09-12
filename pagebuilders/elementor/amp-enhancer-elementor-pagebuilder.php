@@ -13,9 +13,10 @@ final class Amp_Enhancer_Elementor_Support {
 		// Init Plugin
 		 $this->initialize();
 	}
+
 	function initialize(){
          //include files
-			require_once( AMP_ENHANCER_PLUGIN_DIR.'/pagebuilders/elementor/load-elementor-widgets.php' );
+		 require_once( AMP_ENHANCER_PLUGIN_DIR.'/pagebuilders/elementor/load-elementor-widgets.php' );
 	}
 
 }

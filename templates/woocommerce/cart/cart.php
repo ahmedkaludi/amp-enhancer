@@ -168,13 +168,14 @@ $applyCouponXhrUrl = preg_replace('#^https?:#', '', $submit_url);
 	         <div submit-success>
 				<template type="amp-mustache">
 				 <div class="cart_form_success" style="color:green;">
-				  Please wait until it reloads...</div>
+				 <?php echo esc_html__( 'Please wait until it reloads...', 'amp-enhancer' ); ?>
+				  </div>
 				</template>
 			</div>					 
 			<div submit-error>
 				<template type="amp-mustache">
 				 <div class="cart_form_error" style="color:red;">
-				 	Coupon code is not entered,Please Enter Coupon code.
+				 	<?php echo esc_html__( 'Coupon code is not entered,Please Enter Coupon code.', 'amp-enhancer' ); ?>
 				 </div>
 				</template>
 			</div>
