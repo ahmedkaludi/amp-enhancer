@@ -51,8 +51,22 @@ function amp_enhancer_support_link( $links ) {
 // Added Opening Notice
  add_action( 'admin_notices', 'amp_enhancer_admin_notice' );
 
- function amp_enhancer_admin_notice() {
-	  ?>
-	  <div id="message" class="updated notice is-dismissible"><p><?php echo esc_html__( 'Thank You for activating AMP Enhancer, it has Built-In functionalities no setup required', 'amp-enhancer' ); ?></p></div>
-	  <?php
+function amp_enhancer_admin_notice() {
+    $user_id = get_current_user_id();
+    if ( !get_user_meta( $user_id, 'amp_enhancer_dismiss_notice' ) ){ 
+        echo '<div class="updated notice">
+	                <p style = "font-size:14px;">' . esc_html__( 'Thank You for activating AMP Enhancer, it has Built-In functionalities no setup required.', 'amp-enhancer' ) . '
+	                     <a  href="?amp-enhancer-dismissed" class="button">'. esc_html__('Dismiss','amp-enhancer').'</a>
+	                </p>
+                </div>';
+        }
+}
+
+add_action( 'admin_init', 'amp_enhancer_dismiss_notice' );
+
+function amp_enhancer_dismiss_notice() {
+    $user_id = get_current_user_id();
+    if ( isset( $_GET['amp-enhancer-dismissed'] ) ){
+        add_user_meta( $user_id, 'amp_enhancer_dismiss_notice', 'true', true );
+    }
 }
