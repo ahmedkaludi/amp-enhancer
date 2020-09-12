@@ -1,12 +1,12 @@
 <?php 
 // Add Custom CSS
 add_action( 'wp_head', 'amp_enhancer_add_custom_css');
+
 function amp_enhancer_add_custom_css(){
    if ( (function_exists( 'is_amp_endpoint' ) && is_amp_endpoint()) ) {
     	wp_enqueue_style( 'amp_enhancer_css', untrailingslashit(AMP_ENHANCER_PLUGIN_URI) . '/includes/style.css', false, AMP_ENHANCER_VERSION );
-      }
+    }
 }
-
 
 
 add_action('wp','amp_enhancer_third_party_compatibililty');
@@ -28,3 +28,21 @@ function amp_enhancer_third_party_compatibililty(){
 	}
 
 }
+
+// Added Support Link
+add_filter( 'plugin_action_links_' .AMP_ENHANCER_BASENAME, 'amp_enhancer_support_link' );
+
+function amp_enhancer_support_link( $links ) { 
+  		$support_link = '<a href="'.esc_url_raw( "https://magazine3.company/contact/" ).'">'.esc_html__('Support', 'amp-enhancer').'</a>';
+  		array_unshift( $links, $support_link );
+  		return $links; 
+	}
+
+// Added Opening Notice
+ add_action( 'admin_notices', 'amp_enhancer_admin_notice' );
+
+ function amp_enhancer_admin_notice() {
+      ?>
+      <div id="message" class="updated notice is-dismissible"><p><?php echo esc_html__( 'Thank You for activating AMP Enhancer, it has Built-In functionalities no setup required', 'amp-enhancer' ); ?></p></div>
+      <?php
+    }

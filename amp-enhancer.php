@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: AMP Enhancer
-Description: Enhances Your AMP Site by adding support for Woocommerce,Forms and pagebuilder plugins.
-Author: AMPforWP Team
+Description: AMP Enhancer is a Compatibility Layer for AMP by Google.
+Author: Magazine3
 Version: 1.0
 Author URI: http://ampforwp.com
 License: GPLv2 or later
@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 define('AMP_ENHANCER_PLUGIN_URI', plugin_dir_url(__FILE__));
 define('AMP_ENHANCER_PLUGIN_DIR', plugin_dir_path(__FILE__));
+define('AMP_ENHANCER_BASENAME',plugin_basename(__FILE__));
 define('AMP_ENHANCER_TEMPPLATE_DIR', plugin_dir_path(__FILE__).'templates/');
 
 define('AMP_ENHANCER_VERSION','1.0');
