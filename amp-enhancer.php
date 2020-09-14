@@ -42,4 +42,8 @@ function amp_enhancer_third_party_plugins_support(){
 		    if(class_exists('WPCF7_ContactForm')){
 		      require_once(AMP_ENHANCER_TEMPPLATE_DIR.'contact-form7/cf7_functions.php');
 		    }
+	       // Cookie Notice
+	       if(class_exists('Cookie_Notice')){
+		      require_once(AMP_ENHANCER_TEMPPLATE_DIR.'cookie-notice/cookie-notice-functions.php');
+		   } 
 }

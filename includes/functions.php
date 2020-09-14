@@ -35,7 +35,11 @@ function amp_enhancer_third_party_compatibililty(){
 		  add_filter('wpcf7_form_class_attr','amp_enhancer_add_cf7_custom_class',10,1);
 		  add_filter('wpcf7_form_elements','amp_enhancer_cf7_form_elements_modification',10,1);
 	    }
-	  	
+	    // Cookie Notice
+        if(class_exists('Cookie_Notice')){
+	      add_filter('cn_cookie_notice_output','amp_enhancer_cookie_notice_html_markup',10,2);
+	    }
+
 	}
 }
 
@@ -69,4 +73,19 @@ function amp_enhancer_dismiss_notice() {
     if ( isset( $_GET['amp-enhancer-dismissed'] ) ){
         add_user_meta( $user_id, 'amp_enhancer_dismiss_notice', 'true', true );
     }
+}
+
+// color sanitizer
+function amp_enhancer_sanitize_color( $color ) {
+    if ( empty( $color ) || is_array( $color ) )
+        return 'rgba(0,0,0,0)';
+    // If string does not start with 'rgba', then treat as hex
+    // sanitize the hex color and finally convert hex to rgba
+    if ( false === strpos( $color, 'rgba' ) ) {
+        return sanitize_hex_color( $color );
+    }
+    // By now we know the string is formatted as an rgba color so we need to further sanitize it.
+    $color = str_replace( ' ', '', $color );
+    sscanf( $color, 'rgba(%d,%d,%d,%f)', $red, $green, $blue, $alpha );
+    return 'rgba('.$red.','.$green.','.$blue.','.$alpha.')';
 }
