@@ -34,7 +34,7 @@
 				' . ( $options['refuse_opt'] === true && $options['revoke_cookies'] == true ? 
 				'<div class="cookie-revoke-container"  style="color: ' . amp_enhancer_sanitize_color($options['colors']['text']) . ';">'
 				. ( ! empty( $options['revoke_message_text'] ) ? '<span id="cn-revoke-text" class="cn-text-container">'. esc_html__($options['revoke_message_text'],'amp-enhancer') . '</span>' : '' )
-				. '<span id="cn-revoke-buttons" class="cn-buttons-container"><a on="tap:AMP.setState({ hideCookie: \''.esc_attr($revoke_bind_cls).'\' })" role="button" tab-index="0" class="cn-revoke-cookie ' . esc_attr($options['button_class']) . ( $options['css_style'] !== 'none' ? ' ' . esc_attr($options['css_style']) : '' ) . ( $options['css_class'] !== '' ? ' ' . esc_attr($options['css_class']) : '' ) . '" aria-label="' . $options['revoke_text'] . '">' . esc_html__( $options['revoke_text'],'amp-enhancer' ) . '</a></span>
+				. '<span id="cn-revoke-buttons" class="cn-buttons-container"><a on="tap:AMP.setState({ hideCookie: \''.esc_attr($revoke_bind_cls).'\' })" role="button" tabindex="0" class="cn-revoke-cookie ' . esc_attr($options['button_class']) . ( $options['css_style'] !== 'none' ? ' ' . esc_attr($options['css_style']) : '' ) . ( $options['css_class'] !== '' ? ' ' . esc_attr($options['css_class']) : '' ) . '" aria-label="' . $options['revoke_text'] . '">' . esc_html__( $options['revoke_text'],'amp-enhancer' ) . '</a></span>
 				</div>' : '' ) . '
 				<span class= "cookie-revoke-hidden cookie-notice-hidden"></span>
 			</div>

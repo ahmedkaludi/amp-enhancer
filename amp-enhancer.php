@@ -45,5 +45,10 @@ function amp_enhancer_third_party_plugins_support(){
 	       // Cookie Notice
 	       if(class_exists('Cookie_Notice')){
 		      require_once(AMP_ENHANCER_TEMPPLATE_DIR.'cookie-notice/cookie-notice-functions.php');
-		   } 
+		   }
+
+		   // Cookie Notice
+	       if(class_exists('Cookie_Law_Info')){
+		      require_once(AMP_ENHANCER_TEMPPLATE_DIR.'cookie-law-info/cookie-law-info-functions.php');
+		   }  
 }
