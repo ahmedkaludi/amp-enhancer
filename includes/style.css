@@ -129,4 +129,23 @@ body .fa{font-size: 15px;}
 }
 .cn-close-icon {
   background-color: transparent;
- }   
+ }
+.elementor .elementor-widget-tabs .elementor-tab-content {
+    display: block;
+}
+amp-script {
+    opacity: 1;
+}
+.swiper-wrapper{
+transition-duration: 500ms;
+}
+@media(max-width: 700px){
+    :root:not(#_):not(#_):not(#_):not(#_):not(#_) .elementor .swiper-slide{
+        width: 100%;
+    }
+}
+@media(min-width: 768px) and (max-width: 1024px){
+    :root:not(#_):not(#_):not(#_):not(#_):not(#_) .elementor .swiper-slide{
+        width: 50%;
+    }
+}
