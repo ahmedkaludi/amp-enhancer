@@ -695,7 +695,7 @@ class AMP_Image_Carousel extends Widget_Base {
 		}
 		//print_r($settings['carousel']);die;
 
-		$slides_width = round(620/$settings['slides_to_show'],3);
+		$slides_width = round(100/$settings['slides_to_show'],3);
 
 		$slides = [];
 		foreach ( $settings['carousel'] as $index => $attachment ) {
@@ -704,6 +704,8 @@ class AMP_Image_Carousel extends Widget_Base {
 			$image_settings = $this->amp_enhancer_get_attachment_image_src( $attachment['id'], 'thumbnail', $settings );
 			
 			$image_html = '<amp-img class="swiper-slide-image" src="' . esc_url( $image_url ) . '" alt="' . esc_attr( \Elementor\Control_Media::get_image_alt( $attachment ) ) . '" layout="responsive" width="'.esc_attr($image_settings[1]).'" height="'.esc_attr($image_settings[2]).'"></amp-img>';
+
+			//$image_html = '<img class="swiper-slide-image" src="' . esc_attr( $image_url ) . '" alt="' . esc_attr( \Elementor\Control_Media::get_image_alt( $attachment ) ) . '" />';
 
 			$link_tag = '';
 
@@ -727,7 +729,7 @@ class AMP_Image_Carousel extends Widget_Base {
 
 			$image_caption = $this->get_image_caption( $attachment );
 
-			$slide_html = '<div class="swiper-slide" style = "width:'.esc_attr($slides_width).'px">' . $link_tag . '<figure class="swiper-slide-inner">' . $image_html;
+			$slide_html = '<div class="swiper-slide" style = "width:'.esc_attr($slides_width).'%">' . $link_tag . '<figure class="swiper-slide-inner">' . $image_html;
 
 			if ( ! empty( $image_caption ) ) {
 				$slide_html .= '<figcaption class="elementor-image-carousel-caption">' . $image_caption . '</figcaption>';
@@ -772,11 +774,10 @@ class AMP_Image_Carousel extends Widget_Base {
 	
 			$dots_count    = ceil($slides_count/$slides_scroll);
 			$no_scroll     = $slides_scroll;
-        
 
 
 		?>
-		<div  <?php echo $this->get_render_attribute_string( 'carousel-wrapper' ); ?>>
+		<div  <?php echo $this->get_render_attribute_string( 'carousel-wrapper' ); ?> >
 			<div <?php echo $this->get_render_attribute_string( 'carousel' ); ?> 
 			data-transform-px="0" data-frame="0">
 				<?php echo implode( '', $slides ); ?>

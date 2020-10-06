@@ -139,13 +139,20 @@ amp-script {
 .swiper-wrapper{
 transition-duration: 500ms;
 }
+
 @media(max-width: 700px){
     :root:not(#_):not(#_):not(#_):not(#_):not(#_) .elementor .swiper-slide{
         width: 100%;
+    }
+    :root:not(#_):not(#_):not(#_):not(#_):not(#_) .elementor .e-gallery-container{
+        --columns: 1;
     }
 }
 @media(min-width: 768px) and (max-width: 1024px){
     :root:not(#_):not(#_):not(#_):not(#_):not(#_) .elementor .swiper-slide{
         width: 50%;
+    }
+    :root:not(#_):not(#_):not(#_):not(#_):not(#_) .elementor .e-gallery-container{
+        --columns: 2;
     }
 }
