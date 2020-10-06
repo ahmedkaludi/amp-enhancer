@@ -695,7 +695,9 @@ class AMP_Image_Carousel extends Widget_Base {
 		}
 		//print_r($settings['carousel']);die;
 
-		$slides_width = round(100/$settings['slides_to_show'],3);
+		$slides_show = (isset($settings['slides_to_show']) &&  !empty($settings['slides_to_show']) ) ? $settings['slides_to_show'] : 3;
+
+		$slides_width = round(100/$slides_show,3);
 
 		$slides = [];
 		foreach ( $settings['carousel'] as $index => $attachment ) {
