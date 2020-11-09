@@ -21,13 +21,6 @@ class Amp_Enhancer_Elementor_Widgets_Loading {
 	     require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/amp-counter.php' );
 	     require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/amp-progress.php' );
 	     require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/amp-image-carousel.php' );
-	     if(class_exists("\ElementorPro\Plugin")){
-	     	require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/pro/amp-gallery.php' );
-	     	require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/pro/amp-slides.php' );
-	     	require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/pro/carousel/amp-carousel-base.php' );
-	     	require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/pro/carousel/amp-media-carousel.php' );
-	     	require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/pro/carousel/amp-testimonial-carousel.php' );
-	     }
 	 }
 
 	public function register_widgets($widgets_manager) {
@@ -43,13 +36,6 @@ class Amp_Enhancer_Elementor_Widgets_Loading {
 	        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\AMP_Counter() );
 	        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\AMP_Progress() );
 	        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Amp_Image_Carousel() );
-	        if(class_exists("\ElementorPro\Plugin")){
-	        	\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Pro\Amp_Gallery() );
-	        	\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Pro\AMP_Slides() );
-	        	\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Pro\Carousel\AMP_Media_Carousel() );
-	        	\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Pro\Carousel\AMP_Testimonial_Carousel() );
-	        }
-
 		}
 	}
 

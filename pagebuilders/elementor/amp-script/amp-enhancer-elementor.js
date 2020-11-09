@@ -4,8 +4,6 @@ var swiper_prev = document.getElementsByClassName("elementor-swiper-button-prev"
 var bullet_wrapper = document.getElementsByClassName("swiper-pagination-bullets");
 var viewport   = document.defaultView.innerWidth;
 
-var thumb_slider = document.getElementsByClassName('elementor-thumbnails-swiper');
-
 
 if(swiper){
 
@@ -165,53 +163,3 @@ function amp_enhancer_viewport_transform_css(){
    return transform_css;
 }
 
-// Gallery Module Js Start Here....
-
-var gallery_title = document.getElementsByClassName("elementor-gallery-title");
-
-if(gallery_title){
-
-	for(var k=0; k<gallery_title.length;k++ ){
-        gallery_title[k].addEventListener( 'click', function(e) {
-        var data_gal_index = e.target.getAttribute('data-gallery-index');
-        var data_id_g = e.target.parentNode.getAttribute('data-id');
-        var gal_cont = document.getElementById('eg'+data_id_g);
-        var gal_single = gal_cont.getElementsByClassName('elementor-gallery-item');
-         for (var l=0; l<gal_single.length; l++) {
-         	var data_tag_ind = gal_single[l].getAttribute('data-e-gallery-tags');
-         	if(data_tag_ind != data_gal_index && data_gal_index != 'all'){
-				gal_single[l].style.display = 'none';
-         	}else{
-              gal_single[l].style.display = 'block';
-         	}
-         }
-		});
-	}
-}
-
-if(thumb_slider){
-
-	var thumb_slides = thumb_slider[0].getElementsByClassName('swiper-slide');
-	if(thumb_slides){
-	for(var i=0; i<thumb_slides.length;i++ ){
-    thumb_slides[i].addEventListener( 'click', function(e) {
-	
-		    	var transform = e.target.getAttribute('data-transform');
-		    	var thumb_transform = e.target.getAttribute('data-thumbtransform');
-		    	var bullet = e.target.getAttribute('data-bullet');
-		    	var data_id = e.target.getAttribute('data-id');
-		    	var swiper_cls = 'swiper-wrapper'+data_id;
-		    	var swiper_wrapper = document.getElementsByClassName(swiper_cls);
-				var swiper_active = e.target.parentNode.getElementsByClassName("swiper-pagination-bullet-active");
-		    	console.log(e.target.parentNode)
-		    	swiper_wrapper[0].style.transform = 'translate3d(-'+transform+'%, 0px, 0px)';
-		    	swiper_wrapper[0].setAttribute('data-transform-px',transform);
-		    	swiper_wrapper[0].setAttribute('data-frame',bullet);
-		    	swiper_wrapper[1].style.transform = 'translate3d(-'+thumb_transform+'%, 0px, 0px)';
-		    	swiper_wrapper[1].setAttribute('data-transform-px',transform);
-		    	swiper_wrapper[1].setAttribute('data-frame',bullet);
-     });	
-    }
-
-}
-}
