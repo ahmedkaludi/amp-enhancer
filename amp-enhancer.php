@@ -16,8 +16,8 @@ define('AMP_ENHANCER_VERSION','1.0');
 define('AMP_ENHANCER_PLUGIN_URI', plugin_dir_url(__FILE__));
 define('AMP_ENHANCER_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('AMP_ENHANCER_BASENAME',plugin_basename(__FILE__));
-define('AMP_ENHANCER_TEMPPLATE_DIR', plugin_dir_path(__FILE__).'templates/');
-define('AMP_ENHANCER_ElEMENTOR_URI', plugin_dir_url(__FILE__).'pagebuilders/');
+define('AMP_ENHANCER_TEMPLATE_DIR', plugin_dir_path(__FILE__).'templates/');
+define('AMP_ENHANCER_PAGEBUILDER_URI', plugin_dir_url(__FILE__).'pagebuilders/');
 
 
 require_once(AMP_ENHANCER_PLUGIN_DIR.'includes/functions.php');
@@ -33,7 +33,7 @@ function amp_enhancer_third_party_plugins_support(){
 			}
 			// Woocommerce Template override
 		   if(function_exists('WC')){
-		     require_once(AMP_ENHANCER_TEMPPLATE_DIR.'woocommerce/wc_functions.php');
+		     require_once(AMP_ENHANCER_TEMPLATE_DIR.'woocommerce/wc_functions.php');
 		    }
 		   // Elementor Plugin  Support
 		   if(class_exists('\Elementor\Plugin')){
@@ -41,15 +41,15 @@ function amp_enhancer_third_party_plugins_support(){
 		    }
 		    // Contact Form Response Support
 		    if(class_exists('WPCF7_ContactForm')){
-		      require_once(AMP_ENHANCER_TEMPPLATE_DIR.'contact-form7/cf7_functions.php');
+		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'contact-form7/cf7_functions.php');
 		    }
 	       // Cookie Notice
 	       if(class_exists('Cookie_Notice')){
-		      require_once(AMP_ENHANCER_TEMPPLATE_DIR.'cookie-notice/cookie-notice-functions.php');
+		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-notice/cookie-notice-functions.php');
 		   }
 
 		   // Cookie Notice
 	       if(class_exists('Cookie_Law_Info')){
-		      require_once(AMP_ENHANCER_TEMPPLATE_DIR.'cookie-law-info/cookie-law-info-functions.php');
+		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-law-info/cookie-law-info-functions.php');
 		   }  
 }

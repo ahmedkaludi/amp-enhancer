@@ -10,7 +10,7 @@ if($notify_html==""){ return; } //if filter is applied
 echo $notify_html;
 $pop_out='';
 $cookielaw_nonce       =   wp_create_nonce( 'amp_enhancer_cookie_law_info' );
-$pop_content_html_file = AMP_ENHANCER_TEMPPLATE_DIR.'cookie-law-info/views/cookie-law-info_popup_content.php';
+$pop_content_html_file = AMP_ENHANCER_TEMPLATE_DIR.'cookie-law-info/views/cookie-law-info_popup_content.php';
 if(file_exists($pop_content_html_file))
 {
     include $pop_content_html_file;

@@ -44,8 +44,8 @@ function amp_enhancer_third_party_compatibililty(){
         if(class_exists('Cookie_Law_Info')){
           add_filter('cli_show_cookie_bar_only_on_selected_pages','amp_enhancer_gdpr_cookie_consent_remove_markup',10,2);
           add_action( 'wp_footer','amp_enhancer_cookielawinfo_html_markup',10);
-          require_once(AMP_ENHANCER_TEMPPLATE_DIR.'cookie-law-info/cookie-law-css.php');
-          require_once(AMP_ENHANCER_TEMPPLATE_DIR.'cookie-law-info/cookie-law-shortcode.php');
+          require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-law-info/cookie-law-css.php');
+          require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-law-info/cookie-law-shortcode.php');
         }
 
 	}

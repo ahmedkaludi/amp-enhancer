@@ -77,7 +77,7 @@ function amp_enhancer_cookielawinfo_html_markup(){
 				$notify_html = '';
 			}
 			//$notify_html = apply_filters('cli_show_cookie_bar_only_on_selected_pages', $notify_html, $post_slug);
-			require_once(AMP_ENHANCER_TEMPPLATE_DIR.'cookie-law-info/views/cookie-law-info_bar.php');
+			require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-law-info/views/cookie-law-info_bar.php');
 		}
 }
 
