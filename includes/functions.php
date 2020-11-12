@@ -55,7 +55,7 @@ function amp_enhancer_third_party_compatibililty(){
 add_filter( 'plugin_action_links_' .AMP_ENHANCER_BASENAME, 'amp_enhancer_support_link' );
 
 function amp_enhancer_support_link( $links ) { 
-	$support_link = '<a href="'.esc_url_raw( "https://magazine3.company/contact/" ).'">'.esc_html__('Support', 'amp-enhancer').'</a>';
+	$support_link = '<a href="'.esc_url_raw( "http://ampenhancer.com/contact-us/" ).'">'.esc_html__('Support', 'amp-enhancer').'</a>';
 	array_unshift( $links, $support_link );
 	return $links; 
 }
