@@ -1,6 +1,6 @@
 === AMP Enhancer ===
 Contributors: Magazine3
-Tags: AMP Enhancer,AMP, accelerated mobile pages, mobile, amp project, google amp, amp wp, google
+Tags: AMP, accelerated mobile pages, mobile, amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.5.3
