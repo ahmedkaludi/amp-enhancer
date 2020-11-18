@@ -1,6 +1,6 @@
 === AMP Enhancer ===
-Contributors: Magazine3
-Tags: AMP, accelerated mobile pages, mobile, amp project, google amp,official amp
+Contributors: ampenhancer
+Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.5.3
@@ -40,5 +40,5 @@ Third Party Plugins Supported Features are listed below :-
 
 == Changelog ==
 
-= 1.0 (12 November 2020) =
+= 1.0 (18 November 2020) =
 * Initial Release

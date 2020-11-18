@@ -2,7 +2,7 @@
 /*
 Plugin Name: AMP Enhancer
 Description: AMP Enhancer is a Compatibility Layer for Official AMP Plugin ( Its Plug & Play, Requires No Settings )
-Author: Magazine3
+Author: ampenhancer
 Version: 1.0
 Author URI: http://ampenhancer.com
 License: GPLv2 or later
