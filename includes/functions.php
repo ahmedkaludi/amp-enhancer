@@ -55,7 +55,11 @@ function amp_enhancer_third_party_compatibililty(){
 add_filter( 'plugin_action_links_' .AMP_ENHANCER_BASENAME, 'amp_enhancer_support_link' );
 
 function amp_enhancer_support_link( $links ) { 
-	$support_link = '<a href="'.esc_url_raw( "admin.php?page=amp-enhacer-settings" ).'">'.esc_html__('Settings', 'amp-enhancer').'</a> | <a href="'.esc_url_raw( "http://ampenhancer.com/contact-us/" ).'">'.esc_html__('Support', 'amp-enhancer').'</a>';
+  if(function_exists('amp_activate')){
+	     $support_link = '<a href="'.esc_url_raw( "admin.php?page=amp-enhacer-settings" ).'">'.esc_html__('Settings', 'amp-enhancer').'</a> | <a href="'.esc_url_raw( "http://ampenhancer.com/contact-us/" ).'">'.esc_html__('Support', 'amp-enhancer').'</a>';
+   }else{
+     $support_link = '<a href="'.esc_url_raw( "plugin-install.php?tab=plugin-information&plugin=amp" ).'">'.esc_html__('Please Activate Parent Plugin', 'amp-enhancer').'</a>'; 
+   }
 	array_unshift( $links, $support_link );
 	return $links; 
 }
