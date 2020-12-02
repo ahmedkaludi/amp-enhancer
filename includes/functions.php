@@ -40,13 +40,18 @@ function amp_enhancer_third_party_compatibililty(){
 	      add_filter('cn_cookie_notice_output','amp_enhancer_cookie_notice_html_markup',10,2);
 	    }
 
-        // GDPR Cookie Consent
-        if(class_exists('Cookie_Law_Info')){
-          add_filter('cli_show_cookie_bar_only_on_selected_pages','amp_enhancer_gdpr_cookie_consent_remove_markup',10,2);
-          add_action( 'wp_footer','amp_enhancer_cookielawinfo_html_markup',10);
-          require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-law-info/cookie-law-css.php');
-          require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-law-info/cookie-law-shortcode.php');
-        }
+      // GDPR Cookie Consent
+      if(class_exists('Cookie_Law_Info')){
+        add_filter('cli_show_cookie_bar_only_on_selected_pages','amp_enhancer_gdpr_cookie_consent_remove_markup',10,2);
+        add_action( 'wp_footer','amp_enhancer_cookielawinfo_html_markup',10);
+        require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-law-info/cookie-law-css.php');
+        require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-law-info/cookie-law-shortcode.php');
+      }
+      // GDPR Cookie Compliance
+      if(function_exists('gdpr_cookie_compliance_load_libs')){
+       add_filter('gdpr_infobar_base_module','amp_enhancer_gdpr_infobar_base_module',10,1);
+       add_filter('gdpr_infobar_buttons_module','amp_enhancer_gdpr_infobar_buttons_module',10,1);
+      }
 
 	}
 }
@@ -122,7 +127,7 @@ function amp_enhancer_settings_option() {
     }
 
 function  amp_enhancer_settings_page(){
-    $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = false;
+    $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
@@ -137,6 +142,9 @@ function  amp_enhancer_settings_page(){
     }
     if(class_exists('Cookie_Notice')){
      $Cookie_Notice = true;
+    }
+    if(function_exists('gdpr_cookie_compliance_load_libs')){
+     $GDPR_Compliance = true;
     }
  ?>
  <div class="enhc-container">
@@ -188,6 +196,14 @@ function  amp_enhancer_settings_page(){
                   <tr>
                     <td>Cookie Notice</td>
                         <?php if($Cookie_Notice == true){?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>GDPR Cookie Compliance (CCPA, PIPEDA ready)</td>
+                        <?php if($GDPR_Compliance == true){?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  

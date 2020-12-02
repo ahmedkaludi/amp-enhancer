@@ -3,7 +3,7 @@
 Plugin Name: AMP Enhancer
 Description: AMP Enhancer is a Compatibility Layer for Official AMP Plugin ( Its Plug & Play, Requires No Settings )
 Author: ampenhancer
-Version: 1.0.1
+Version: 1.0.2
 Author URI: http://ampenhancer.com
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ Text Domain: amp-enhancer
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define('AMP_ENHANCER_VERSION','1.0.1');
+define('AMP_ENHANCER_VERSION','1.0.2');
 define('AMP_ENHANCER_PLUGIN_URI', plugin_dir_url(__FILE__));
 define('AMP_ENHANCER_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('AMP_ENHANCER_BASENAME',plugin_basename(__FILE__));
@@ -48,8 +48,16 @@ function amp_enhancer_third_party_plugins_support(){
 		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-notice/cookie-notice-functions.php');
 		   }
 
-		   // Cookie Notice
+		   // GDPR Cookie Consent
 	       if(class_exists('Cookie_Law_Info')){
 		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-law-info/cookie-law-info-functions.php');
-		   }  
+		   }
+
+		    // GDPR Cookie Compliance
+	       if(function_exists('gdpr_cookie_compliance_load_libs')){
+
+		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'gdpr-cookie-compliance/gdpr-cookie-compliance-functions.php');
+		   }
+
+		     
 }
