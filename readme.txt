@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.5.3
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,7 +38,16 @@ Third Party Plugins Supported Features are listed below :-
   * Connected with the Option to refuse & revoke the consent.
   * Full design Compatibility.
 
+== GDPR Cookie Compliance (CCPA, PIPEDA ready) : ==
+  * Includes both ‘Accept’ and ‘Reject’ buttons Support.
+  * Connected with the Option of Consent expiration settings.
+  * Includes link to Privacy Policy page
+  * Full design Compatibility.
+
 == Changelog ==
+
+= 1.0.2 (2 December 2020) =
+* Added GDPR Cookie Compliance (CCPA, PIPEDA ready) Plugin Compatibility.
 
 = 1.0.1 (27 November 2020) =
 * Added Settings Page Support
