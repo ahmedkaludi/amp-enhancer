@@ -48,8 +48,16 @@ function amp_enhancer_third_party_plugins_support(){
 		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-notice/cookie-notice-functions.php');
 		   }
 
-		   // Cookie Notice
+		   // GDPR Cookie Consent
 	       if(class_exists('Cookie_Law_Info')){
 		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'cookie-law-info/cookie-law-info-functions.php');
-		   }  
+		   }
+
+		    // GDPR Cookie Compliance
+	       if(function_exists('gdpr_cookie_compliance_load_libs')){
+
+		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'gdpr-cookie-compliance/gdpr-cookie-compliance-functions.php');
+		   }
+
+		     
 }
