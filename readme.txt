@@ -51,7 +51,7 @@ Third Party Plugins Supported Features are listed below :-
 
 == Changelog ==
 
-= 1.0.3 (2 December 2020) =
+= 1.0.3 (5 December 2020) =
 * Added WordPress Zero Spam Plugin Compatibility.
 
 = 1.0.2 (2 December 2020) =
