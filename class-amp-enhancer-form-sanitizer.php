@@ -209,7 +209,15 @@ class AMP_Enhancer_Form_Sanitizer extends AMP_Form_Sanitizer {
 			'submit-success' => null,
 			'submitting'     => null,
 		];
-
+		    // Wordpress Zero Spam Plugin Support
+         	if(function_exists('wpzerospam_get_key') ){
+				$zero_spam_key = wpzerospam_get_key();
+				$input_span      = $this->dom->createElement( 'input' );
+				$input_span->setAttribute( 'name', 'wpzerospam_key' );
+				$input_span->setAttribute( 'type', 'hidden' );
+				$input_span->setAttribute( 'value', $zero_spam_key);
+				$form->appendChild( $input_span );
+		    }
 
 		$templates = $this->dom->xpath->query( Document::XPATH_MUSTACHE_TEMPLATE_ELEMENTS_QUERY, $form );
 		foreach ( $templates as $template ) {
