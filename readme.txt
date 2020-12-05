@@ -46,8 +46,8 @@ Third Party Plugins Supported Features are listed below :-
 
 == WordPress Zero Spam : ==
   * Added Contact Form 7 Plugin Compatibility. 
-  * Added Wordpress Zero Spam hidden Field in WordPress Comments to submit Comment Forms in AMP.
-  * Included Formidable Form Builder Plugin Support with Wordpress Zero Spam plugin in AMP Pages.
+  * Added WordPress Zero Spam hidden Field in WordPress Comments to submit Comment Forms in AMP.
+  * Included Formidable Form Builder Plugin Support with WordPress Zero Spam plugin in AMP Pages.
 
 == Changelog ==
 
