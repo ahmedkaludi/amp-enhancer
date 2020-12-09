@@ -135,7 +135,7 @@ function amp_enhancer_settings_option() {
     }
 
 function  amp_enhancer_settings_page(){
-    $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = false;
+    $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
