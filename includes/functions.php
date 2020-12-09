@@ -52,7 +52,15 @@ function amp_enhancer_third_party_compatibililty(){
        add_filter('gdpr_infobar_base_module','amp_enhancer_gdpr_infobar_base_module',10,1);
        add_filter('gdpr_infobar_buttons_module','amp_enhancer_gdpr_infobar_buttons_module',10,1);
       }
+      // Easy Table of Content
+      if(class_exists('ezTOC_Option')){
+       add_filter('the_content','amp_enhancer_easy_toc_content',99999,1);
+     }
 
+       // Table of Content Plus
+       if(class_exists('toc')){
+        add_filter('the_content','amp_enhancer_table_of_content_plus',99999,1);
+       }
 	}
 }
 
@@ -264,3 +272,67 @@ function amp_enhancer_settings_page_css( $hook ) {
 
     }
 } 
+
+
+// Easy table of content Code
+
+function amp_enhancer_easy_toc_content($content){
+  if(class_exists('ezTOC_Option')){
+    if('1' == ezTOC_Option::get('visibility_hide_by_default')){
+        $hidden = 'hidden';
+        $hide = true;
+     }else {
+       $hidden = '';
+       $hide = false;
+    }
+  }
+   $ampStateJson = json_encode( array( 'easy_table' => $hide));
+   $amp_state = '<amp-state id="ampeztable"><script type="application/json">'.$ampStateJson.'</script></amp-state>';
+
+   if(preg_match('/<p class="ez-toc-title">(.*?)<\/p>(.*?)<a(.*?)class="(.*?)ez-toc-toggle(.*?)>(.*?)<\/a>/s', $content)){
+
+     $content = preg_replace('/<p class="ez-toc-title">(.*?)<\/p>(.*?)<a(.*?)class="(.*?)ez-toc-toggle(.*?)>(.*?)<\/a>/s', ''.$amp_state.'<p class="ez-toc-title">$1</p>$2<a$3class="$4ez-toc-toggle$5 
+      on="tap:AMP.setState({
+                        ampeztable:{
+                                easy_table: !(ampeztable.easy_table)}})">$6</a>', $content);
+    }
+    if(preg_match('/<nav><ul class="ez-toc-list (.*?)">/', $content)){
+
+        $content = preg_replace('/<nav><ul class="ez-toc-list (.*?)">/', '<nav [hidden]="ampeztable.easy_table" '.esc_attr($hidden).'><ul class="ez-toc-list $1">', $content);
+    }
+
+ return $content;
+}
+// Easy table of content Code Ends here
+
+// Table of Content Plus Code
+function amp_enhancer_table_of_content_plus($content){
+
+   global $tic;
+   if(method_exists($tic, 'get_options')){
+    $options = $tic->get_options();
+   }
+   $hidden =  $hide = '';
+   $show = 'hidden';
+
+   if(isset($options['visibility']) && $options['visibility'] == true){
+
+       if(isset($options['visibility_hide_by_default']) && $options['visibility_hide_by_default'] == true){
+          $hidden = $hide = 'hidden';
+          $show = '';
+       }
+
+     $show_text = (isset($options['visibility_show']) && !empty($options['visibility_show'])) ? $options['visibility_show'] : 'show';
+     $hide_text = (isset($options['visibility_hide']) && !empty($options['visibility_hide'])) ? $options['visibility_hide'] : 'hide';
+
+     if(preg_match('/<p\s+class="toc_title">(.*?)<\/p>(.*?)<ul\s+class="toc_list">/', $content)){
+
+         $content = preg_replace('/<p\s+class="toc_title">(.*?)<\/p>(.*?)<ul\s+class="toc_list">/', '<p class="toc_title">$1 <span class="toc_toggle">[<a 
+           '.esc_attr($show).' [hidden]="showText"  role="button" tabindex="0"  on="tap:AMP.setState({hideToggle: false,showText:true})"> '.esc_html($show_text).'</a> <a 
+            '.esc_attr($hide).'  [hidden]="hideToggle" role="button" tabindex="0"  on="tap:AMP.setState({hideToggle: true,showText:false})"> '.esc_html($hide_text).'</a>]</span></p>$2<ul class="toc_list" [hidden]="hideToggle" '.esc_attr($hidden).'>', $content);
+     }
+  }
+
+ return $content;
+}
+// Table of Content Plus Code Ends Here...
