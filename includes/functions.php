@@ -154,6 +154,12 @@ function  amp_enhancer_settings_page(){
     if(function_exists('gdpr_cookie_compliance_load_libs')){
      $GDPR_Compliance = true;
     }
+    if(class_exists('toc')){
+     $toc_plus = true;
+    }
+    if(class_exists('ezTOC_Option')){
+     $easy_toc = true;
+    }
  ?>
  <div class="enhc-container">
   <h1>AMP Enhancer Settings</h1>
@@ -212,6 +218,22 @@ function  amp_enhancer_settings_page(){
                   <tr>
                     <td>GDPR Cookie Compliance (CCPA, PIPEDA ready)</td>
                         <?php if($GDPR_Compliance == true){?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>Table of Contents Plus</td>
+                        <?php if($toc_plus == true){?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>Easy Table of Contents</td>
+                        <?php if($easy_toc == true){?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  
