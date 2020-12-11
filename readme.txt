@@ -3,8 +3,8 @@ Contributors: ampenhancer
 Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
-Tested up to: 5.5.3
-Stable tag: 1.0.4
+Tested up to: 5.6
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,7 +58,15 @@ Third Party Plugins Supported Features are listed below :-
   * Added Toggle functionality. 
   * Connected with the Initial View option of Table of Content Settings Panel.
 
+== LuckyWP Table of Contents : ==
+  * Added Toggle functionality. 
+  * Connected with the option of Label Show & Label Hide text option from LuckyWP TOC Settings panel.
+  * Also Connected  with the option of bydefault items of contents will be hidden.
+
 == Changelog ==
+
+= 1.0.5 (11 December 2020) =
+* Added the Compatibility with LuckyWP Table of Contents Plugin.
 
 = 1.0.4 (9 December 2020) =
 * Added Table of Contents Plus Plugin Compatibility.

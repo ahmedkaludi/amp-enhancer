@@ -55,11 +55,16 @@ function amp_enhancer_third_party_compatibililty(){
       // Easy Table of Content
       if(class_exists('ezTOC_Option')){
        add_filter('the_content','amp_enhancer_easy_toc_content',99999,1);
-     }
+      }
 
        // Table of Content Plus
        if(class_exists('toc')){
         add_filter('the_content','amp_enhancer_table_of_content_plus',99999,1);
+       }
+
+       // Lucky Table of Content
+       if(class_exists('lwptocAutoloader')){
+        add_filter('the_content','amp_enhancer_luckywp_toc',99999,1);
        }
 	}
 }
@@ -135,7 +140,7 @@ function amp_enhancer_settings_option() {
     }
 
 function  amp_enhancer_settings_page(){
-    $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = false;
+    $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
@@ -159,6 +164,9 @@ function  amp_enhancer_settings_page(){
     }
     if(class_exists('ezTOC_Option')){
      $easy_toc = true;
+    }
+    if(class_exists('lwptocAutoloader')){
+      $lwp_toc = true;
     }
  ?>
  <div class="enhc-container">
@@ -234,6 +242,14 @@ function  amp_enhancer_settings_page(){
                   <tr>
                     <td>Easy Table of Contents</td>
                         <?php if($easy_toc == true){?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>LuckyWP Table of Contents</td>
+                        <?php if($lwp_toc == true){?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  
@@ -316,7 +332,8 @@ function amp_enhancer_easy_toc_content($content){
      $content = preg_replace('/<p class="ez-toc-title">(.*?)<\/p>(.*?)<a(.*?)class="(.*?)ez-toc-toggle(.*?)>(.*?)<\/a>/s', ''.$amp_state.'<p class="ez-toc-title">$1</p>$2<a$3class="$4ez-toc-toggle$5 
       on="tap:AMP.setState({
                         ampeztable:{
-                                easy_table: !(ampeztable.easy_table)}})">$6</a>', $content);
+                                easy_table: !(ampeztable.easy_table)}})" 
+                                 role="button" tabindex="0">$6</a>', $content);
     }
     if(preg_match('/<nav><ul class="ez-toc-list (.*?)">/', $content)){
 
@@ -358,3 +375,27 @@ function amp_enhancer_table_of_content_plus($content){
  return $content;
 }
 // Table of Content Plus Code Ends Here...
+
+// LuckyWp Table of Content
+
+function amp_enhancer_luckywp_toc($content){
+   
+   $lwptoc_settings = get_option('lwptoc_general');
+    
+    if(isset($lwptoc_settings['toggle']) && $lwptoc_settings['toggle'] == 1){
+
+       $content = preg_replace('/<a href="(.*?)"\s+class="lwptoc_toggle_label"\s+data-label="(.*?)">(.*?)<\/a>/', '<a  role="button" tabindex="0" class="lwptoc_toggle_label" data-label="'.esc_html('$2').'" on="tap:AMP.setState({ampen_ltoc:{lwptoc: !ampen_ltoc.lwptoc}})" [text]="ampen_ltoc.lwptoc? \''.esc_html('$2').'\':\''.esc_html('$3').'\'" >$3</a>', $content);
+
+            if(isset($lwptoc_settings['hideItems']) && $lwptoc_settings['hideItems'] == 1){
+
+               $content = preg_replace('/<div class="lwptoc_items(.*?)">/', '<div class="lwptoc_items"  hidden  [hidden]="ampen_ltoc.lwptoc? false : true ">', $content);
+
+              }else{
+
+                $content = preg_replace('/<div class="lwptoc_items(.*?)">/', '<div class="lwptoc_items"  [hidden]="ampen_ltoc.lwptoc? true : false ">', $content);
+              }
+
+       }
+    
+  return $content;
+}
