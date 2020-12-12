@@ -59,5 +59,10 @@ function amp_enhancer_third_party_plugins_support(){
 		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'gdpr-cookie-compliance/gdpr-cookie-compliance-functions.php');
 		   }
 
+		    // Shortcodes Ultimate
+	       if ( class_exists('Shortcodes_Ultimate_Shortcodes')) {
+		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'shortcodes-ultimate/shortcodes-ultimate-functions.php');
+		   }
+
 		     
 }
