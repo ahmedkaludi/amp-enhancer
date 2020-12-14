@@ -70,8 +70,8 @@ Third Party Plugins Supported Features are listed below :-
 == Changelog ==
 
 = 1.0.6 (14 December 2020) =
-* Added Shortcodes Ultimate Plugin Spoiler and Accordion Shortcode Functionality in AMP  
-  pages.
+* Added Shortcodes Ultimate Plugin Spoiler and Accordion Shortcode Functionality in AMP
+pages.
 
 = 1.0.5 (11 December 2020) =
 * Added the Compatibility with LuckyWP Table of Contents Plugin.
