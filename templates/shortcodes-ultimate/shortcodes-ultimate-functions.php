@@ -27,7 +27,7 @@
 
 	return '<amp-accordion animate>
 	        <section class="su-spoiler su-spoiler-style-' . esc_attr($atts['style']) . ' su-spoiler-icon-' . $atts['icon'] . esc_attr(su_get_css_class( $atts )) . '"' . esc_attr($atts['anchor']) . '>
-			    <header class="su-spoiler-title" id="amp-spoiler-title" style=" background-color: unset;">
+			    <header class="su-spoiler-title" id="amp-spoiler-title" style=" background-color: unset;border:unset;">
 			    <span class="su-spoiler-icon"></span>
 			     		' . esc_html(su_do_attribute( $atts['title'] )) . '
 			     </header>
