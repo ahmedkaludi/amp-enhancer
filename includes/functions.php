@@ -140,7 +140,7 @@ function amp_enhancer_settings_option() {
     }
 
 function  amp_enhancer_settings_page(){
-    $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = false;
+    $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
@@ -167,6 +167,9 @@ function  amp_enhancer_settings_page(){
     }
     if(class_exists('lwptocAutoloader')){
       $lwp_toc = true;
+    }
+    if(class_exists('Shortcodes_Ultimate_Shortcodes')){
+      $shortcodes = true;
     }
  ?>
  <div class="enhc-container">
@@ -250,6 +253,14 @@ function  amp_enhancer_settings_page(){
                   <tr>
                     <td>LuckyWP Table of Contents</td>
                         <?php if($lwp_toc == true){?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>Shortcodes Ultimate</td>
+                        <?php if($shortcodes == true){ ?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  
