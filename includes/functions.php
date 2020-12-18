@@ -13,8 +13,13 @@ function amp_enhancer_form_sanitizer($data){
 add_action( 'wp_head', 'amp_enhancer_add_custom_css');
 
 function amp_enhancer_add_custom_css(){
+  $settings = get_option( 'ampenhancer_settings');
    if ( (function_exists( 'is_amp_endpoint' ) && is_amp_endpoint()) ) {
     	wp_enqueue_style( 'amp_enhancer_css', untrailingslashit(AMP_ENHANCER_PLUGIN_URI) . '/includes/style.css', false, AMP_ENHANCER_VERSION );
+     // Popup feature CSS
+      if(isset($settings['popup']) && ($settings['popup'] == 'on' || $settings['popup'] == 1)){
+           wp_enqueue_style( 'amp_enhancer_popup_css', untrailingslashit(AMP_ENHANCER_PLUGIN_URI) . '/includes/features/popup/popup-styles.css', false, AMP_ENHANCER_VERSION );
+       }
     }
 }
 
@@ -22,6 +27,7 @@ function amp_enhancer_add_custom_css(){
 add_action('wp','amp_enhancer_third_party_compatibililty');
 
 function amp_enhancer_third_party_compatibililty(){
+  $settings = get_option( 'ampenhancer_settings');
 
 	if ( (function_exists( 'is_amp_endpoint' ) && is_amp_endpoint()) ) {
 
@@ -66,6 +72,9 @@ function amp_enhancer_third_party_compatibililty(){
        if(class_exists('lwptocAutoloader')){
         add_filter('the_content','amp_enhancer_luckywp_toc',99999,1);
        }
+      if(isset($settings['popup']) && ($settings['popup'] == 'on' || $settings['popup'] == 1)){
+          require_once(AMP_ENHANCER_PLUGIN_DIR.'includes/features/popup/popup-frontend.php');
+      }   
 	}
 }
 
@@ -123,9 +132,10 @@ function amp_enhancer_sanitize_color( $color ) {
 
 // Settings Page
 
+require_once(AMP_ENHANCER_PLUGIN_DIR.'admin/settings.php');
 add_action( 'admin_menu', 'amp_enhancer_settings_option', 50 );
 function amp_enhancer_settings_option() {
-
+  $settings = get_option( 'ampenhancer_settings');
     if(class_exists('AMP_Options_Manager')){
 
        $amp_options = New AMP_Options_Manager();
@@ -136,171 +146,17 @@ function amp_enhancer_settings_option() {
                          'amp-enhacer-settings',
                          'amp_enhancer_settings_page' 
                        );
+       if(isset($settings['popup']) && ($settings['popup'] == 'on' || $settings['popup'] == 1)){
+           add_submenu_page( $amp_options::OPTION_NAME,
+                           esc_html__( 'Popups', 'amp-enhancer' ),
+                           esc_html__( 'Popups', 'amp-enhancer' ),
+                           'manage_options',
+                           admin_url( 'edit.php?post_type=ampenhancerpopup' )
+                         );
+          }
        }
     }
 
-function  amp_enhancer_settings_page(){
-    $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = false;
-    if(function_exists('WC')){
-     $woocommerce = true;
-    }
-    if(class_exists('\Elementor\Plugin')){
-     $elementor = true;
-    }
-    if(class_exists('WPCF7_ContactForm')){
-     $contact_form7 = true;
-    }
-    if(class_exists('Cookie_Law_Info')){
-     $GDPR_Cookie = true;
-    }
-    if(class_exists('Cookie_Notice')){
-     $Cookie_Notice = true;
-    }
-    if(function_exists('gdpr_cookie_compliance_load_libs')){
-     $GDPR_Compliance = true;
-    }
-    if(class_exists('toc')){
-     $toc_plus = true;
-    }
-    if(class_exists('ezTOC_Option')){
-     $easy_toc = true;
-    }
-    if(class_exists('lwptocAutoloader')){
-      $lwp_toc = true;
-    }
-    if(class_exists('Shortcodes_Ultimate_Shortcodes')){
-      $shortcodes = true;
-    }
- ?>
- <div class="enhc-container">
-  <h1>AMP Enhancer Settings</h1>
-    <div class="enhr-comp-cont">
-             <div class="enhancer-nosetup">
-                <h3 class="enhc-notice-title">No Setup Required</h3>
-                <span class="enhc-notice-cont">It will now Automatically include the  features of the compatible third party plugins and starts working.</span>
-            </div>
-            <div class="enhr-compatible-section">
-                <h2 class="enhr-comp-title">Compatibilities :</h2>
-              <table class="enhr-comp-table">
-                  <tr>
-                    <th>Plugin</th>
-                    <th>Status</th>
-                  </tr>
-                    <tr>
-                    <td>WooCommerce</td>
-                        <?php if($woocommerce == true){?>
-                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
-                        <?php }else{ ?>
-                        <td>Inactive</td>  
-                        <?php } ?>
-                  </tr>
-                  <tr>
-                    <td>Elementor</td>
-                        <?php if($elementor == true){?>
-                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
-                        <?php }else{ ?>
-                        <td>Inactive</td>  
-                        <?php } ?>
-                  </tr>
-                  <tr>
-                    <td>Contact Form 7</td>
-                        <?php if($contact_form7 == true){?>
-                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
-                        <?php }else{ ?>
-                        <td>Inactive</td>  
-                        <?php } ?>
-                  </tr>
-                  <tr>
-                    <td>GDPR Cookie Consent</td>
-                        <?php if($GDPR_Cookie == true){?>
-                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
-                        <?php }else{ ?>
-                        <td>Inactive</td>  
-                        <?php } ?>
-                  </tr>
-                  <tr>
-                    <td>Cookie Notice</td>
-                        <?php if($Cookie_Notice == true){?>
-                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
-                        <?php }else{ ?>
-                        <td>Inactive</td>  
-                        <?php } ?>
-                  </tr>
-                  <tr>
-                    <td>GDPR Cookie Compliance (CCPA, PIPEDA ready)</td>
-                        <?php if($GDPR_Compliance == true){?>
-                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
-                        <?php }else{ ?>
-                        <td>Inactive</td>  
-                        <?php } ?>
-                  </tr>
-                  <tr>
-                    <td>Table of Contents Plus</td>
-                        <?php if($toc_plus == true){?>
-                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
-                        <?php }else{ ?>
-                        <td>Inactive</td>  
-                        <?php } ?>
-                  </tr>
-                  <tr>
-                    <td>Easy Table of Contents</td>
-                        <?php if($easy_toc == true){?>
-                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
-                        <?php }else{ ?>
-                        <td>Inactive</td>  
-                        <?php } ?>
-                  </tr>
-                  <tr>
-                    <td>LuckyWP Table of Contents</td>
-                        <?php if($lwp_toc == true){?>
-                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
-                        <?php }else{ ?>
-                        <td>Inactive</td>  
-                        <?php } ?>
-                  </tr>
-                  <tr>
-                    <td>Shortcodes Ultimate</td>
-                        <?php if($shortcodes == true){ ?>
-                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
-                        <?php }else{ ?>
-                        <td>Inactive</td>  
-                        <?php } ?>
-                  </tr>
-                </table>
-            </div>
-    </div>
-    <div class="enhr_support">
-        <div class="postbox">
-                <h2 class="enhr-hndle">
-                    <span class="dashicons dashicons-email-alt"></span>
-                    <span>Technical Support</span>
-                </h2>
-                <div class="enhr-inside">
-                    <p>
-                       If you have any queries, you can directly connect with our support developers by submitting a ticket
-                    </p>
-                    <p>
-                    Our team will get back to your email address very shortly
-                    </p>
-                    <a href="http://ampenhancer.com/contact-us/">Submit a Ticket »</a>               </div>
-            </div>
-
-            <div class="postbox">
-                <h2 class="enhr-hndle">
-                    <span class="dashicons dashicons-star-filled"></span>
-                    <span>Rate Us</span>
-                </h2>
-                <div class="enhr-inside">
-                    <p>
-                       If you have got the features which you are looking for in our plugin, then please rate us a 5 star review on WordPress.org.</p>
-                    <p>This will help spread the word out about this plugin and will encourage us to continue the development.</p>
-                    <p>Much appreciated, thank you very much.</p>
-                    <a href="https://wordpress.org/support/plugin/amp-enhancer/reviews/?rate=5#new-post">Give Us a 5 star</a>               </div>
-            </div>
-    </div>
-</div>
- <?php
-}
 
 add_action( 'admin_enqueue_scripts', 'amp_enhancer_settings_page_css' );
 function amp_enhancer_settings_page_css( $hook ) {
@@ -409,4 +265,29 @@ function amp_enhancer_luckywp_toc($content){
        }
     
   return $content;
+}
+
+add_action('plugins_loaded','amp_enhancer_ajax_request_callbacks');
+
+function amp_enhancer_ajax_request_callbacks(){
+//set cookies Submission
+   $settings = get_option( 'ampenhancer_settings');
+  if(isset($settings['popup']) && ($settings['popup'] == 'on' || $settings['popup'] == 1)){
+      add_action('wp_ajax_amp_enhancer_popup_dismiss_consent','amp_enhancer_popup_dismiss_consent');
+      add_action('wp_ajax_nopriv_amp_enhancer_popup_dismiss_consent','amp_enhancer_popup_dismiss_consent');
+   }
+}
+
+function amp_enhancer_popup_dismiss_consent(){
+  $postId = $_POST['dismiss_id'];
+  $timeInHour = get_post_meta($postId, 'en_cookie_time', true);
+  $expire_time = time() + intval($timeInHour)*3600;
+    setcookie('ampenhancer_popup','true', esc_attr( $expire_time) , "/");
+    $current_url = $site_url = $site_host = $amp_site = '';
+    $current_url  = wp_get_referer();
+  $site_url     = parse_url( get_site_url() );
+  $site_host    = $site_url['host'];
+  $amp_site     = $site_url['scheme'] . '://' . $site_url['host'];
+  header("AMP-Access-Control-Allow-Source-Origin: ".esc_url($amp_site));
+  die();
 }
