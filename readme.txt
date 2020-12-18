@@ -11,6 +11,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
 AMP Enhancer is a Compatibility Layer for Official AMP Plugin.
 
+== Features: ==
+
+== Popups : ==
+ * Multiple Popups functionality in AMP Pages.
+ * Display Popups based on Conditions such as Globally or Homepage.
+ * Show popups on every time page loads or after a specific time condition logic.
+ * Outputs AMP Compatible Code and Shortcodes of other plugins too. 
+
 == Compatibilities: ==
 Third Party Plugins Supported Features are listed below :-
 
@@ -66,14 +74,6 @@ Third Party Plugins Supported Features are listed below :-
 == Shortcodes Ultimate : ==
   * Added Spoiler Shortcode Support. 
   * Added Accordion Shortcode Functionality.
-
-== Features: ==
-
-== Popups : ==
- * Multiple Popups functionality in AMP Pages.
- * Display Popups based on Conditions such as Globally or Homepage.
- * Show popups on every time page loads or after a specific time condition logic.
- * Outputs AMP Compatible Code and Shortcodes of other plugins too. 
 
 == Changelog ==
 
