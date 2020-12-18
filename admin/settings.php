@@ -29,7 +29,7 @@ function  amp_enhancer_settings_page(){
 
                 echo "<div class='amp-enhancer-features' ".( $tab != 'features' ? 'style="display:none;"' : '').">"; 
                  $help = 'Adds Pop-Up for AMP Pages';
-                 $docs_url = 'http://ampenhancer.com/docs/';
+                 $docs_url = 'http://ampenhancer.com/docs/article-categories/popup/';
                  $settings_url =  admin_url( 'edit.php?post_type=ampenhancerpopup' );
                  echo   '<h2 class="amp-en-label">POP-UP 
                           '.amp_enhancer_tooltip($help,$docs_url).'

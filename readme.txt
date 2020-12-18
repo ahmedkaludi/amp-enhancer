@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,7 +67,18 @@ Third Party Plugins Supported Features are listed below :-
   * Added Spoiler Shortcode Support. 
   * Added Accordion Shortcode Functionality.
 
+== Features: ==
+
+== Popups : ==
+ * Multiple Popups functionality in AMP Pages.
+ * Display Popups based on Conditions such as Globally or Homepage.
+ * Show popups on every time page loads or after a specific time condition logic.
+ * Outputs AMP Compatible Code and Shortcodes of other plugins too. 
+
 == Changelog ==
+
+= 1.0.7 (18 December 2020) =
+* Added Popup Feature to display popups in AMP Pages.
 
 = 1.0.6 (14 December 2020) =
 * Added Shortcodes Ultimate Plugin Spoiler and Accordion Shortcode Functionality.

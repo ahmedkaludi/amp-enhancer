@@ -193,8 +193,7 @@ function amp_enhancer_pop_up_wysiwig_content($wis){
     global $post;
     $popup_cookie_duration = get_post_meta($post->ID, 'en_cookie_time', true);
     $popup_cookie_type  = get_post_meta($post->ID, 'en_popup_cookie_type', true);
-    $popup_with_cookie     = get_post_meta($post->ID, 'en_popup_set_time', true);
-    wp_nonce_field( 'amp_pop_up_type_callback', 'amp_pop_up_type_callback_nonce' ); ?>
+    $popup_with_cookie     = get_post_meta($post->ID, 'en_popup_set_time', true); ?>
     <script>
       jQuery(document).ready(function($){
           $("#en_popup_set_time").click(function(){
