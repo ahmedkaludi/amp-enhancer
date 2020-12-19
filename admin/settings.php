@@ -28,10 +28,13 @@ function  amp_enhancer_settings_page(){
                  echo "</div>";
 
                 echo "<div class='amp-enhancer-features' ".( $tab != 'features' ? 'style="display:none;"' : '').">"; 
+
+                // Popup Settings
                  $help = 'Adds Pop-Up for AMP Pages';
                  $docs_url = 'http://ampenhancer.com/docs/article-categories/popup/';
                  $settings_url =  admin_url( 'edit.php?post_type=ampenhancerpopup' );
-                 echo   '<h2 class="amp-en-label">POP-UP 
+                 echo   '<div class="en-feature-sub">
+                    <h2 class="amp-en-label">POP-UP 
                           '.amp_enhancer_tooltip($help,$docs_url).'
                           </h2> 
                            <label class="switch">
@@ -39,8 +42,26 @@ function  amp_enhancer_settings_page(){
                               <span class="slider round"></span>
                            </label>';
                    if(isset($settings['popup']) && ($settings['popup'] == 'on' || $settings['popup'] == 1)){
-                    echo  '<span class="amp-en-popup-settings"><a href="'.esc_url_raw($settings_url).'"><i class="dashicons dashicons-admin-generic"></i> </a></span> ';
+                    echo  '<span class="amp-en-popup-settings"><a href="'.esc_url_raw($settings_url).'"><i class="dashicons dashicons-admin-generic"></i> </a></span>';
                    }
+                   echo '</div>'; 
+
+                  // Custom CSS Settings
+                 $css_help = 'Adds up Custom CSS for AMP Pages';
+                 $css_docs_url = 'http://ampenhancer.com/docs/';
+                 $css_settings_url =  admin_url( 'admin.php?page=amp-enhancer-custom-css' );
+                 echo   '<div class="en-feature-sub">
+                        <h2 class="amp-en-label">Custom CSS 
+                          '.amp_enhancer_tooltip($css_help,$css_docs_url).'
+                          </h2> 
+                           <label class="switch">
+                             <input type="checkbox" '.(isset( $settings['custom_css'] ) && ($settings['custom_css'] == 'on' || $settings['custom_css'] == 1) ? 'checked="checked"' : '').' name="ampenhancer_settings[custom_css]" />
+                              <span class="slider round"></span>
+                           </label>';
+                   if(isset($settings['custom_css']) && ($settings['custom_css'] == 'on' || $settings['custom_css'] == 1)){
+                    echo  '<span class="amp-en-popup-settings"><a href="'.esc_url_raw($css_settings_url).'"><i class="dashicons dashicons-admin-generic"></i> </a></span> ';
+                   }
+                 echo '</div>'; 
                 echo "</div>";
                ?>
                <?php 
@@ -264,7 +285,9 @@ add_action('admin_init', 'amp_enhancer_settings_init');
 function amp_enhancer_settings_init(){
 
   register_setting( 'amp_enhancer_settings_group', 'ampenhancer_settings' );
+  register_setting( 'amp_enhancer_custom_css_group', 'ampenhancer_custom_css' );
 
 }
 
 require_once(AMP_ENHANCER_PLUGIN_DIR.'admin/amp-enhancer-popup/amp-enhancer-popup-admin.php');
+require_once(AMP_ENHANCER_PLUGIN_DIR.'admin/amp-enhancer-custom-css/amp-enhancer-custom-css.php');
