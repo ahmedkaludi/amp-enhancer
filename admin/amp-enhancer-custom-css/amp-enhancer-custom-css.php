@@ -24,7 +24,7 @@ function  amp_enhancer_custom_css(){
 function amp_enhancer_register_codemirror_css_lib( $hook ) {
 
     wp_enqueue_code_editor( array( 'type' => 'text/html' ) );
-    wp_enqueue_script( 'amp-enhancer-css-editor-js',AMP_ENHANCER_PLUGIN_URI.'admin/js/editor_css.js', array( 'jquery' ), '20190306sd', true );
+    wp_enqueue_script( 'amp-enhancer-css-editor-js',AMP_ENHANCER_PLUGIN_URI.'admin/js/editor_css.js', array( 'jquery' ), AMP_ENHANCER_VERSION, true );
   
 }
 add_action( 'admin_enqueue_scripts', 'amp_enhancer_register_codemirror_css_lib' );
