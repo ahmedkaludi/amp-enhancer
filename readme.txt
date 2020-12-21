@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,6 +18,9 @@ AMP Enhancer is a Compatibility Layer for Official AMP Plugin.
  * Display Popups based on Conditions such as Globally or Homepage.
  * Show popups on every time page loads or after a specific time condition logic.
  * Outputs AMP Compatible Code and Shortcodes of other plugins too. 
+
+== Custom CSS : ==
+* Added CSS Editor to add Custom CSS to your AMP Post/Pages.  
 
 == Compatibilities: ==
 Third Party Plugins Supported Features are listed below :-
@@ -77,8 +80,11 @@ Third Party Plugins Supported Features are listed below :-
 
 == Changelog ==
 
+= 1.0.8 (21 December 2020) =
+* Added Custom CSS Feature to add additional CSS in AMP Post/Pages.
+
 = 1.0.7 (18 December 2020) =
-* Added Popup Feature to display popups in AMP Pages.
+* Added Popup Feature to display popups in AMP Post/Pages.
 
 = 1.0.6 (14 December 2020) =
 * Added Shortcodes Ultimate Plugin Spoiler and Accordion Shortcode Functionality.

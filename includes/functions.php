@@ -20,6 +20,12 @@ function amp_enhancer_add_custom_css(){
       if(isset($settings['popup']) && ($settings['popup'] == 'on' || $settings['popup'] == 1)){
            wp_enqueue_style( 'amp_enhancer_popup_css', untrailingslashit(AMP_ENHANCER_PLUGIN_URI) . '/includes/features/popup/popup-styles.css', false, AMP_ENHANCER_VERSION );
        }
+       if(isset($settings['custom_css']) && ($settings['custom_css'] == 'on' || $settings['custom_css'] == 1)){
+           wp_enqueue_style( 'amp_enhancer_custom_css', untrailingslashit(AMP_ENHANCER_PLUGIN_URI) . '/includes/features/custom-css/custom-styles.css', false, AMP_ENHANCER_VERSION );
+
+           $custom_css = amp_enhancer_custom_css_output();
+           wp_add_inline_style( 'amp_enhancer_custom_css', $custom_css );
+       }
     }
 }
 
@@ -154,6 +160,15 @@ function amp_enhancer_settings_option() {
                            admin_url( 'edit.php?post_type=ampenhancerpopup' )
                          );
           }
+        if(isset($settings['custom_css']) && ($settings['custom_css'] == 'on' || $settings['custom_css'] == 1)){
+            add_submenu_page( $amp_options::OPTION_NAME,
+                         esc_html__( 'Custom CSS', 'amp-enhancer' ),
+                         esc_html__( 'Custom CSS', 'amp-enhancer' ),
+                         'manage_options',
+                         'amp-enhancer-custom-css',
+                         'amp_enhancer_custom_css' 
+                        );
+          }
        }
     }
 
@@ -164,6 +179,9 @@ function amp_enhancer_settings_page_css( $hook ) {
  $pagenow = false; 
   if(isset($current_screen->id)){ 
        if($current_screen->id == 'amp_page_amp-enhacer-settings'){
+        $pagenow = true;
+       }
+       if($current_screen->id == 'amp_page_amp-enhancer-custom-css'){
         $pagenow = true;
        }
 
@@ -290,4 +308,14 @@ function amp_enhancer_popup_dismiss_consent(){
   $amp_site     = $site_url['scheme'] . '://' . $site_url['host'];
   header("AMP-Access-Control-Allow-Source-Origin: ".esc_url($amp_site));
   die();
+}
+
+function amp_enhancer_custom_css_output(){
+
+  $custom_css = get_option('ampenhancer_custom_css');
+  $raw_css = (isset($custom_css['css']) && !empty($custom_css['css'])) ? $custom_css['css'] : '' ;
+  $css = '';
+  $css     = wp_kses( $raw_css, array( '\'', '\"' ) );
+  $css     = str_replace( '&gt;', '>', $css );
+  return $css;
 }

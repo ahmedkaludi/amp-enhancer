@@ -83,7 +83,7 @@ body {
 }
 .amp-en-label {
     display: inline-block;
-    margin-right:40px; 
+    width: 20%;
 }
 .am-en-tooltip {
     position: relative;
@@ -212,6 +212,20 @@ input:checked + .slider:before {
 .amp-en-popup-settings a{
   text-decoration: none;
   color: black;
+}
+.enhc-css-container{
+  padding: 20px;
+}
+.amp_enhancer_custom_css{
+  color: #F8F8F2;
+  background-color: #272822;
+  position: relative;
+  width: 100%;
+  height: 200px; 
+  border: 1px solid #DFDFDF; 
+  border-radius: 3px; 
+  -moz-border-radius: 3px; 
+  -webkit-border-radius: 3px; 
 }
 @media(max-width: 768px){
 	.enhc-container{
