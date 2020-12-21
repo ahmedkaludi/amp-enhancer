@@ -48,7 +48,7 @@ function  amp_enhancer_settings_page(){
 
                   // Custom CSS Settings
                  $css_help = 'Adds up Custom CSS for AMP Pages';
-                 $css_docs_url = 'http://ampenhancer.com/docs/';
+                 $css_docs_url = 'http://ampenhancer.com/docs/article-categories/custom-css/';
                  $css_settings_url =  admin_url( 'admin.php?page=amp-enhancer-custom-css' );
                  echo   '<div class="en-feature-sub">
                         <h2 class="amp-en-label">Custom CSS 
