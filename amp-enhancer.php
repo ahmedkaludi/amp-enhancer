@@ -64,5 +64,9 @@ function amp_enhancer_third_party_plugins_support(){
 		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'shortcodes-ultimate/shortcodes-ultimate-functions.php');
 		   }
 
+		   // WP-FORMS
+		   if(function_exists('wpforms')){
+		   	require_once(AMP_ENHANCER_TEMPLATE_DIR.'wp-forms/amp-wp-forms-functions.php');
+		   }
 		     
 }
