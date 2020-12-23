@@ -3,7 +3,7 @@
 Plugin Name: AMP Enhancer
 Description: AMP Enhancer is a Compatibility Layer for Official AMP Plugin ( Its Plug & Play, Requires No Settings )
 Author: ampenhancer
-Version: 1.0.8
+Version: 1.0.9
 Author URI: http://ampenhancer.com
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ Text Domain: amp-enhancer
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define('AMP_ENHANCER_VERSION','1.0.8');
+define('AMP_ENHANCER_VERSION','1.0.9');
 define('AMP_ENHANCER_PLUGIN_URI', plugin_dir_url(__FILE__));
 define('AMP_ENHANCER_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('AMP_ENHANCER_BASENAME',plugin_basename(__FILE__));
@@ -64,5 +64,14 @@ function amp_enhancer_third_party_plugins_support(){
 		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'shortcodes-ultimate/shortcodes-ultimate-functions.php');
 		   }
 
+		   // WP-FORMS
+		   if(function_exists('wpforms')){
+		   	require_once(AMP_ENHANCER_TEMPLATE_DIR.'wp-forms/amp-wp-forms-functions.php');
+		   }
+
+		   // Ninja Forms
+		    if(function_exists('Ninja_Forms')){
+		   	require_once(AMP_ENHANCER_TEMPLATE_DIR.'ninja-forms/amp-enhancer-ninja-forms-functions.php');
+		   }
 		     
 }

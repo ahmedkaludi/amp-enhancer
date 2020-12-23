@@ -78,9 +78,20 @@ function amp_enhancer_third_party_compatibililty(){
        if(class_exists('lwptocAutoloader')){
         add_filter('the_content','amp_enhancer_luckywp_toc',99999,1);
        }
+
       if(isset($settings['popup']) && ($settings['popup'] == 'on' || $settings['popup'] == 1)){
           require_once(AMP_ENHANCER_PLUGIN_DIR.'includes/features/popup/popup-frontend.php');
-      }   
+      }
+     if(function_exists('wpforms')){
+         remove_shortcode( 'wpforms' );
+         add_shortcode( 'wpforms', 'amp_enhancer_wpforms_shortcode');
+     }
+
+     if(function_exists('Ninja_Forms')){
+      remove_shortcode('ninja_form');
+      add_shortcode( 'ninja_forms', 'amp_enhancer_ninja_forms_shortcode' );
+      add_shortcode( 'ninja_form', 'amp_enhancer_ninja_forms_shortcode' );
+     }     
 	}
 }
 
