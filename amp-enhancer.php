@@ -68,5 +68,10 @@ function amp_enhancer_third_party_plugins_support(){
 		   if(function_exists('wpforms')){
 		   	require_once(AMP_ENHANCER_TEMPLATE_DIR.'wp-forms/amp-wp-forms-functions.php');
 		   }
+
+		   // Ninja Forms
+		    if(function_exists('Ninja_Forms')){
+		   	require_once(AMP_ENHANCER_TEMPLATE_DIR.'ninja-forms/amp-enhancer-ninja-forms-functions.php');
+		   }
 		     
 }

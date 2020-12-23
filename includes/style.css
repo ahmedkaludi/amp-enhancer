@@ -140,6 +140,7 @@ amp-script {
 transition-duration: 500ms;
 }
 .toc_toggle a{cursor: pointer;}
+.nf-table-display .amp-form-submit-success .form-fields-wrapper{display: none;}
 
 @media(max-width: 700px){
     :root:not(#_):not(#_):not(#_):not(#_):not(#_) .elementor .swiper-slide{

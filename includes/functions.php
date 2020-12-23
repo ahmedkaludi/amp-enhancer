@@ -85,6 +85,12 @@ function amp_enhancer_third_party_compatibililty(){
      if(function_exists('wpforms')){
          remove_shortcode( 'wpforms' );
          add_shortcode( 'wpforms', 'amp_enhancer_wpforms_shortcode');
+     }
+
+     if(function_exists('Ninja_Forms')){
+      remove_shortcode('ninja_form');
+      add_shortcode( 'ninja_forms', 'amp_enhancer_ninja_forms_shortcode' );
+      add_shortcode( 'ninja_form', 'amp_enhancer_ninja_forms_shortcode' );
      }     
 	}
 }
