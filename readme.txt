@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,7 +78,19 @@ Third Party Plugins Supported Features are listed below :-
   * Added Spoiler Shortcode Support. 
   * Added Accordion Shortcode Functionality.
 
+== WPForms : ==
+  * Renders Form HTML in AMP. 
+  * Form Submission and form validation.
+
+== Ninja Forms : ==
+  * Renders Form HTML in AMP.
+  * Form Submission and form validation.
+
 == Changelog ==
+
+= 1.0.9 (23 December 2020) =
+* Added Contact Form by WPForms Plugin Compatibility.
+* Added Ninja Forms Contact Form Plugin Compatibility.
 
 = 1.0.8 (21 December 2020) =
 * Added Custom CSS Feature to add additional CSS in AMP Post/Pages.
