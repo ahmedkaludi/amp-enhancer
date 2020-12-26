@@ -73,5 +73,10 @@ function amp_enhancer_third_party_plugins_support(){
 		    if(function_exists('Ninja_Forms')){
 		   	require_once(AMP_ENHANCER_TEMPLATE_DIR.'ninja-forms/amp-enhancer-ninja-forms-functions.php');
 		   }
+
+		   // KK Star Rating
+		    if(function_exists('kksr_freemius')){
+		   	require_once(AMP_ENHANCER_TEMPLATE_DIR.'kk-star/amp-enhancer-kkstar-functions.php');
+		   }
 		     
 }
