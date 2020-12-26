@@ -20,12 +20,20 @@ function amp_enhancer_add_custom_css(){
       if(isset($settings['popup']) && ($settings['popup'] == 'on' || $settings['popup'] == 1)){
            wp_enqueue_style( 'amp_enhancer_popup_css', untrailingslashit(AMP_ENHANCER_PLUGIN_URI) . '/includes/features/popup/popup-styles.css', false, AMP_ENHANCER_VERSION );
        }
+       // Custom CSS feature style
        if(isset($settings['custom_css']) && ($settings['custom_css'] == 'on' || $settings['custom_css'] == 1)){
            wp_enqueue_style( 'amp_enhancer_custom_css', untrailingslashit(AMP_ENHANCER_PLUGIN_URI) . '/includes/features/custom-css/custom-styles.css', false, AMP_ENHANCER_VERSION );
 
            $custom_css = amp_enhancer_custom_css_output();
            wp_add_inline_style( 'amp_enhancer_custom_css', $custom_css );
        }
+     // KK Star rating CSS
+       if(function_exists('kksr_freemius')){
+          $kksr_enable = get_option('kksr_enable'); 
+          if($kksr_enable == 1){
+             wp_enqueue_style( 'amp_enhancer_kkstar_css', untrailingslashit(AMP_ENHANCER_PLUGIN_URI) . '/templates/kk-star/kkstar-styles.css', false, AMP_ENHANCER_VERSION );
+          }  
+        }
     }
 }
 
@@ -91,7 +99,11 @@ function amp_enhancer_third_party_compatibililty(){
       remove_shortcode('ninja_form');
       add_shortcode( 'ninja_forms', 'amp_enhancer_ninja_forms_shortcode' );
       add_shortcode( 'ninja_form', 'amp_enhancer_ninja_forms_shortcode' );
-     }     
+     }  
+     if(function_exists('kksr_freemius')){
+       remove_shortcode(Bhittani\StarRating\config('shortcode'));  
+       add_shortcode(Bhittani\StarRating\config('shortcode'),'amp_enhancer_kkstar_rating');  
+     }
 	}
 }
 

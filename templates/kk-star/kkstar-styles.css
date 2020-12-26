@@ -1,0 +1,102 @@
+/*rating */
+.en-sticn {
+      color: #3d7f99;
+      font-size: 34px;
+      position: relative;
+      top: 4px;
+    }
+span.rt_form button {
+  border: none;
+  background-color: inherit;
+  padding-left:5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  color: green;
+}
+ .en-rt {
+      --star-size: 2;
+      padding: 0;
+      border: none;
+      unicode-bidi: bidi-override; direction: rtl;
+      text-align: left;
+      user-select: none;
+      font-size: 3em;
+      font-size: calc(var(--star-size) * 1em);
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-tap-highlight-color: transparent;
+    }
+    .en-rt > label {
+      display: inline-block;
+      position: relative;
+      width: 1.1em;
+      width: calc(var(--star-size) / 3 * 1.1em);
+    }
+    
+    .en-rt > *:hover,
+    .en-rt > *:hover ~ label,
+    .en-rt:not(:hover) > input:checked ~ label {
+      cursor: inherit;
+    }
+    .en-rt > *:hover:before,
+    .en-rt > *:hover ~ label:before{
+     content: "★";
+      position: absolute;
+      left: -4px;
+      color: gold;
+      
+    }
+    .en-rt:not(:hover) > input:checked ~ label:before {
+      content: "★";
+      position: absolute;
+      left: -4px;
+      color: #ef872e;
+    }
+    .en-rt > input {
+      position: relative;
+      transform: scale(3);
+      transform: scale(var(--star-size));
+      top: -0.5em;
+      top: calc(var(--star-size) / 6 * -1em);
+      margin-left: -2.5em;
+      margin-left: calc(var(--star-size) / 6 * -5em);
+      z-index: 2;
+      opacity: 0;
+      font-size: initial;
+    }
+/*Star Rating CSS End*/
+
+.str-rt-txt{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 2px;
+    margin-left: 5px;
+    }
+.kksr-muted{
+  opacity: 0.5;
+}
+
+    .en-sticn.full:before {
+      color:#ef872e;
+      content: '\2605';
+      position: absolute;
+      left: 0;
+      text-shadow: 0 0 2px rgba(0,0,0,0.7);
+    }
+    @supports (-moz-appearance:none) {
+      .design_1_wrapper .en-sticn.full::before {
+        top: 5px;
+      }
+      .cntr .en-sticn.full::before{
+        top: -5px;
+      }
+    }
+    .en-sticn.half:before {
+      color:#ef872e;
+      content: '\2605';
+      position: absolute;
+      left: 0;
+      width: 50%;
+      overflow: hidden;
+      text-shadow: 0 0 2px rgba(0,0,0,0.7);
+    }
