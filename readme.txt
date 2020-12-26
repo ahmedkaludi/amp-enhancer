@@ -93,7 +93,7 @@ Third Party Plugins Supported Features are listed below :-
 
 == Changelog ==
 
-= 1.0.10 (23 December 2020) =
+= 1.0.10 (26 December 2020) =
 * Added kk Star Ratings Plugin Compatibility.
 
 = 1.0.9 (23 December 2020) =
