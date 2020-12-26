@@ -231,7 +231,7 @@ function amp_enhancer_plugin_comaptibilities_list(){
                   </tr> 
                   <tr>
                     <td>kk Star Ratings</td>
-                        <?php if($$kkstar == true){ ?>
+                        <?php if($kkstar == true){ ?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  
