@@ -104,6 +104,20 @@ function amp_enhancer_third_party_compatibililty(){
        remove_shortcode(Bhittani\StarRating\config('shortcode'));  
        add_shortcode(Bhittani\StarRating\config('shortcode'),'amp_enhancer_kkstar_rating');  
      }
+     
+      // Content Views
+      if(class_exists('PT_CV_Html')){
+
+        $CV_PREFIX = defined('PT_CV_PREFIX_') ? PT_CV_PREFIX_ : 'pt_cv_';
+        $cv_template = $CV_PREFIX. 'view_type_file';
+        $collapsible = $CV_PREFIX. 'item_final_html';
+        $view_all_output = $CV_PREFIX. 'view_all_output';
+        $collapsible_wrapper = $CV_PREFIX. 'collapsible_filters';
+        add_filter($cv_template,'amp_enhancer_cv_template_override',10,1);
+        add_filter($collapsible,'amp_enhancer_cv_collapsible_filters',10,2);
+        add_filter($collapsible_wrapper,'amp_enhancer_cv_collapsible_wrapper',10,2);
+        add_filter($view_all_output,'amp_enhancer_cv_view_all_output',10,3);
+      }  
 	}
 }
 
