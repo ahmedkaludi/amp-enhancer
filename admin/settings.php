@@ -80,7 +80,7 @@ function  amp_enhancer_settings_page(){
 
 function amp_enhancer_plugin_comaptibilities_list(){ 
 
-  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = false;
+  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
@@ -119,6 +119,9 @@ function amp_enhancer_plugin_comaptibilities_list(){
     } 
     if(function_exists('kksr_freemius')){
       $kkstar = true;
+    }
+    if(class_exists('PT_CV_Html')){
+      $cv = true;
     }
 
   ?>
@@ -232,6 +235,14 @@ function amp_enhancer_plugin_comaptibilities_list(){
                   <tr>
                     <td>kk Star Ratings</td>
                         <?php if($kkstar == true){ ?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>Content Views– Post Grid & Filter for WordPress</td>
+                        <?php if($cv == true){ ?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  
