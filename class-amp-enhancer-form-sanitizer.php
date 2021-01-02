@@ -273,6 +273,10 @@ class AMP_Enhancer_Form_Sanitizer extends AMP_Form_Sanitizer {
 					//$p->appendChild( $this->dom->createElement( __( 'div' ) ) );
 					//$reason = __( 'Even though the server responded OK, it is possible the submission was not processed.', 'amp' );
 				}
+                 $parentclass = false;
+				if(function_exists('coblocks')){
+				 $parentclass = $form->parentNode->getAttribute( 'class' );
+				}
 
 				
 		        if((strpos($form_class, 'cart') > -1 && strpos($submit_class,'single_add_to_cart_button') > -1) || (strpos($form_class, 'variations_form') > -1)){
@@ -282,6 +286,9 @@ class AMP_Enhancer_Form_Sanitizer extends AMP_Form_Sanitizer {
                    elseif(strpos($form_class, 'amp_wpcf7_form') > -1){
                        $small = $this->dom->createElement( 'div' );
 				    $this->amp_contact_form_response( $small,$attribute );
+                   }elseif($parentclass != false && strpos($parentclass, 'coblocks-form') > -1){
+                   		 $small = $this->dom->createElement( 'div' );
+				    	$this->amp_coblocks_form_response( $small,$attribute );
                    }
                    else{
                        $small = $this->dom->createElement( 'small' );
@@ -331,6 +338,14 @@ class AMP_Enhancer_Form_Sanitizer extends AMP_Form_Sanitizer {
 	public function amp_contact_form_response( $small,$attribute ) {
 
                 $reason = ' ' . __( 'Thank you for your message. It has been sent.' );
+                $small->setAttribute( 'class', 'ampcf7-response-output' );
+				$small->appendChild( $this->dom->createTextNode( $reason ) );
+
+	}
+
+	public function amp_coblocks_form_response( $small,$attribute ) {
+
+                $reason = ' ' . esc_html__( 'Thank you for your message. It has been sent.' ,'amp-enhancer');
                 $small->setAttribute( 'class', 'ampcf7-response-output' );
 				$small->appendChild( $this->dom->createTextNode( $reason ) );
 
