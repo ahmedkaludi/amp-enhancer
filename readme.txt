@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6
-Stable tag: 1.0.12
+Stable tag: 1.0.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,7 +99,14 @@ Third Party Plugins Supported Features are listed below :-
   * Form Module Proper Submit Response.
   * Form Validation.
 
+== Astra Pro ==
+  * Added Sticky Header Module Support and also connected with the options stick primary header & sticky header on devices
+  * Added Scroll To Top Module Support.
+
 == Changelog ==
+
+= 1.0.13 (5 January 2021) =
+* Added Astra Pro Plugin Sticky Header and Scroll To Top Modules Support.
 
 = 1.0.12 (2 January 2021) =
 * Added Page Builder Gutenberg Blocks – CoBlocks Plugin Form Support.

@@ -1,0 +1,6 @@
+#ast-scroll-top {
+    background-color: #0274be;
+    font-size: 15px;
+    font-size: 1rem;
+}
+body #ast-scroll-top {display: block;}
