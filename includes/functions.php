@@ -32,9 +32,24 @@ function amp_enhancer_add_custom_css(){
           $kksr_enable = get_option('kksr_enable'); 
           if($kksr_enable == 1){
              wp_enqueue_style( 'amp_enhancer_kkstar_css', untrailingslashit(AMP_ENHANCER_PLUGIN_URI) . '/templates/kk-star/kkstar-styles.css', false, AMP_ENHANCER_VERSION );
-          }  
-        }
-    }
+          }       
+       }
+     // Astra Addon
+       if(defined('ASTRA_EXT_VER') && function_exists('astra_get_option')){
+        // Sticky Header
+         $sticky_header = defined('ASTRA_EXT_STICKY_HEADER_URI');
+         $primary_header = astra_get_option('header-main-stick');
+
+         wp_enqueue_style( 'amp_enhancer_astra_addon_css', untrailingslashit(AMP_ENHANCER_PLUGIN_URI) . '/templates/astra-addon/amp-enhancer-astra-addon-styles.css', false, AMP_ENHANCER_VERSION );
+
+           if($sticky_header == true && $primary_header == true){
+             $sticky_css = amp_enhancer_astra_sticky_header_css();
+             wp_add_inline_style( 'amp_enhancer_astra_addon_css', $sticky_css );
+
+           } 
+         }
+
+    }// amp endpoint checking ends here...
 }
 
 
@@ -118,6 +133,17 @@ function amp_enhancer_third_party_compatibililty(){
         add_filter($collapsible_wrapper,'amp_enhancer_cv_collapsible_wrapper',10,2);
         add_filter($view_all_output,'amp_enhancer_cv_view_all_output',10,3);
       }  
+
+       //Astra Addon
+       if(defined('ASTRA_EXT_VER') && function_exists('astra_get_option')){
+         // Scroll to top
+         $scroll_top = defined('ASTRA_EXT_SCROLL_TO_TOP_URL');
+
+           if($scroll_top == true || $scroll_top == 1){
+            add_action('wp_body_open','amp_enhancer_astra_back_to_top');
+            add_action('wp_footer','amp_enhancer_astra_back_to_top_link');
+           }
+       }
 	}
 }
 

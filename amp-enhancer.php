@@ -82,5 +82,9 @@ function amp_enhancer_third_party_plugins_support(){
       	   if(class_exists('PT_CV_Html')){
 		   	require_once(AMP_ENHANCER_TEMPLATE_DIR.'content-views/content-views-functions.php');
 		   }
+		   //Astra Addon
+		   if(defined('ASTRA_EXT_VER')){
+		   	require_once(AMP_ENHANCER_TEMPLATE_DIR.'astra-addon/amp-enhancer-astra-addon-functions.php');
+		   }
 		     
 }

@@ -80,7 +80,7 @@ function  amp_enhancer_settings_page(){
 
 function amp_enhancer_plugin_comaptibilities_list(){ 
 
-  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = false;
+  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
@@ -125,6 +125,9 @@ function amp_enhancer_plugin_comaptibilities_list(){
     }
     if(function_exists('coblocks')){
       $coblocks = true;
+    }
+    if(defined('ASTRA_EXT_VER')){
+      $astra = true;
     }
 
   ?>
@@ -254,6 +257,14 @@ function amp_enhancer_plugin_comaptibilities_list(){
                   <tr>
                     <td>CoBlocks</td>
                         <?php if($coblocks == true){ ?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>Astra Pro</td>
+                        <?php if($astra == true){ ?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  
