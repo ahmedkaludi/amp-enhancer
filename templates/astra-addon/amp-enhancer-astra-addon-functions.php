@@ -75,3 +75,55 @@ function amp_enhancer_astra_sticky_header_css(){
 	  }
 return $sticky_css;
 }
+
+
+add_action('wp','amp_enhancer_modify_astra_get_option',999);
+
+
+function amp_enhancer_modify_astra_get_option(){
+
+    if (  (function_exists( 'is_amp_endpoint' ) && is_amp_endpoint()) && class_exists('Astra_Ext_Extension') && true === Astra_Ext_Extension::is_active( 'advanced-search' ) ) {
+      add_filter( 'astra_get_option_header-main-rt-section-search-box-type', 'amp_enhancer_return_search_box_type');
+      add_filter('astra_addon_get_template','amp_enhancer_astra_addon_template_override',10,5);
+      add_filter( 'astra_get_search', 'amp_enhancer_get_search_markup', 10, 2 );
+    }
+}
+
+function amp_enhancer_return_search_box_type(){
+
+   $search_box_type = get_option('amp_enhancer_astra_options');
+  
+  return $search_box_type;
+}
+
+add_action('wp_loaded','amp_enhancer_astra_addon_module_options');
+
+function amp_enhancer_astra_addon_module_options(){
+add_option('amp_enhancer_astra_options',false);
+  if ( class_exists('Astra_Ext_Extension') && true === Astra_Ext_Extension::is_active( 'advanced-search' ) ) {
+    $search_box_type = astra_get_option( 'header-main-rt-section-search-box-type' );
+    update_option('amp_enhancer_astra_options',$search_box_type);
+  }
+}
+
+
+function amp_enhancer_astra_addon_template_override($located, $template_name, $args, $template_path, $default_path){
+
+  if($template_name == 'advanced-search/template/full-screen.php'){
+    $located = AMP_ENHANCER_TEMPLATE_DIR.'astra-addon/advanced-search/full-screen.php';
+  }
+  if($template_name == 'advanced-search/template/header-cover.php'){
+    $located = AMP_ENHANCER_TEMPLATE_DIR.'astra-addon/advanced-search/header-cover.php';
+  }
+  return $located;
+}
+
+function amp_enhancer_get_search_markup( $search_markup, $option = '' ) {
+
+  $search_box_type = get_option('amp_enhancer_astra_options');
+
+    if($search_box_type != 'slide-search' && preg_match('/<div\s+class="ast-search-icon"(.*?)<a(.*?)>(.*?)<\/a>/s', $search_markup)){
+      $search_markup = preg_replace('/<div\s+class="ast-search-icon"(.*?)<a(.*?)>(.*?)<\/a>/s', '<div class="ast-search-icon"$1<a$2 on="tap:AMP.setState({ astSearch: false })" >$3</a>', $search_markup);
+    }
+  return $search_markup;
+  }
