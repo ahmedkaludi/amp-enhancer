@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6
-Stable tag: 1.0.13
+Stable tag: 1.0.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,8 +102,12 @@ Third Party Plugins Supported Features are listed below :-
 == Astra Pro ==
   * Added Sticky Header Module Support and also connected with the options stick primary header & sticky header on devices
   * Added Scroll To Top Module Support.
+  * Added advance search styles feature support for all the four options slide,full-screen,header cover and search box.
 
 == Changelog ==
+
+= 1.0.14 (7 January 2021) =
+* Added Astra Pro Plugin advance search styles feature Support for all the four options slide,full-screen,header cover and search box.
 
 = 1.0.13 (5 January 2021) =
 * Added Astra Pro Plugin Sticky Header and Scroll To Top Modules Support.
