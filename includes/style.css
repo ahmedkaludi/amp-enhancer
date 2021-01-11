@@ -133,6 +133,9 @@ body .fa{font-size: 15px;}
 .elementor .elementor-widget-tabs .elementor-tab-content {
     display: block;
 }
+body .joinchat:not(.joinchat--show)>div{display: flex;}
+body .joinchat{    transform: unset;}
+body #qlwapp {display: inline;}
 amp-script {
     opacity: 1;
 }
