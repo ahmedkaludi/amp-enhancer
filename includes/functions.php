@@ -144,6 +144,12 @@ function amp_enhancer_third_party_compatibililty(){
             add_action('wp_footer','amp_enhancer_astra_back_to_top_link');
            }
        }
+    if(class_exists('JoinChat')){
+     add_filter('joinchat_html_output','amp_enhancer_joinchat_html_output',10,2); 
+    }
+    if(class_exists('QLWAPP_Frontend')){
+      add_filter('qlwapp_box_template','amp_enhancer_qlwapp_box_template',10,1);
+    }
 	}
 }
 
@@ -381,4 +387,21 @@ function amp_enhancer_custom_css_output(){
   $css     = wp_kses( $raw_css, array( '\'', '\"' ) );
   $css     = str_replace( '&gt;', '>', $css );
   return $css;
+}
+
+// Join.chat plugin
+function amp_enhancer_joinchat_html_output($html_output, $settings){
+  $href = 'https://api.whatsapp.com/send?phone='.$settings['telephone'].'&text='.$settings['message_send'].'' ;
+  $html_output = '<a class="en_join_cht" href="'.esc_url_raw($href).'"  target="_blank" >'.$html_output.'</a>';
+  return $html_output;
+}
+
+// wp social chat
+function amp_enhancer_qlwapp_box_template($file){
+
+  if(defined('QLWAPP_PLUGIN_DIR') &&  $file == QLWAPP_PLUGIN_DIR . 'template/box.php'){
+    $file = AMP_ENHANCER_TEMPLATE_DIR.'wp-social-chat/box.php';
+  }
+
+ return $file;
 }
