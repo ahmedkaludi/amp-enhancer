@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6
-Stable tag: 1.0.14
+Stable tag: 1.0.15
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -104,7 +104,18 @@ Third Party Plugins Supported Features are listed below :-
   * Added Scroll To Top Module Support.
   * Added advance search styles feature support for all the four options slide,full-screen,header cover and search box.
 
+== Join.chat ==
+  * Rendering whatsapp floating button in AMP.
+  * Dynamic variables support.
+
+== WP Social Chat ==
+  * Rendering whatsapp floating button in AMP.
+
 == Changelog ==
+
+= 1.0.15 (11 January 2021) =
+* Added Join.chat plugin support.
+* Added WP Social Chat plugin support.
 
 = 1.0.14 (7 January 2021) =
 * Added Astra Pro Plugin advance search styles feature Support for all the four options slide,full-screen,header cover and search box.
