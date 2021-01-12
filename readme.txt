@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6
-Stable tag: 1.0.15
+Stable tag: 1.0.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,7 +111,15 @@ Third Party Plugins Supported Features are listed below :-
 == WP Social Chat ==
   * Rendering whatsapp floating button in AMP.
 
+== FooGallery ==
+  * Added Responsive Image Gallery Support.
+  * Added Simple Portfolio Support.
+  * Added Single Thumbnail Gallery Support.
+
 == Changelog ==
+
+= 1.0.16 (12 January 2021) =
+* Added Responsive Image Gallery,Simple Portfolio & Single Thumbnail Gallery Support of FooGallery Plugin.
 
 = 1.0.15 (11 January 2021) =
 * Added Join.chat plugin support.
