@@ -150,6 +150,10 @@ function amp_enhancer_third_party_compatibililty(){
     if(class_exists('QLWAPP_Frontend')){
       add_filter('qlwapp_box_template','amp_enhancer_qlwapp_box_template',10,1);
     }
+   
+   if(function_exists('foogallery_fs')){ 
+    add_filter('foogallery_attachment_html_image','amp_enhancer_foogallery_attachment_html_image',10,3);
+    }
 	}
 }
 
@@ -404,4 +408,16 @@ function amp_enhancer_qlwapp_box_template($file){
   }
 
  return $file;
+}
+
+
+
+function amp_enhancer_foogallery_attachment_html_image($html, $args, $foogallery_attachment){
+  $src = isset($foogallery_attachment->url) ? $foogallery_attachment->url : false;
+  $width = isset($args['width']) ? $args['width'] : 150;
+  $height = isset($args['height']) ? $args['height'] : 150;
+  if($src != false){
+  $html = '<img class="fg-image" width="'.esc_attr($width).'" height="'.esc_attr($height).'" src="'.esc_url($src).'" />';
+  }
+ return $html;
 }
