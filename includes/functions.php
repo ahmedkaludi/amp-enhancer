@@ -48,6 +48,11 @@ function amp_enhancer_add_custom_css(){
 
            } 
          }
+      // Icegram CSS
+      if(defined('IG_PLUGIN_URL') && class_exists('Icegram')){
+
+        wp_enqueue_style( 'amp_enhancer_icegram_css', untrailingslashit(IG_PLUGIN_URL) . '/message-types/popup/themes/popup.min.css', false, AMP_ENHANCER_VERSION );
+      }
 
     }// amp endpoint checking ends here...
 }
@@ -153,6 +158,10 @@ function amp_enhancer_third_party_compatibililty(){
    
    if(function_exists('foogallery_fs')){ 
     add_filter('foogallery_attachment_html_image','amp_enhancer_foogallery_attachment_html_image',10,3);
+    }
+    // Icegram HTML Generation
+     if(defined('IG_PLUGIN_URL') && class_exists('Icegram')){
+      add_action('wp_footer','amp_enhancer_icegram_popup_output');
     }
 	}
 }

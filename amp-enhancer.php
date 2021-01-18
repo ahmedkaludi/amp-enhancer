@@ -86,5 +86,9 @@ function amp_enhancer_third_party_plugins_support(){
 		   if(defined('ASTRA_EXT_VER')){
 		   	require_once(AMP_ENHANCER_TEMPLATE_DIR.'astra-addon/amp-enhancer-astra-addon-functions.php');
 		   }
+		   //Icegram
+		   if(class_exists('Icegram')){
+		   	 require_once(AMP_ENHANCER_TEMPLATE_DIR.'icegram/amp-enhancer-icegram-popup-html.php');
+		   }
 		     
 }
