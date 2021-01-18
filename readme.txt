@@ -116,7 +116,7 @@ Third Party Plugins Supported Features are listed below :-
   * Added Simple Portfolio Support.
   * Added Single Thumbnail Gallery Support.
 
-== FooGallery ==
+== Icegram ==
   * Added Popups Support.
   * Displays campaigns on AMP Pages.
 
