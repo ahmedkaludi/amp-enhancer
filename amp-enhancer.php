@@ -3,7 +3,7 @@
 Plugin Name: AMP Enhancer
 Description: AMP Enhancer is a Compatibility Layer for Official AMP Plugin ( Its Plug & Play, Requires No Settings )
 Author: ampenhancer
-Version: 1.0.16
+Version: 1.0.17
 Author URI: http://ampenhancer.com
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -85,6 +85,10 @@ function amp_enhancer_third_party_plugins_support(){
 		   //Astra Addon
 		   if(defined('ASTRA_EXT_VER')){
 		   	require_once(AMP_ENHANCER_TEMPLATE_DIR.'astra-addon/amp-enhancer-astra-addon-functions.php');
+		   }
+		   //Icegram
+		   if(class_exists('Icegram')){
+		   	 require_once(AMP_ENHANCER_TEMPLATE_DIR.'icegram/amp-enhancer-icegram-popup-html.php');
 		   }
 		     
 }

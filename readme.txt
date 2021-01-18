@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6
-Stable tag: 1.0.16
+Stable tag: 1.0.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -116,7 +116,14 @@ Third Party Plugins Supported Features are listed below :-
   * Added Simple Portfolio Support.
   * Added Single Thumbnail Gallery Support.
 
+== Icegram ==
+  * Added Popups Support.
+  * Displays campaigns on AMP Pages.
+
 == Changelog ==
+
+= 1.0.17 (18 January 2021) =
+* Added Icegram Plugin Popup Campaigns Support.
 
 = 1.0.16 (12 January 2021) =
 * Added Responsive Image Gallery,Simple Portfolio & Single Thumbnail Gallery Support of FooGallery Plugin.
