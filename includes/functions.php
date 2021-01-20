@@ -163,6 +163,12 @@ function amp_enhancer_third_party_compatibililty(){
      if(defined('IG_PLUGIN_URL') && class_exists('Icegram')){
       add_action('wp_footer','amp_enhancer_icegram_popup_output');
     }
+    //Helpie FAQ
+     if(class_exists('Helpie_FAQ_Plugin')){
+      remove_shortcode('helpie_faq');
+      add_shortcode('helpie_faq', 'amp_enhancer_helpie_faq');
+    }
+    
 	}
 }
 
