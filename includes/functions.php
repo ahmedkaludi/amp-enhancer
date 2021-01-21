@@ -47,6 +47,15 @@ function amp_enhancer_add_custom_css(){
              wp_add_inline_style( 'amp_enhancer_astra_addon_css', $sticky_css );
 
            } 
+          if(class_exists('Astra_Builder_Header')){
+             $astra_header = Astra_Builder_Header::get_instance();
+   
+             remove_action( 'astra_header_mobile_trigger', array( $astra_header, 'header_mobile_trigger' ) );
+             remove_action( 'astra_mobile_header', array( $astra_header, 'mobile_header' ) );
+             add_action( 'astra_header_mobile_trigger', 'amp_enhancer_astra_mobile_trigger' );
+             add_action( 'astra_mobile_header', 'amp_enhancer_astra_mobile_header'  );
+           }
+
          }
       // Icegram CSS
       if(defined('IG_PLUGIN_URL') && class_exists('Icegram')){

@@ -127,3 +127,71 @@ function amp_enhancer_get_search_markup( $search_markup, $option = '' ) {
     }
   return $search_markup;
   }
+
+  // Mobile Header
+
+  function amp_enhancer_astra_mobile_header() {
+
+      $located =  AMP_ENHANCER_TEMPLATE_DIR.'astra-addon/header/mobile-builder-layout.php';
+      
+      include $located;
+
+    }
+
+   //
+   
+   function amp_enhancer_astra_mobile_trigger() {
+
+      $icon             = astra_get_option( 'header-trigger-icon' );
+      $mobile_label     = astra_get_option( 'mobile-header-menu-label' );
+      $toggle_btn_style = astra_get_option( 'mobile-header-toggle-btn-style' );
+      $aria_controls    = '';
+      if ( ! Astra_Builder_Helper::$is_header_footer_builder_active ) {
+        $aria_controls = 'aria-controls="primary-menu"';
+      }
+      ?>
+      <div class="ast-button-wrap" [hidden]="showMenu">
+        <button type="button" class="menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-<?php echo esc_attr( $toggle_btn_style ); ?>" <?php echo esc_attr( $aria_controls ); ?> aria-expanded="false"on="tap:AMP.setState({menuToggle: false,showMenu:true})">
+          <span class="screen-reader-text">Main Menu</span>
+          <span class="mobile-menu-toggle-icon">
+            <?php
+              echo Astra_Builder_UI_Controller::fetch_svg_icon( $icon ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+             // echo Astra_Builder_UI_Controller::fetch_svg_icon( 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+            ?>
+          </span>
+          <?php
+          if ( isset( $mobile_label ) && ! empty( $mobile_label ) ) {
+            ?>
+
+            <span class="mobile-menu-wrap">
+              <span class="mobile-menu"><?php echo esc_html( $mobile_label ); ?></span>
+            </span>
+            <?php
+          }
+          ?>
+        </button>
+      </div>
+
+       <div class="ast-button-wrap" hidden [hidden]="menuToggle">
+        <button type="button" class="menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-<?php echo esc_attr( $toggle_btn_style ); ?>" <?php echo esc_attr( $aria_controls ); ?> aria-expanded="false"on="tap:AMP.setState({menuToggle: true,showMenu:false})">
+          <span class="screen-reader-text">Main Menu</span>
+          <span class="mobile-menu-toggle-icon">
+            <?php
+             // echo Astra_Builder_UI_Controller::fetch_svg_icon( $icon ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+              echo Astra_Builder_UI_Controller::fetch_svg_icon( 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+            ?>
+          </span>
+          <?php
+          if ( isset( $mobile_label ) && ! empty( $mobile_label ) ) {
+            ?>
+
+            <span class="mobile-menu-wrap">
+              <span class="mobile-menu"><?php echo esc_html( $mobile_label ); ?></span>
+            </span>
+            <?php
+          }
+          ?>
+        </button>
+      </div>
+      <?php
+    } 
