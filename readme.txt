@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6
-Stable tag: 1.0.19
+Stable tag: 1.0.20
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -103,7 +103,7 @@ Third Party Plugins Supported Features are listed below :-
   * Added Sticky Header Module Support and also connected with the options stick primary header & sticky header on devices
   * Added Scroll To Top Module Support.
   * Added advance search styles feature support for all the four options slide,full-screen,header cover and search box.
-  * Off-Canvas Mobile Menu Module Support.
+  * Off-Canvas Mobile Menu Module Full Support.
 
 == Join.chat ==
   * Rendering whatsapp floating button in AMP.
@@ -126,6 +126,9 @@ Third Party Plugins Supported Features are listed below :-
   * Basic FAQ Shortcode builder for all pages and posts.
 
 == Changelog ==
+
+= 1.0.20 (23 January 2021) =
+* Added  Astra Off-Canvas Menu Module All the three Header Types(Flyout,Fullscreen,Dropdown),Position & Content Alignment Support.
 
 = 1.0.19 (21 January 2021) =
 * Added  Astra Addon Off-Canvas Mobile Menu Module Support.

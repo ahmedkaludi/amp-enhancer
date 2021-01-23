@@ -194,4 +194,74 @@ function amp_enhancer_get_search_markup( $search_markup, $option = '' ) {
         </button>
       </div>
       <?php
-    } 
+    }
+  
+ function amp_enhancer_nav_menu_wrapper( $attr){
+      $attr['[hidden]']         = 'menuToggle';
+      $attr['hidden']           = true;
+
+      return $attr;
+
+ }
+ 
+function amp_enhancer_astra_mobile_popup(){
+
+  $mobile_header_type = astra_get_option( 'mobile-header-type' );
+
+      if ( 'off-canvas' === $mobile_header_type || 'full-width' === $mobile_header_type || is_customize_preview() ) {
+
+        //Astra_Builder_Helper::render_mobile_popup_markup();
+
+
+          $off_canvas_slide   = astra_get_option( 'off-canvas-slide' );
+          $mobile_header_type = astra_get_option( 'mobile-header-type' );
+          $content_alignment  = astra_get_option( 'header-offcanvas-content-alignment' );
+
+          $side_class = 'content-align-' . $content_alignment . ' ';
+
+          if ( $mobile_header_type ) {
+
+            if ( 'off-canvas' === $mobile_header_type ) {
+
+              if ( $off_canvas_slide ) {
+
+                if ( 'left' === $off_canvas_slide ) {
+
+                  $side_class .= 'ast-mobile-popup-left';
+                } else {
+
+                  $side_class .= 'ast-mobile-popup-right';
+                }
+              }
+            } else {
+              $side_class .= 'ast-mobile-popup-full-width';
+            }
+          }
+          ?>
+          <div id="ast-mobile-popup-wrapper">
+            <div id="ast-mobile-popup" hidden [hidden]="menuToggle" class="ast-mobile-popup-drawer <?php echo esc_attr( $side_class ); ?> active show">
+            <div class="ast-mobile-popup-overlay"></div>
+            <div class="ast-mobile-popup-inner">
+                <div class="ast-mobile-popup-header">
+                  <button id="menu-toggle-close" class="menu-toggle-close" aria-label="Close menu" on="tap:AMP.setState({menuToggle: true,showMenu:false})">
+                    <span class="ast-svg-iconset">
+                      <?php echo Astra_Builder_UI_Controller::fetch_svg_icon( 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                    </span>
+                  </button>
+                </div>
+                <div class="ast-mobile-popup-content">
+                  <?php
+                    /**
+                     * Astra Off-Canvas
+                     */
+                    do_action( 'astra_render_mobile_popup', 'popup', 'content' );
+                  ?>
+                </div>
+              </div>
+          </div>
+          </div>
+
+           <?php
+
+      }
+}
