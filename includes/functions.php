@@ -180,6 +180,11 @@ function amp_enhancer_third_party_compatibililty(){
       remove_shortcode('helpie_faq');
       add_shortcode('helpie_faq', 'amp_enhancer_helpie_faq');
     }
+    // Convertkit
+    if(class_exists('WP_ConvertKit')){
+      remove_shortcode( 'convertkit');
+      add_shortcode( 'convertkit', 'amp_enhancer_convertkit_shortcode',10 );
+    }
     
 	}
 }
