@@ -80,7 +80,7 @@ function  amp_enhancer_settings_page(){
 
 function amp_enhancer_plugin_comaptibilities_list(){ 
 
-  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie =  false;
+  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
@@ -143,6 +143,9 @@ function amp_enhancer_plugin_comaptibilities_list(){
     }
     if(class_exists('Helpie_FAQ_Plugin')){
       $helpie = true;
+    }
+    if(class_exists('WP_ConvertKit')){
+      $convertkit = true;
     }
 
   ?>
@@ -320,6 +323,14 @@ function amp_enhancer_plugin_comaptibilities_list(){
                   <tr>
                     <td>Helpie FAQ</td>
                         <?php if($helpie == true){ ?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>ConvertKit</td>
+                        <?php if($convertkit == true){ ?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  
