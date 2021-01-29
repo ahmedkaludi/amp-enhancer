@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6
-Stable tag: 1.0.21
+Stable tag: 1.0.22
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -124,11 +124,15 @@ Third Party Plugins Supported Features are listed below :-
 == Helpie FAQ ==
   * Fully responsive Accordion.
   * Basic FAQ Shortcode builder for all pages and posts.
+  * Search Feature Support.
 
 == ConvertKit ==
   * Added Shortcode Email Subscription Support.
 
 == Changelog ==
+
+= 1.0.22 (29 January 2021) =
+* Added Helpie FAQ Plugin Search Feature Support.
 
 = 1.0.21 (27 January 2021) =
 * Added ConvertKit Shortcode Email Subscription Support.
