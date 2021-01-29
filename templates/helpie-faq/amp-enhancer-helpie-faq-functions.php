@@ -54,17 +54,18 @@ function  amp_enhancer_helpie_get_html( $viewProps ){
             if ( isset( $viewProps['collection']['id'] ) ) {
                 $id .= $viewProps['collection']['id'];
             }
-            $html = '<section id="' . esc_attr($id) . '" class="helpie-faq accordions ' . esc_attr($additional_classes) . '">';
+            $script_url = str_replace('http:','https:',AMP_ENHANCER_PLUGIN_URI).'templates/helpie-faq/amp-script/amp-enhancer-faq-search.js?ver='.AMP_ENHANCER_VERSION;
+            $html = '<amp-script src="'.esc_url_raw($script_url).'"><section id="' . esc_attr($id) . '" class="helpie-faq accordions ' . esc_attr($additional_classes) . '">';
             if ( isset( $viewProps['collection']['title'] ) && $viewProps['collection']['title'] != '' ) {
                 $html .= '<h3 class="collection-title">' . esc_html($viewProps['collection']['title']) . '</h3>';
             }
             // TODO check FAQ searchbar is enable or not
-            //$is_faq_search_enabled = $faq_view->is_faq_search_enabled( $viewProps );
-            //if ( $is_faq_search_enabled ) {
-            // $html .= $stylus->search->get_view( $viewProps['collection'] );
-           // }
+            $is_faq_search_enabled = amp_enhancer_is_faq_search_enabled( $viewProps );
+            if ( $is_faq_search_enabled ) {
+             $html .= $stylus->search->get_view( $viewProps['collection'] );
+            }
             $html .= amp_enhancer_get_view($viewProps );
-            $html .= '</section>';
+            $html .= '</section></amp-script>';
             return $html;
         }
 
@@ -77,8 +78,11 @@ function  amp_enhancer_helpie_get_html( $viewProps ){
             if( $top_level == 'simple_accordion_category' || $top_level == 'faq_list'){
                 $html = $accordion->get_titled_view($viewProps['items'], $collectionProps );
             } else{
-                $html = amp_enhancer_get_accordion($viewProps['items'], $collectionProps,$accordion );
+                $html = amp_enhancer_search_get_accordion($viewProps['items'], $collectionProps,$accordion );
             }
+            /*else{
+                $html = amp_enhancer_get_accordion($viewProps['items'], $collectionProps,$accordion );
+            }*/
             
 
             return $html;
@@ -105,6 +109,71 @@ function  amp_enhancer_helpie_get_html( $viewProps ){
             }
 
             $html .= '</amp-accordion>';
+
+            return $html;
+        }
+
+    function amp_enhancer_search_get_accordion($props,$collectionProps,$accordion){
+
+            $faq_list_class = '';
+            if(isset($collectionProps['display_mode']) &&  $collectionProps['display_mode'] == 'faq_list'){
+                $faq_list_class = 'faq_list';
+            }
+         
+            $html = '<article class="accordion '.$faq_list_class.'">';
+
+            for ($ii = 0; $ii < sizeof($props); $ii++) {
+                $html .= amp_enhancer_get_single_item_accordion($props[$ii],$collectionProps,$accordion);
+            }
+
+            $html .= '</article>';
+
+            return $html;
+
+        }
+
+        function amp_enhancer_get_single_item_accordion($props,$collectionProps,$accordion){
+            $id = isset($props['post_id']) ? "post-".$props['post_id'] : "term-".$props['term_id'];
+            
+            $faq_url_data_item = '';
+            if(isset($collectionProps['faq_url_attribute']) && $collectionProps['faq_url_attribute'] == 1){
+                $faq_url_data_item = 'hfaq-'.$id;
+            }
+
+            $accordion__header_classes = '';
+
+            $show_accordion_body = '';
+            if(isset($collectionProps['open_by_default']) && $collectionProps['open_by_default'] == 'open_all_faqs'){
+                $show_accordion_body = 'style="display: block;"';
+                $accordion__header_classes .= ' active'; 
+            }
+
+            $custom_toggle_icon_content = $accordion->get_custom_toggle_icon($collectionProps);
+
+            if(!empty($custom_toggle_icon_content)){
+                $accordion__header_classes .= ' custom-icon';
+            }
+
+            $html = '<li class="accordion__item">';
+            $html .= '<div class="accordion__header '.$accordion__header_classes.'" data-id="'.$id.'" data-item="'.$faq_url_data_item.'">';
+            $html .= '<div class="accordion__title">'.$props['title'].'</div>';
+            // $html .= '<a href="#hfaq-'.esc_attr($id).'">'.$props['title'].'</a>';
+            $html .= $custom_toggle_icon_content;
+            $html .= '</div>';
+            $html .= '<div hidden class="accordion__body" '.$show_accordion_body.'>';
+           
+            if(is_plugin_active('elementor/elementor.php')){
+                $html .= '<p>' . apply_filters('elementor/frontend/the_content',$props['content']) . '</p>';
+            }else{
+                $html .= '<p>' . apply_filters('the_content',$props['content']) . '</p>';
+            }
+
+            if( isset($props['children'])){
+                $html .= $accordion->get_accordion($props['children'],$collectionProps);
+            }
+            
+            $html .= '</div>';
+            $html .= '</li>';
 
             return $html;
         }
@@ -154,3 +223,18 @@ function  amp_enhancer_helpie_get_html( $viewProps ){
 
             return $html;
     }
+
+  function amp_enhancer_is_faq_search_enabled( $viewProps ){
+            
+            if ( is_singular( 'product' ) ) {
+                if ( isset( $viewProps['collection']['woo_search_show'] ) && $viewProps['collection']['woo_search_show'] ) {
+                    return true;
+                }
+            } else {
+                if ( isset( $viewProps['collection']['show_search'] ) && $viewProps['collection']['show_search'] ) {
+                    return true;
+                }
+            }
+            
+            return false;
+    }  
