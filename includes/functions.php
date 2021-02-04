@@ -65,6 +65,10 @@ function amp_enhancer_add_custom_css(){
 
         wp_enqueue_style( 'amp_enhancer_icegram_css', untrailingslashit(IG_PLUGIN_URL) . '/message-types/popup/themes/popup.min.css', false, AMP_ENHANCER_VERSION );
       }
+      // Smart Slider3
+      if(defined('SMARTSLIDER3_LIBRARY_PATH')){
+        wp_enqueue_style( 'amp_enhancer_smartslider3_css', trailingslashit(plugins_url()).'smart-slider-3/Public/SmartSlider3/Application/Frontend/Assets/dist/smartslider.min.css', false, AMP_ENHANCER_VERSION );
+      }
 
     }// amp endpoint checking ends here...
 }
@@ -185,6 +189,11 @@ function amp_enhancer_third_party_compatibililty(){
       remove_shortcode( 'convertkit');
       add_shortcode( 'convertkit', 'amp_enhancer_convertkit_shortcode',10 );
     }
+     // Smart Slider3
+    if(defined('SMARTSLIDER3_LIBRARY_PATH')){
+       remove_shortcode('smartslider3');
+       new templates\smartslider3\Enhancer_Slider_Shortcode();
+     }
     
 	}
 }

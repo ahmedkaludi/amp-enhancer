@@ -129,7 +129,13 @@ Third Party Plugins Supported Features are listed below :-
 == ConvertKit ==
   * Added Shortcode Email Subscription Support.
 
+== Smart Slider 3 ==
+  * Added Shortcode Support.
+
 == Changelog ==
+
+= 1.0.23 (4 February 2021) =
+* Added Smart Slider 3 Plugin Shortcode Support.
 
 = 1.0.22 (29 January 2021) =
 * Added Helpie FAQ Plugin Search Feature Support.

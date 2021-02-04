@@ -98,5 +98,11 @@ function amp_enhancer_third_party_plugins_support(){
     	  if(class_exists('WP_ConvertKit')){
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'convertkit/amp-enhancer-convertkit-functions.php');
     	  }
+
+    	  if(defined('SMARTSLIDER3_LIBRARY_PATH')){
+    	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'smart-slider-3/shortcode.php');
+    	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'smart-slider-3/AbstractController.php');
+    	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'smart-slider-3/controllerSlider.php');
+    	  }
 		     
 }
