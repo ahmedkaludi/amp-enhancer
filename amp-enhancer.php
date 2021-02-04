@@ -104,5 +104,9 @@ function amp_enhancer_third_party_plugins_support(){
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'smart-slider-3/AbstractController.php');
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'smart-slider-3/controllerSlider.php');
     	  }
+
+    	  if(defined('HEATEOR_FFC_VERSION')){
+    	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'fancy-comments-wordpress/fancy-comments-wordpress-functions.php');
+    	  }
 		     
 }

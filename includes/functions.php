@@ -194,7 +194,11 @@ function amp_enhancer_third_party_compatibililty(){
        remove_shortcode('smartslider3');
        new templates\smartslider3\Enhancer_Slider_Shortcode();
      }
-    
+   
+    if(defined('HEATEOR_FFC_VERSION')){
+     add_filter( 'the_content','amp_enhancer_render_facebook_comments',10 );
+     add_filter( 'the_excerpt', 'amp_enhancer_render_facebook_comments', 10 );
+    }
 	}
 }
 

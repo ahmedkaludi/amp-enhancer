@@ -80,7 +80,7 @@ function  amp_enhancer_settings_page(){
 
 function amp_enhancer_plugin_comaptibilities_list(){ 
 
-  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = $smartslider3 = false;
+  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = $smartslider3 = $fancy_comments = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
@@ -149,6 +149,9 @@ function amp_enhancer_plugin_comaptibilities_list(){
     }
     if(defined('SMARTSLIDER3_LIBRARY_PATH')){
        $smartslider3 = true;
+    }
+    if(defined('HEATEOR_FFC_VERSION')){
+       $fancy_comments = true;
     }
 
   ?>
@@ -342,6 +345,14 @@ function amp_enhancer_plugin_comaptibilities_list(){
                   <tr>
                     <td>Smart Slider 3</td>
                         <?php if($smartslider3 == true){ ?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>Fancy Comments WordPress</td>
+                        <?php if($fancy_comments == true){ ?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  
