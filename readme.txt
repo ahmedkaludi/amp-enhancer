@@ -3,8 +3,8 @@ Contributors: ampenhancer
 Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
-Tested up to: 5.6
-Stable tag: 1.0.22
+Tested up to: 5.6.1
+Stable tag: 1.0.23
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
