@@ -194,7 +194,17 @@ function amp_enhancer_third_party_compatibililty(){
        remove_shortcode('smartslider3');
        new templates\smartslider3\Enhancer_Slider_Shortcode();
      }
-    
+   
+    if(defined('HEATEOR_FFC_VERSION')){
+     add_filter( 'the_content','amp_enhancer_render_facebook_comments',10 );
+     add_filter( 'the_excerpt', 'amp_enhancer_render_facebook_comments', 10 );
+    }
+     if ( class_exists( 'ET_Builder_Module' ) ) {
+      require_once (AMP_ENHANCER_PAGEBUILDER_DIR.'divi/amp-enhancer-divi-pagebuilder.php');
+        if(class_exists('pagebuilders\divi\AMP_Enhancer_Divi_Pagebuidler')){
+         new pagebuilders\divi\AMP_Enhancer_Divi_Pagebuidler();
+        }
+     }
 	}
 }
 
