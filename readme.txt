@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6.1
-Stable tag: 1.0.23
+Stable tag: 1.0.24
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,10 @@ Third Party Plugins Supported Features are listed below :-
 == GDPR Cookie Consent : ==
   * Added Support of All the 3 Cookies viewed_cookie_policy ,cookielawinfo-checkbox-necessary/
    cookielawinfo-checkbox-non-necessary , CookieLawInfoConsent.
+
+== Divi : ==
+  * Added Accordion Support.
+  * Added Toggle Support.
 
 == Cookie Notice : ==
   * Customizable message & Link to Privacy Policy page .
@@ -132,7 +136,14 @@ Third Party Plugins Supported Features are listed below :-
 == Smart Slider 3 ==
   * Added Shortcode Support.
 
+== Fancy Comments WordPress ==
+  * Full Plugin Support.
+
 == Changelog ==
+
+= 1.0.24 (5 February 2021) =
+* Added Divi theme builder Accordion & Toggle Support.
+* Added Fancy Comments WordPress Plugin Support.
 
 = 1.0.23 (4 February 2021) =
 * Added Smart Slider 3 Plugin Shortcode Support.
