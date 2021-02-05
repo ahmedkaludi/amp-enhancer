@@ -17,6 +17,7 @@ define('AMP_ENHANCER_PLUGIN_URI', plugin_dir_url(__FILE__));
 define('AMP_ENHANCER_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('AMP_ENHANCER_BASENAME',plugin_basename(__FILE__));
 define('AMP_ENHANCER_TEMPLATE_DIR', plugin_dir_path(__FILE__).'templates/');
+define('AMP_ENHANCER_PAGEBUILDER_DIR', plugin_dir_path(__FILE__).'pagebuilders/');
 define('AMP_ENHANCER_PAGEBUILDER_URI', plugin_dir_url(__FILE__).'pagebuilders/');
 
 
