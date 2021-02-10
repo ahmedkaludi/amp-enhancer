@@ -56,7 +56,7 @@ function amp_enhancer_add_custom_css(){
              add_action( 'astra_header_mobile_trigger', 'amp_enhancer_astra_mobile_trigger' );
              add_action( 'astra_mobile_header', 'amp_enhancer_astra_mobile_header'  );
              add_action( 'wp_footer', 'amp_enhancer_astra_mobile_popup' );
-            add_filter( 'astra_attr_ast-main-header-bar-alignment', 'amp_enhancer_nav_menu_wrapper');  
+//            add_filter( 'astra_attr_ast-main-header-bar-alignment', 'amp_enhancer_nav_menu_wrapper');  
            }
 
          }
