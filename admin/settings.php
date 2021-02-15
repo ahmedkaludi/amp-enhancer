@@ -126,7 +126,7 @@ function amp_enhancer_plugin_comaptibilities_list(){
     if(function_exists('coblocks')){
       $coblocks = true;
     }
-    if(defined('ASTRA_EXT_VER')){
+    if(defined('ASTRA_EXT_VER') || defined('ASTRA_THEME_VERSION')){
       $astra = true;
     }
     if(class_exists('JoinChat')){
