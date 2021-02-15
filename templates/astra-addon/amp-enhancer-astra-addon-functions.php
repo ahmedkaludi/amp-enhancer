@@ -265,3 +265,30 @@ function amp_enhancer_astra_mobile_popup(){
 
       }
 }
+
+function amp_enhancer_astra_masthead_primary_template_markup(){
+
+    $hide_scroll = astra_get_option( 'sticky-hide-on-scroll' );
+    $amp_fx  = '';
+      if($hide_scroll == true){
+        $amp_fx = 'amp-fx="float-in-top"';
+        $amp_fx_class  = '  amp-fx-main-header'; 
+      }
+    ?>
+
+     <div class="main-header-bar-wrap" >
+    <div <?php echo astra_attr( 'main-header-bar' ); ?>  <?php echo $amp_fx; ?> >
+      <?php astra_main_header_bar_top(); ?>
+      <div class="ast-container">
+
+        <div class="ast-flex main-header-container">
+          <?php astra_masthead_content(); ?>
+        </div><!-- Main Header Container -->
+      </div><!-- ast-row -->
+      <?php astra_main_header_bar_bottom(); ?>
+    </div> <!-- Main Header Bar -->
+  </div> <!-- Main Header Bar Wrap -->
+
+  <?php
+
+}
