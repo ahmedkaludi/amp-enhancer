@@ -43,6 +43,7 @@ function amp_enhancer_third_party_plugins_support(){
 		    // Contact Form Response Support
 		    if(class_exists('WPCF7_ContactForm')){
 		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'contact-form7/cf7_functions.php');
+		      require_once(AMP_ENHANCER_TEMPLATE_DIR.'contact-form7/class_amp_enhancer_wpcf7_contactform.php');
 		    }
 	       // Cookie Notice
 	       if(class_exists('Cookie_Notice')){

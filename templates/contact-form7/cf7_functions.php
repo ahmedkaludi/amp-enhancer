@@ -37,3 +37,78 @@ function amp_enhancer_add_cf7_custom_class($class){
 	$class .='  amp_wpcf7_form  ';
 	return $class;
 }
+
+
+function amp_enhancer_wpcf7_contact_form_tag_func($atts, $content = null, $code = ''){
+
+  if ( is_feed() ) {
+    return '[contact-form-7]';
+  }
+
+  if ( 'contact-form-7' == $code ) {
+    $atts = shortcode_atts(
+      array(
+        'id' => 0,
+        'title' => '',
+        'html_id' => '',
+        'html_name' => '',
+        'html_class' => '',
+        'output' => 'form',
+      ),
+      $atts, 'wpcf7'
+    );
+
+    $id = (int) $atts['id'];
+    $title = trim( $atts['title'] );
+     
+
+
+    if ( ! $contact_form = amp_enhancer_wpcf7_contact_form( $id ) ) {
+      $contact_form = amp_enhancer_wpcf7_get_contact_form_by_title( $title );
+    }
+
+  } else {
+    if ( is_string( $atts ) ) {
+      $atts = explode( ' ', $atts, 2 );
+    }
+
+    $id = (int) array_shift( $atts );
+    $contact_form = amp_enhancer_wpcf7_get_contact_form_by_old_id( $id );
+  }
+
+  if ( ! $contact_form ) {
+    return sprintf(
+      '[contact-form-7 404 "%s"]',
+      esc_html( __( 'Not Found', 'contact-form-7' ) )
+    );
+  }
+
+  return  $contact_form->form_html( $atts );
+}
+
+
+function amp_enhancer_wpcf7_contact_form( $id ) {
+  return AMP_Enhancer_WPCF7_ContactForm::get_instance( $id );
+}
+
+
+function amp_enhancer_wpcf7_get_contact_form_by_title( $title ) {
+  $page = get_page_by_title( $title, OBJECT, WPCF7_ContactForm::post_type );
+
+  if ( $page ) {
+    return amp_enhancer_wpcf7_contact_form( $page->ID );
+  }
+
+  return null;
+}
+
+function amp_enhancer_wpcf7_get_contact_form_by_old_id( $old_id ) {
+  global $wpdb;
+
+  $q = "SELECT post_id FROM $wpdb->postmeta WHERE meta_key = '_old_cf7_unit_id'"
+    . $wpdb->prepare( " AND meta_value = %d", $old_id );
+
+  if ( $new_id = $wpdb->get_var( $q ) ) {
+    return amp_enhancer_wpcf7_contact_form( $new_id );
+  }
+}
