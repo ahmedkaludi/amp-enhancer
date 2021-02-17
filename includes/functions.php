@@ -169,9 +169,9 @@ function amp_enhancer_third_party_compatibililty(){
                remove_action( 'astra_header_mobile_trigger', array( $astra_header, 'header_mobile_trigger' ) );
                remove_action( 'astra_mobile_header', array( $astra_header, 'mobile_header' ) );
                remove_action( 'wp_footer', array( $astra_header, 'mobile_popup' ) );
-               add_action( 'astra_header_mobile_trigger', 'amp_enhancer_astra_mobile_trigger' );
+               add_action( 'astra_header_mobile_trigger', 'amp_enhancer_astra_mobile_trigger_html' );
                add_action( 'astra_mobile_header', 'amp_enhancer_astra_mobile_header'  );
-               add_action( 'wp_footer', 'amp_enhancer_astra_mobile_popup' );
+               add_action( 'wp_footer', 'amp_enhancer_astra_mobile_popup_html' );
           //   add_filter( 'astra_attr_ast-main-header-bar-alignment', 'amp_enhancer_nav_menu_wrapper');  
           }
 
@@ -212,12 +212,24 @@ function amp_enhancer_third_party_compatibililty(){
      add_filter( 'the_content','amp_enhancer_render_facebook_comments',10 );
      add_filter( 'the_excerpt', 'amp_enhancer_render_facebook_comments', 10 );
     }
+
      if ( class_exists( 'ET_Builder_Module' ) ) {
       require_once (AMP_ENHANCER_PAGEBUILDER_DIR.'divi/amp-enhancer-divi-pagebuilder.php');
         if(class_exists('pagebuilders\divi\AMP_Enhancer_Divi_Pagebuidler')){
          new pagebuilders\divi\AMP_Enhancer_Divi_Pagebuidler();
         }
      }
+
+
+     //CF7
+     if(class_exists('WPCF7_ContactForm')){
+       remove_shortcode( 'contact-form-7', 'wpcf7_contact_form_tag_func' );
+       remove_shortcode( 'contact-form', 'wpcf7_contact_form_tag_func' );
+       add_shortcode( 'contact-form-7', 'amp_enhancer_wpcf7_contact_form_tag_func' );
+       add_shortcode( 'contact-form', 'amp_enhancer_wpcf7_contact_form_tag_func' );
+    }
+
+    //
 	}
 }
 

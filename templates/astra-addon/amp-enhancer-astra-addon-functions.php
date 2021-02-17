@@ -140,7 +140,7 @@ function amp_enhancer_get_search_markup( $search_markup, $option = '' ) {
 
    //
    
-   function amp_enhancer_astra_mobile_trigger() {
+   function amp_enhancer_astra_mobile_trigger_html() {
 
       $icon             = astra_get_option( 'header-trigger-icon' );
       $mobile_label     = astra_get_option( 'mobile-header-menu-label' );
@@ -196,15 +196,15 @@ function amp_enhancer_get_search_markup( $search_markup, $option = '' ) {
       <?php
     }
   
- function amp_enhancer_nav_menu_wrapper( $attr){
+/* function amp_enhancer_nav_menu_wrapper( $attr){
       $attr['[hidden]']         = 'menuToggle';
       $attr['hidden']           = true;
 
       return $attr;
 
- }
+ }*/
  
-function amp_enhancer_astra_mobile_popup(){
+function amp_enhancer_astra_mobile_popup_html(){
 
   $mobile_header_type = astra_get_option( 'mobile-header-type' );
 
