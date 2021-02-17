@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6.1
-Stable tag: 1.0.26
+Stable tag: 1.0.27
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,7 @@ Third Party Plugins Supported Features are listed below :-
 == Contact Form 7 : ==
   * Submit Response
   * Form Validation
+  * reCAPTCHA(v3) Module support.
 
 == GDPR Cookie Consent : ==
   * Added Support of All the 3 Cookies viewed_cookie_policy ,cookielawinfo-checkbox-necessary/
@@ -140,6 +141,9 @@ Third Party Plugins Supported Features are listed below :-
   * Full Plugin Support.
 
 == Changelog ==
+
+= 1.0.27 (17 February 2021) =
+* Added reCAPTCHA(v3) Module support of Contact Form 7 Plugin.
 
 = 1.0.26 (15 February 2021) =
 * Added the functionality of Hide When Scrolling Down Option of Astra Theme Sticky Header.
