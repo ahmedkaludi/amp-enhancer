@@ -164,7 +164,7 @@ body .n2-ss-slider.n2-ss-load-fade{opacity: 1}
 .et_pb_accordion h5,.et_pb_toggle h5{background-color: unset;border: unset;}
 .et_pb_toggle section{padding: unset;border: unset;}
 body .et_pb_toggle .et_pb_toggle_title, .et_pb_toggle h5.et_pb_toggle_title{padding-bottom: 10px;}
-
+body #cookies-eu-wrapper{display: block;}
 @media(max-width: 700px){
     :root:not(#_):not(#_):not(#_):not(#_):not(#_) .elementor .swiper-slide{
         width: 100%;

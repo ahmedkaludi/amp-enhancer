@@ -497,3 +497,16 @@ function amp_enhancer_foogallery_attachment_html_image($html, $args, $foogallery
   }
  return $html;
 }
+
+function amp_enhancer_complete_html_after_dom_loaded( $content_buffer ) {
+
+  if ( (function_exists( 'is_amp_endpoint' ) && is_amp_endpoint()) ) {
+     
+    $content_buffer = apply_filters('amp_enhancer_content_html_last_filter', $content_buffer);
+  }
+  
+  return  $content_buffer;
+}
+
+
+add_action('wp', function(){ ob_start('amp_enhancer_complete_html_after_dom_loaded'); }, 999);

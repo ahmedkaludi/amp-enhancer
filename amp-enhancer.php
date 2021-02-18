@@ -97,15 +97,19 @@ function amp_enhancer_third_party_plugins_support(){
     	  if(class_exists('WP_ConvertKit')){
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'convertkit/amp-enhancer-convertkit-functions.php');
     	  }
-
+          // SMART SLIDER3
     	  if(defined('SMARTSLIDER3_LIBRARY_PATH')){
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'smart-slider-3/shortcode.php');
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'smart-slider-3/AbstractController.php');
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'smart-slider-3/controllerSlider.php');
     	  }
-
+          // fancy comments
     	  if(defined('HEATEOR_FFC_VERSION')){
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'fancy-comments-wordpress/fancy-comments-wordpress-functions.php');
+    	  }
+         // Adapta RGPD
+         if(class_exists('Adapta_RGPD')){ 
+          require_once(AMP_ENHANCER_TEMPLATE_DIR.'adapta-rgpd/amp-enhancer-adapta-rgpd-functions.php');
     	  }
 		     
 }
