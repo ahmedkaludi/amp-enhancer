@@ -145,7 +145,7 @@ Third Party Plugins Supported Features are listed below :-
 
 == Changelog ==
 
-= 1.0.28 (17 February 2021) =
+= 1.0.28 (19 February 2021) =
 * Added Adapta RGPD Plugin Support.
 
 = 1.0.27 (17 February 2021) =
