@@ -3,7 +3,7 @@
 Plugin Name: AMP Enhancer
 Description: AMP Enhancer is a Compatibility Layer for Official AMP Plugin ( Its Plug & Play, Requires No Settings )
 Author: ampenhancer
-Version: 1.0.27
+Version: 1.0.28
 Author URI: http://ampenhancer.com
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ Text Domain: amp-enhancer
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define('AMP_ENHANCER_VERSION','1.0.27');
+define('AMP_ENHANCER_VERSION','1.0.28');
 define('AMP_ENHANCER_PLUGIN_URI', plugin_dir_url(__FILE__));
 define('AMP_ENHANCER_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('AMP_ENHANCER_BASENAME',plugin_basename(__FILE__));
@@ -97,15 +97,19 @@ function amp_enhancer_third_party_plugins_support(){
     	  if(class_exists('WP_ConvertKit')){
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'convertkit/amp-enhancer-convertkit-functions.php');
     	  }
-
+          // SMART SLIDER3
     	  if(defined('SMARTSLIDER3_LIBRARY_PATH')){
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'smart-slider-3/shortcode.php');
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'smart-slider-3/AbstractController.php');
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'smart-slider-3/controllerSlider.php');
     	  }
-
+          // fancy comments
     	  if(defined('HEATEOR_FFC_VERSION')){
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'fancy-comments-wordpress/fancy-comments-wordpress-functions.php');
+    	  }
+         // Adapta RGPD
+         if(class_exists('Adapta_RGPD')){ 
+          require_once(AMP_ENHANCER_TEMPLATE_DIR.'adapta-rgpd/amp-enhancer-adapta-rgpd-functions.php');
     	  }
 		     
 }

@@ -80,7 +80,7 @@ function  amp_enhancer_settings_page(){
 
 function amp_enhancer_plugin_comaptibilities_list(){ 
 
-  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = $smartslider3 = $fancy_comments =  $divi = false;
+  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = $smartslider3 = $fancy_comments =  $divi = $adapta_RGPD = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
@@ -155,6 +155,9 @@ function amp_enhancer_plugin_comaptibilities_list(){
     }
     if ( function_exists( 'et_setup_theme' ) ) {
          $divi = true;
+    }
+    if(class_exists('Adapta_RGPD')){ 
+      $adapta_RGPD = true;
     }
 
   ?>
@@ -364,6 +367,14 @@ function amp_enhancer_plugin_comaptibilities_list(){
                   <tr>
                     <td>Fancy Comments WordPress</td>
                         <?php if($fancy_comments == true){ ?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>Adapta RGPD</td>
+                        <?php if($adapta_RGPD == true){ ?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  
