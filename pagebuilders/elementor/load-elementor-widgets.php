@@ -41,11 +41,15 @@ class Amp_Enhancer_Elementor_Widgets_Loading {
 
 
 	public function amp_enhancer_elementor_add_amp_script_wrapper($content){
-		if ( (function_exists( 'is_amp_endpoint' ) && is_amp_endpoint()) ) {
-		  $script_url = str_replace('http:','https:',AMP_ENHANCER_PAGEBUILDER_URI).'elementor/amp-script/amp-enhancer-elementor.js?ver='.AMP_ENHANCER_VERSION;
-		 $amp_script = ' <amp-script src="'.esc_url_raw($script_url).'" sandbox="allow-forms" >';
-		 $close_script = '</amp-script>';
-		 $content =  $amp_script.$content.$close_script;
+		$post_id = get_the_ID();
+
+	   if ( (function_exists( 'is_amp_endpoint' ) && is_amp_endpoint() && (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->db->is_built_with_elementor($post_id) ) ) ) {
+	   	
+		  	$script_url = str_replace('http:','https:',AMP_ENHANCER_PAGEBUILDER_URI).'elementor/amp-script/amp-enhancer-elementor.js?ver='.AMP_ENHANCER_VERSION;
+		 	$amp_script = ' <amp-script src="'.esc_url_raw($script_url).'" sandbox="allow-forms" >';
+		 	$close_script = '</amp-script>';
+
+		  $content =  $amp_script.$content.$close_script;
 	    }
       
        return $content;
