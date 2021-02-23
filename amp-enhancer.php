@@ -111,5 +111,8 @@ function amp_enhancer_third_party_plugins_support(){
          if(class_exists('Adapta_RGPD')){ 
           require_once(AMP_ENHANCER_TEMPLATE_DIR.'adapta-rgpd/amp-enhancer-adapta-rgpd-functions.php');
     	  }
-		     
+         // Ultimate Addons For Gutenberg
+    	  if(class_exists('UAGB_Loader')){
+		     require_once(AMP_ENHANCER_TEMPLATE_DIR.'ultimate-addons-for-gutenberg/amp-enhancer-ul-addon-gtbg-functions.php');
+		  }
 }
