@@ -229,7 +229,11 @@ function amp_enhancer_third_party_compatibililty(){
        add_shortcode( 'contact-form', 'amp_enhancer_wpcf7_contact_form_tag_func' );
     }
 
-    //
+    // Ultimate Addons For Gutenberg
+    if(class_exists('UAGB_Loader')){
+      add_filter('the_content','amp_enhancer_ul_addon_gutenberg_functionalities',999);
+    }
+
 	}
 }
 
