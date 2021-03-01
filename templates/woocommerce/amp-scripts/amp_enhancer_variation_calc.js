@@ -69,11 +69,12 @@ function amp_en_ajax_request_sending(formData){
           if(output == false){
              price = "Sorry this combination is not available";
              document.getElementById("error_msg").classList.remove("hide"); 
+             document.getElementById("error_msg").style.display = 'inline-block'; 
              document.getElementById("error_msg").innerHTML = price;
              document.getElementById("var_display_price").style.display = 'none';
              return;
            }
-             document.getElementById("error_msg").classList.add("hide"); 
+             document.getElementById("error_msg").style.display = 'none'; 
              price = output.display_price;
              /* var  image_url = output.image.url;
              var thumb_url_src = output.image.gallery_thumbnail_src;
