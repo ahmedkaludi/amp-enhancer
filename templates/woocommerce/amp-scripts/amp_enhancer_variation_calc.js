@@ -30,13 +30,13 @@ function amp_enhancer_variation_calculation(e){
       }
 
       if(all_attribute_set == false){
-      document.getElementById("var_display_price").classList.remove("hide");
-      document.getElementById("var_display_price").classList.add("hide");  
+      document.getElementById("var_display_price").style.display = 'inline-block';
+      document.getElementById("var_display_price").style.display = 'none';
       var default_img = '';
       //AMP.setState({product:{swatch_image:{bigswatch_url:default_img,big_tmb_src:default_img}}});
       return;
       }
-     document.getElementById("var_display_price").classList.remove("hide");
+     document.getElementById("var_display_price").style.display = 'inline-block';
      var product_id = form.getAttribute('data-product_id');
    
 	
@@ -67,11 +67,11 @@ function amp_en_ajax_request_sending(formData){
           //console.log(output);
           var price = '';
           if(output == false){
-           price = "Sorry this combination is not available";
-           document.getElementById("error_msg").classList.remove("hide"); 
-           document.getElementById("error_msg").innerHTML = price;
-           document.getElementById("var_display_price").classList.add("hide"); 
-           return;
+             price = "Sorry this combination is not available";
+             document.getElementById("error_msg").classList.remove("hide"); 
+             document.getElementById("error_msg").innerHTML = price;
+             document.getElementById("var_display_price").style.display = 'none';
+             return;
            }
              document.getElementById("error_msg").classList.add("hide"); 
              price = output.display_price;

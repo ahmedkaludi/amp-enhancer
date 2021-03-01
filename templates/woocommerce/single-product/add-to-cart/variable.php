@@ -21,7 +21,7 @@ global $product;
 
 $default_varprice = '';
 $default_variation = $product->get_default_attributes();
-$show_class = "hide";
+$show_class = "none";
 $variation_id = 0;
 add_option('amp_enhancer_wc_variation_id',$variation_id);
 
@@ -41,7 +41,7 @@ add_option('amp_enhancer_wc_variation_id',$variation_id);
          update_option('amp_enhancer_wc_variation_id',$variation_id);
 
      $default_varprice = $variation['display_price'];
-     $show_class = '';
+     $show_class = 'inline-block';
   }
 
 $attribute_keys  = array_keys( $attributes );
@@ -83,7 +83,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				</tbody>
 			</table>
 
-			 <div id="var_display_price"  class="single_variation_wrap <?php esc_attr_e($show_class); ?>">
+			 <div id="var_display_price"  class="single_variation_wrap" style="display:<?php echo $show_class; ?> ">
 		      <div class="var_show_price ">
 		        <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo esc_html__($allStaticData['product']['currency_sym'],'amp-enhancer'); ?></span><span id="var_price" ><?php echo esc_html__($default_varprice,'amp-enhancer'); ?></span></span></span>
 		        <div id="awc-in-stock" style="margin-top: 20px;"></div>

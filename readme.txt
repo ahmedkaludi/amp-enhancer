@@ -3,8 +3,8 @@ Contributors: ampenhancer
 Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
-Tested up to: 5.6.1
-Stable tag: 1.0.29
+Tested up to: 5.6.2
+Stable tag: 1.0.30
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,7 @@ Third Party Plugins Supported Features are listed below :-
   * Single Product Tab Functionality.
   * Cart Page Coupon Code Functionality
   * Update Cart Support.
+  * Variable Product Support.
   * Shop and Archives Page Orderby Sorting.
 
 == Elementor : ==
@@ -148,6 +149,9 @@ Third Party Plugins Supported Features are listed below :-
   * FAQ-Schema Block Support.
 
 == Changelog ==
+
+= 1.0.30 (1st March 2021) =
+* Added Variable Product Support of WooCommerce Plugin.
 
 = 1.0.29 (23 February 2021) =
 * Added Gutenberg Blocks – Ultimate Addons for Gutenberg Plugin Table of Contents and FAQ-Schema Blocks Support.
