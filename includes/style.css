@@ -46,7 +46,7 @@
 html .single-product .product .woocommerce-product-gallery .flex-control-thumbs{
 	margin-top: 30px;  
 }
-.storefront-product-pagination{
+.storefront-product-pagination,.hide{
 	display:none;
 }
 .carousel-indicators {
@@ -142,6 +142,7 @@ body #qlwapp {display: inline;}
 amp-script {
     opacity: 1;
 }
+.show{display: inline-block;}
 .swiper-wrapper{
 transition-duration: 500ms;
 }
