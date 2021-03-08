@@ -435,7 +435,7 @@ function amp_enhancer_settings_support_box_html(){ ?>
                        If you have got the features which you are looking for in our plugin, then please rate us a 5 star review on WordPress.org.</p>
                     <p>This will help spread the word out about this plugin and will encourage us to continue the development.</p>
                     <p>Much appreciated, thank you very much.</p>
-                    <a href="https://wordpress.org/support/plugin/amp-enhancer/reviews/?rate=5#new-post">Give Us a 5 star</a>               </div>
+                    <a href="https://wordpress.org/support/plugin/amp-enhancer/reviews/?rate=5#new-post" target="_blank">Give Us a 5 star</a>               </div>
             </div>
             <?php
 }
