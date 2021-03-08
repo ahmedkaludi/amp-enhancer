@@ -116,4 +116,8 @@ function amp_enhancer_third_party_plugins_support(){
     	  if(class_exists('UAGB_Loader')){
 		     require_once(AMP_ENHANCER_TEMPLATE_DIR.'ultimate-addons-for-gutenberg/amp-enhancer-ul-addon-gtbg-functions.php');
 		  }
+		  // NinjaTable
+    	  if(function_exists('ninja_tables_boot')){
+    	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'ninja-tables/amp-enhancer-ninja-tables-functions.php');
+    	  }
 }

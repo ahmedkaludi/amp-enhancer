@@ -234,6 +234,13 @@ function amp_enhancer_third_party_compatibililty(){
       add_filter('the_content','amp_enhancer_ul_addon_gutenberg_functionalities',999);
     }
 
+    // NinjaTable
+    if(function_exists('ninja_tables_boot')){
+        $shortCodeBase = apply_filters('ninja_tables_shortcode_base', 'ninja_tables');
+        remove_shortcode($shortCodeBase, 'render_ninja_table_shortcode');
+        add_shortcode($shortCodeBase, 'amp_enhancer_render_ninja_table_shortcode');
+     }
+
 	}
 }
 

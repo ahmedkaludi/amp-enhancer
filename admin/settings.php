@@ -80,7 +80,7 @@ function  amp_enhancer_settings_page(){
 
 function amp_enhancer_plugin_comaptibilities_list(){ 
 
-  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = $smartslider3 = $fancy_comments =  $divi = $adapta_RGPD = $UAGB = false;
+  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = $smartslider3 = $fancy_comments =  $divi = $adapta_RGPD = $UAGB = $nj_tables = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
@@ -162,6 +162,9 @@ function amp_enhancer_plugin_comaptibilities_list(){
 
     if(class_exists('UAGB_Loader')){
       $UAGB = true;
+    }
+    if(function_exists('ninja_tables_boot')){
+      $nj_tables = true;
     }
 
   ?>
@@ -387,6 +390,14 @@ function amp_enhancer_plugin_comaptibilities_list(){
                   <tr>
                     <td>Ultimate Addons for Gutenberg</td>
                         <?php if($UAGB == true){ ?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>Ninja Tables</td>
+                        <?php if($nj_tables == true){ ?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  
