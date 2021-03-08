@@ -80,7 +80,7 @@ function  amp_enhancer_settings_page(){
 
 function amp_enhancer_plugin_comaptibilities_list(){ 
 
-  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = $smartslider3 = $fancy_comments =  $divi = $adapta_RGPD = $UAGB = false;
+  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = $smartslider3 = $fancy_comments =  $divi = $adapta_RGPD = $UAGB = $nj_tables = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
@@ -162,6 +162,9 @@ function amp_enhancer_plugin_comaptibilities_list(){
 
     if(class_exists('UAGB_Loader')){
       $UAGB = true;
+    }
+    if(function_exists('ninja_tables_boot')){
+      $nj_tables = true;
     }
 
   ?>
@@ -392,6 +395,14 @@ function amp_enhancer_plugin_comaptibilities_list(){
                         <td>Inactive</td>  
                         <?php } ?>
                   </tr>
+                  <tr>
+                    <td>Ninja Tables</td>
+                        <?php if($nj_tables == true){ ?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
                 </table>
             </div>
     <?php 
@@ -424,7 +435,7 @@ function amp_enhancer_settings_support_box_html(){ ?>
                        If you have got the features which you are looking for in our plugin, then please rate us a 5 star review on WordPress.org.</p>
                     <p>This will help spread the word out about this plugin and will encourage us to continue the development.</p>
                     <p>Much appreciated, thank you very much.</p>
-                    <a href="https://wordpress.org/support/plugin/amp-enhancer/reviews/?rate=5#new-post">Give Us a 5 star</a>               </div>
+                    <a href="https://wordpress.org/support/plugin/amp-enhancer/reviews/?rate=5#new-post" target="_blank">Give Us a 5 star</a>               </div>
             </div>
             <?php
 }
