@@ -120,4 +120,9 @@ function amp_enhancer_third_party_plugins_support(){
     	  if(function_exists('ninja_tables_boot')){
     	  	require_once(AMP_ENHANCER_TEMPLATE_DIR.'ninja-tables/amp-enhancer-ninja-tables-functions.php');
     	  }
+    	  //
+    	  if(class_exists('WPCF7r_Submission')){ 
+    	  		require_once(AMP_ENHANCER_TEMPLATE_DIR.'wpcf7-redirect/amp-enhancer-wpcf7-redirect-functions.php');	
+    	  		add_action( 'wpcf7_submit','amp_enhancer_wpcf7_redirect_handle',99,1);
+    	 }
 }
