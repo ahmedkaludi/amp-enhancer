@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.6.2
-Stable tag: 1.0.31
+Stable tag: 1.0.32
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -152,7 +152,14 @@ Third Party Plugins Supported Features are listed below :-
   * Shortcode Support.
   * Full design Compatibility.
 
+== Redirection for Contact Form 7 ==
+  * Redirect to any URL.
+
 == Changelog ==
+
+= 1.0.32 (11 March 2021) =
+* Added Redirection for Contact Form 7 Plugin Support.
+* Fixed the issue of Zakra theme Sub menu's are not displaying in AMP.
 
 = 1.0.31 (8 March 2021) =
 * Added Ninja Tables Plugin Shortcode Support.
