@@ -240,7 +240,7 @@ class AMP_Enhancer_Form_Sanitizer extends AMP_Form_Sanitizer {
 			$div->setAttribute( 'class', 'amp-wp-default-form-message' );
 			if ( 'submitting' === $attribute ) {
 				$p = $this->dom->createElement( 'p' );
-				$p->appendChild( $this->dom->createTextNode( __( 'Submitting…', 'amp' ) ) );
+				$p->appendChild( $this->dom->createTextNode( __( 'Submitting…', 'amp-enhancer' ) ) );
 				$template->appendChild( $p );
 			} else {
 				$p = $this->dom->createElement( 'p' );
@@ -251,7 +251,7 @@ class AMP_Enhancer_Form_Sanitizer extends AMP_Form_Sanitizer {
 				$p->appendChild( $this->dom->createTextNode( '{{^message}}' ) );
 			    $submit_class = $form_class = '';
 				if ( 'submit-error' === $attribute ) {
-					$p->appendChild( $this->dom->createTextNode( __( 'Your submission failed.', 'amp' ) ) );
+					$p->appendChild( $this->dom->createTextNode( __( 'Your submission failed.', 'amp-enhancer' ) ) );
 					/* translators: %1$s: HTTP status text, %2$s: HTTP status code */
 					$reason = sprintf( __( 'The server responded with %1$s (code %2$s).', 'amp' ), '{{status_text}}', '{{status_code}}' );
 					
@@ -292,13 +292,13 @@ class AMP_Enhancer_Form_Sanitizer extends AMP_Form_Sanitizer {
                    }
                    else{
                        $small = $this->dom->createElement( 'small' );
-                       $reason .= ' ' . __( 'Please contact the developer of this form processor to improve this message.', 'amp' );
+                       $reason .= ' ' . __( 'Please contact the developer of this form processor to improve this message.', 'amp-enhancer' );
                        $small->appendChild( $this->dom->createTextNode( $reason ) );
 						$small->appendChild( $this->dom->createTextNode( ' ' ) );
 						$link = $this->dom->createElement( 'a' );
 						$link->setAttribute( 'href', 'https://amp-wp.org/?p=5463' );
 						$link->setAttribute( 'target', '_blank' );
-						$link->appendChild( $this->dom->createTextNode( __( 'Learn More', 'amp' ) ) );
+						$link->appendChild( $this->dom->createTextNode( __( 'Learn More', 'amp-enhancer' ) ) );
 						$small->appendChild( $link );
                 } 
 				$p->appendChild( $small );
@@ -319,7 +319,7 @@ class AMP_Enhancer_Form_Sanitizer extends AMP_Form_Sanitizer {
 						  $name = $product->get_name();
                           $cart_url = wc_get_cart_url().'?amp';
 					}
-                $reason = ' ' . __( '“'.$name  .'” has been added to your cart.	', 'amp' );
+                $reason = ' ' . esc_html__( '“'.$name  .'”','amp-enhancer').esc_html__(' has been added to your cart', 'amp-enhancer' );
                 //$small = $this->dom->createElement( 'div' );
                 $small->setAttribute( 'class', 'woocommerce-message' );
                 //$small->setAttribute( 'data-test', $attribute );
@@ -329,7 +329,7 @@ class AMP_Enhancer_Form_Sanitizer extends AMP_Form_Sanitizer {
 				$link->setAttribute( 'href', $cart_url );
 				$link->setAttribute( 'tabindex', '1' );
 				$link->setAttribute( 'target', '_blank' );
-				$link->appendChild( $this->dom->createTextNode( __( 'View cart', 'amp' ) ) );
+				$link->appendChild( $this->dom->createTextNode( esc_html__( 'View cart', 'amp-enhancer' ) ) );
 				$small->appendChild( $link );
 				$small->appendChild( $this->dom->createTextNode( $reason ) );
 
@@ -337,7 +337,7 @@ class AMP_Enhancer_Form_Sanitizer extends AMP_Form_Sanitizer {
 
 	public function amp_contact_form_response( $small,$attribute ) {
 
-                $reason = ' ' . __( 'Thank you for your message. It has been sent.' );
+                $reason = ' ' . esc_html__( 'Thank you for your message. It has been sent.','amp-enhancer');
                 $small->setAttribute( 'class', 'ampcf7-response-output' );
 				$small->appendChild( $this->dom->createTextNode( $reason ) );
 
