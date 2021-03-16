@@ -1,0 +1,2 @@
+body #wpfront-notification-bar-spacer.hidden,body #wpfront-notification-bar-open-button.hidden{display:inline-block;}
+body #wpfront-notification-bar{visibility:visible;}
