@@ -80,7 +80,7 @@ function  amp_enhancer_settings_page(){
 
 function amp_enhancer_plugin_comaptibilities_list(){ 
 
-  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = $smartslider3 = $fancy_comments =  $divi = $adapta_RGPD = $UAGB = $nj_tables = $wpcf7_redirect = false;
+  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = $smartslider3 = $fancy_comments =  $divi = $adapta_RGPD = $UAGB = $nj_tables = $wpcf7_redirect = $wpfront_bar = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
@@ -168,6 +168,9 @@ function amp_enhancer_plugin_comaptibilities_list(){
     }
     if(class_exists('WPCF7r_Submission')){ 
       $wpcf7_redirect = true;
+    }
+    if(class_exists('WPFront_Notification_Bar')){
+       $wpfront_bar = true;
     }
 
   ?>
@@ -409,6 +412,14 @@ function amp_enhancer_plugin_comaptibilities_list(){
                   <tr>
                     <td>Redirection for Contact Form 7</td>
                         <?php if($wpcf7_redirect == true){ ?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>WPFront Notification Bar</td>
+                        <?php if($wpfront_bar == true){ ?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  

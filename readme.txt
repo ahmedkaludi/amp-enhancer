@@ -3,8 +3,8 @@ Contributors: ampenhancer
 Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
-Tested up to: 5.6.2
-Stable tag: 1.0.32
+Tested up to: 5.7
+Stable tag: 1.0.33
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,8 +43,10 @@ Third Party Plugins Supported Features are listed below :-
   * reCAPTCHA(v3) Module support.
 
 == GDPR Cookie Consent : ==
-  * Added Support of All the 3 Cookies viewed_cookie_policy ,cookielawinfo-checkbox-necessary/
-   cookielawinfo-checkbox-non-necessary , CookieLawInfoConsent.
+  * Added Support of All the 3 Cookies
+  * viewed_cookie_policy
+  * CookieLawInfoConsent
+  * cookielawinfo-checkbox-necessary/cookielawinfo-checkbox-non-necessary 
 
 == Divi : ==
   * Added Accordion Support.
@@ -155,7 +157,15 @@ Third Party Plugins Supported Features are listed below :-
 == Redirection for Contact Form 7 ==
   * Redirect to any URL.
 
+== WPFront Notification Bar ==
+  * Added Notification Bar Support.
+  * Connected with Enabled and Position Options.
+
 == Changelog ==
+
+= 1.0.33 (16 March 2021) =
+* Added Pot File for string translation.
+* Added WPFront Notification Bar Plugin Support.
 
 = 1.0.32 (11 March 2021) =
 * Added Redirection for Contact Form 7 Plugin Support.

@@ -1,0 +1,1106 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: amp enhancer 1.0.33\n"
+"POT-Creation-Date: 2021-03-15 09:30+0000\n"
+"PO-Revision-Date: 2021-03-15 09:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: amp enahancer\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;esc_html__;esc_html_e;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/amp-enhancer-custom-css/amp-enhancer-custom-css.php:16
+#: admin/settings.php:69
+msgid "Save Settings"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:17
+msgid "Popups (AMP)"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:18
+msgid "Popup (AMP)"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:19
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:20
+msgid "Add New"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:21
+msgid "Edit Popup"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:41
+#: pagebuilders/elementor/widgets/amp-accordion.php:113
+#: pagebuilders/elementor/widgets/amp-accordion.php:420
+#: pagebuilders/elementor/widgets/amp-alert.php:128
+#: pagebuilders/elementor/widgets/amp-tabs.php:111
+#: pagebuilders/elementor/widgets/amp-tabs.php:293
+#: pagebuilders/elementor/widgets/amp-toggle.php:112
+#: pagebuilders/elementor/widgets/amp-toggle.php:443
+msgid "Content"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:43
+msgid "Advance Popup settings"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:79
+msgid "Editor Type"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:106
+msgid "Pop up Content"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:119
+msgid "Enter Shortcode"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:131
+msgid "Custom AMP HTML"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:139
+msgid "Display"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:153
+msgid "Globally"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:154
+msgid "Homepage"
+msgstr ""
+
+#: admin/amp-enhancer-popup/amp-enhancer-popup-admin.php:257
+msgid "Set the Time Interval in Hours, only in numerics ( eg: 12 )"
+msgstr ""
+
+#: admin/settings.php:16
+msgid "Compatibilities"
+msgstr ""
+
+#: admin/settings.php:18
+msgid "Features"
+msgstr ""
+
+#: admin/settings.php:483
+msgid "Learn more"
+msgstr ""
+
+#: class-amp-enhancer-form-sanitizer.php:243
+msgid "Submitting…"
+msgstr ""
+
+#: class-amp-enhancer-form-sanitizer.php:254
+msgid "Your submission failed."
+msgstr ""
+
+#: class-amp-enhancer-form-sanitizer.php:256
+#, php-format
+msgid "The server responded with %1$s (code %2$s)."
+msgstr ""
+
+#: class-amp-enhancer-form-sanitizer.php:295
+msgid ""
+"Please contact the developer of this form processor to improve this message."
+msgstr ""
+
+#: class-amp-enhancer-form-sanitizer.php:301
+msgid "Learn More"
+msgstr ""
+
+#: class-amp-enhancer-form-sanitizer.php:322
+msgid "“"
+msgstr ""
+
+#: class-amp-enhancer-form-sanitizer.php:322
+msgid " has been added to your cart"
+msgstr ""
+
+#: class-amp-enhancer-form-sanitizer.php:332
+msgid "View cart"
+msgstr ""
+
+#: class-amp-enhancer-form-sanitizer.php:340
+#: class-amp-enhancer-form-sanitizer.php:348
+msgid "Thank you for your message. It has been sent."
+msgstr ""
+
+#: includes/functions.php:252
+msgid "Settings"
+msgstr ""
+
+#: includes/functions.php:252
+msgid "Support"
+msgstr ""
+
+#: includes/functions.php:254
+msgid "Please Activate Parent Plugin"
+msgstr ""
+
+#: includes/functions.php:268
+msgid ""
+"Thank You for activating AMP Enhancer, it has Built-In functionalities no "
+"setup required."
+msgstr ""
+
+#: includes/functions.php:269
+msgid "Dismiss"
+msgstr ""
+
+#: includes/functions.php:309 includes/functions.php:310
+msgid "AMP Enhancer"
+msgstr ""
+
+#: includes/functions.php:317 includes/functions.php:318
+msgid "Popups"
+msgstr ""
+
+#: includes/functions.php:325 includes/functions.php:326
+msgid "Custom CSS"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:5
+#: pagebuilders/elementor/widgets/amp-accordion.php:48
+#: pagebuilders/elementor/widgets/amp-accordion.php:91
+#: pagebuilders/elementor/widgets/amp-accordion.php:231
+msgid "Accordion"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:6
+msgid "Accordions"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:16
+#: pagebuilders/divi/modules/Toggle.php:21
+#: pagebuilders/elementor/widgets/amp-accordion.php:152
+#: pagebuilders/elementor/widgets/amp-accordion.php:345
+#: pagebuilders/elementor/widgets/amp-toggle.php:151
+#: pagebuilders/elementor/widgets/amp-toggle.php:368
+msgid "Icon"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:17
+#: pagebuilders/divi/modules/Accordion.php:112
+#: pagebuilders/divi/modules/Toggle.php:5
+#: pagebuilders/divi/modules/Toggle.php:26
+#: pagebuilders/elementor/widgets/amp-toggle.php:47
+#: pagebuilders/elementor/widgets/amp-toggle.php:90
+#: pagebuilders/elementor/widgets/amp-toggle.php:230
+msgid "Toggle"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:67
+#: pagebuilders/divi/modules/Toggle.php:72
+#: pagebuilders/divi/modules/Toggle.php:89
+msgid "Closed Title"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:116
+#: pagebuilders/divi/modules/Toggle.php:141
+msgid "Open Toggle"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:120
+#: pagebuilders/divi/modules/Toggle.php:146
+#: pagebuilders/elementor/widgets/amp-toggle.php:101
+msgid "Toggle Title"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:124
+#: pagebuilders/divi/modules/Toggle.php:150
+msgid "Toggle Icon"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:128
+#: pagebuilders/divi/modules/Toggle.php:154
+#: pagebuilders/elementor/widgets/amp-toggle.php:114
+msgid "Toggle Content"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:136
+msgid "An introduction to the Accordion module"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:144
+#: pagebuilders/divi/modules/Toggle.php:202
+msgid "Open Title Text Color"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:145
+#: pagebuilders/divi/modules/Toggle.php:203
+msgid ""
+"You can pick unique text colors for toggle titles when they are open and "
+"closed. Choose the open state title color here."
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:155
+#: pagebuilders/divi/modules/Toggle.php:213
+msgid "Open Toggle Background Color"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:156
+#: pagebuilders/divi/modules/Toggle.php:214
+msgid ""
+"You can pick unique background colors for toggles when they are in their "
+"open and closed states. Choose the open state background color here."
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:166
+#: pagebuilders/divi/modules/Toggle.php:224
+msgid "Closed Title Text Color"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:167
+#: pagebuilders/divi/modules/Toggle.php:225
+msgid ""
+"You can pick unique text colors for toggle titles when they are open and "
+"closed. Choose the closed state title color here."
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:177
+#: pagebuilders/divi/modules/Toggle.php:235
+msgid "Closed Toggle Background Color"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:178
+#: pagebuilders/divi/modules/Toggle.php:236
+msgid ""
+"You can pick unique background colors for toggles when they are in their "
+"open and closed states. Choose the closed state background color here."
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:188
+#: pagebuilders/divi/modules/Toggle.php:246
+msgid "Icon Color"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:189
+#: pagebuilders/divi/modules/Toggle.php:247
+msgid "Here you can define a custom color for the toggle icon."
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:199
+msgid "Use Icon Font Size"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:200
+#: pagebuilders/divi/modules/Toggle.php:258
+msgid ""
+"If you would like to control the size of the icon, you must first enable "
+"this option."
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:216
+#: pagebuilders/divi/modules/Toggle.php:274
+msgid "Icon Font Size"
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:217
+#: pagebuilders/divi/modules/Toggle.php:275
+msgid "Control the size of the icon by increasing or decreasing the font size."
+msgstr ""
+
+#: pagebuilders/divi/modules/Accordion.php:427
+msgid "Add New Accordion Item"
+msgstr ""
+
+#: pagebuilders/divi/modules/Toggle.php:6
+msgid "Toggles"
+msgstr ""
+
+#: pagebuilders/divi/modules/Toggle.php:16
+#: pagebuilders/divi/modules/Toggle.php:180
+msgid "State"
+msgstr ""
+
+#: pagebuilders/divi/modules/Toggle.php:162
+msgid "An introduction to the Toggle module"
+msgstr ""
+
+#: pagebuilders/divi/modules/Toggle.php:173
+msgid "The title will appear above the content and when the toggle is closed."
+msgstr ""
+
+#: pagebuilders/divi/modules/Toggle.php:184
+#: templates/cookie-law-info/views/cookie-law-info_bar.php:24
+msgid "Close"
+msgstr ""
+
+#: pagebuilders/divi/modules/Toggle.php:185
+msgid "Open"
+msgstr ""
+
+#: pagebuilders/divi/modules/Toggle.php:189
+msgid ""
+"Choose whether or not this toggle should start in an open or closed state."
+msgstr ""
+
+#: pagebuilders/divi/modules/Toggle.php:195
+msgid "Input the main text content for your module here."
+msgstr ""
+
+#: pagebuilders/divi/modules/Toggle.php:257
+msgid "Use Custom Icon Size"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:100
+#: pagebuilders/elementor/widgets/amp-alert.php:114
+#: pagebuilders/elementor/widgets/amp-tabs.php:100
+#: pagebuilders/elementor/widgets/amp-toggle.php:99
+msgid "Title & Description"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:102
+msgid "Accordion Title"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:115
+msgid "Accordion Content"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:123
+msgid "Accordion Items"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:128
+msgid "Accordion #1"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:129
+#: pagebuilders/elementor/widgets/amp-accordion.php:133
+#: pagebuilders/elementor/widgets/amp-tabs.php:131
+#: pagebuilders/elementor/widgets/amp-tabs.php:135
+#: pagebuilders/elementor/widgets/amp-toggle.php:128
+#: pagebuilders/elementor/widgets/amp-toggle.php:132
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, "
+"luctus nec ullamcorper mattis, pulvinar dapibus leo."
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:132
+msgid "Accordion #2"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:143
+#: pagebuilders/elementor/widgets/amp-alert.php:156
+#: pagebuilders/elementor/widgets/amp-counter.php:213
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:237
+#: pagebuilders/elementor/widgets/amp-progress.php:166
+#: pagebuilders/elementor/widgets/amp-tabs.php:145
+#: pagebuilders/elementor/widgets/amp-toggle.php:142
+msgid "View"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:180
+#: pagebuilders/elementor/widgets/amp-toggle.php:179
+msgid "Active Icon"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:210
+#: pagebuilders/elementor/widgets/amp-toggle.php:209
+msgid "Title HTML Tag"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:239
+#: pagebuilders/elementor/widgets/amp-tabs.php:202
+#: pagebuilders/elementor/widgets/amp-toggle.php:238
+msgid "Border Width"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:258
+#: pagebuilders/elementor/widgets/amp-alert.php:186
+#: pagebuilders/elementor/widgets/amp-tabs.php:222
+#: pagebuilders/elementor/widgets/amp-toggle.php:256
+msgid "Border Color"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:273
+#: pagebuilders/elementor/widgets/amp-alert.php:216
+#: pagebuilders/elementor/widgets/amp-counter.php:199
+#: pagebuilders/elementor/widgets/amp-counter.php:259
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:227
+#: pagebuilders/elementor/widgets/amp-progress.php:97
+#: pagebuilders/elementor/widgets/amp-tabs.php:245
+#: pagebuilders/elementor/widgets/amp-toggle.php:295
+msgid "Title"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:281
+#: pagebuilders/elementor/widgets/amp-accordion.php:428
+#: pagebuilders/elementor/widgets/amp-toggle.php:303
+#: pagebuilders/elementor/widgets/amp-toggle.php:451
+msgid "Background"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:292
+#: pagebuilders/elementor/widgets/amp-accordion.php:376
+#: pagebuilders/elementor/widgets/amp-accordion.php:439
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:438
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:501
+#: pagebuilders/elementor/widgets/amp-progress.php:185
+#: pagebuilders/elementor/widgets/amp-progress.php:242
+#: pagebuilders/elementor/widgets/amp-tabs.php:254
+#: pagebuilders/elementor/widgets/amp-tabs.php:302
+#: pagebuilders/elementor/widgets/amp-toggle.php:315
+#: pagebuilders/elementor/widgets/amp-toggle.php:399
+#: pagebuilders/elementor/widgets/amp-toggle.php:462
+msgid "Color"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:307
+#: pagebuilders/elementor/widgets/amp-accordion.php:388
+#: pagebuilders/elementor/widgets/amp-tabs.php:268
+#: pagebuilders/elementor/widgets/amp-toggle.php:330
+#: pagebuilders/elementor/widgets/amp-toggle.php:411
+msgid "Active Color"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:331
+#: pagebuilders/elementor/widgets/amp-accordion.php:463
+#: pagebuilders/elementor/widgets/amp-toggle.php:354
+#: pagebuilders/elementor/widgets/amp-toggle.php:486
+msgid "Padding"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:356
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:626
+#: pagebuilders/elementor/widgets/amp-toggle.php:379
+msgid "Alignment"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:360
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:529
+#: pagebuilders/elementor/widgets/amp-toggle.php:383
+msgid "Start"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:364
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:537
+#: pagebuilders/elementor/widgets/amp-toggle.php:387
+msgid "End"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-accordion.php:400
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:553
+#: pagebuilders/elementor/widgets/amp-toggle.php:423
+msgid "Spacing"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:48
+#: pagebuilders/elementor/widgets/amp-alert.php:91
+#: pagebuilders/elementor/widgets/amp-alert.php:167
+msgid "Alert"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:98
+#: pagebuilders/elementor/widgets/amp-progress.php:111
+#: pagebuilders/elementor/widgets/amp-tabs.php:154
+msgid "Type"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:102
+#: pagebuilders/elementor/widgets/amp-progress.php:116
+msgid "Info"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:103
+#: pagebuilders/elementor/widgets/amp-progress.php:117
+msgid "Success"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:104
+#: pagebuilders/elementor/widgets/amp-progress.php:118
+msgid "Warning"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:105
+#: pagebuilders/elementor/widgets/amp-progress.php:119
+msgid "Danger"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:116
+#: pagebuilders/elementor/widgets/amp-progress.php:102
+msgid "Enter your title"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:117
+msgid "This is an Alert"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:130
+msgid "Enter your description"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:131
+msgid "I am a description. Click the edit button to change this text."
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:143
+msgid "Dismiss Button"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:147
+#: pagebuilders/elementor/widgets/amp-counter.php:175
+#: pagebuilders/elementor/widgets/amp-progress.php:144
+msgid "Show"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:148
+#: pagebuilders/elementor/widgets/amp-counter.php:176
+#: pagebuilders/elementor/widgets/amp-progress.php:145
+msgid "Hide"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:175
+#: pagebuilders/elementor/widgets/amp-progress.php:199
+#: pagebuilders/elementor/widgets/amp-tabs.php:233
+msgid "Background Color"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:197
+msgid "Left Border Width"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:224
+#: pagebuilders/elementor/widgets/amp-alert.php:256
+#: pagebuilders/elementor/widgets/amp-counter.php:232
+#: pagebuilders/elementor/widgets/amp-counter.php:267
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:656
+#: pagebuilders/elementor/widgets/amp-progress.php:274
+msgid "Text Color"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:248
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:229
+msgid "Description"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-alert.php:318
+#: pagebuilders/elementor/widgets/amp-alert.php:350
+msgid "Dismiss alert"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-counter.php:47
+#: pagebuilders/elementor/widgets/amp-counter.php:104
+msgid "Counter"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-counter.php:111
+msgid "Starting Number"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-counter.php:123
+msgid "Ending Number"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-counter.php:135
+msgid "Number Prefix"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-counter.php:148
+msgid "Number Suffix"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-counter.php:154
+msgid "Plus"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-counter.php:161
+msgid "Animation Duration"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-counter.php:172
+msgid "Thousand Separator"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-counter.php:183
+msgid "Separator"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-counter.php:205
+#: pagebuilders/elementor/widgets/amp-counter.php:206
+msgid "Cool Number"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-counter.php:224
+msgid "Number"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:47
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:90
+msgid "Image Carousel"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:97
+msgid "Add Images"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:121
+msgid "Slides to Show"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:124
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:137
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:209
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:556
+#: pagebuilders/elementor/widgets/amp-progress.php:115
+msgid "Default"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:133
+msgid "Slides to Scroll"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:135
+msgid "Set how many slides are scrolled per swipe."
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:149
+msgid "Image Stretch"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:153
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:211
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:260
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:275
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:293
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:326
+msgid "No"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:154
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:210
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:259
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:274
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:292
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:325
+msgid "Yes"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:162
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:378
+msgid "Navigation"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:166
+msgid "Arrows and Dots"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:167
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:389
+msgid "Arrows"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:168
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:452
+msgid "Dots"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:169
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:182
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:226
+msgid "None"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:178
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:192
+msgid "Link"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:183
+msgid "Media File"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:184
+msgid "Custom URL"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:194
+msgid "https://your-link.com"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:205
+msgid "Lightbox"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:222
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:228
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:615
+msgid "Caption"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:248
+msgid "Additional Options"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:255
+msgid "Autoplay"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:270
+msgid "Pause on Hover"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:288
+msgid "Pause on Interaction"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:306
+msgid "Autoplay Speed"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:321
+msgid "Infinite Loop"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:335
+msgid "Effect"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:339
+msgid "Slide"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:340
+msgid "Fade"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:352
+msgid "Animation Speed"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:363
+msgid "Direction"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:367
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:630
+msgid "Left"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:368
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:638
+msgid "Right"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:401
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:464
+msgid "Position"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:405
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:469
+msgid "Inside"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:406
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:468
+msgid "Outside"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:418
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:481
+msgid "Size"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:517
+msgid "Image"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:525
+msgid "Vertical Align"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:533
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:634
+msgid "Center"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:557
+msgid "Custom"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:569
+msgid "Image Spacing"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:601
+#: pagebuilders/elementor/widgets/amp-progress.php:221
+msgid "Border Radius"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:642
+msgid "Justified"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:809
+msgid "Previous"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-image-carousel.php:813
+msgid "Next"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-progress.php:47
+#: pagebuilders/elementor/widgets/amp-progress.php:90
+#: pagebuilders/elementor/widgets/amp-progress.php:177
+msgid "Progress Bar"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-progress.php:103
+msgid "My Skill"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-progress.php:127
+msgid "Percentage"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-progress.php:140
+msgid "Display Percentage"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-progress.php:152
+#: pagebuilders/elementor/widgets/amp-progress.php:233
+msgid "Inner Text"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-progress.php:157
+msgid "e.g. Web Designer"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-progress.php:158
+msgid "Web Designer"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-progress.php:210
+msgid "Height"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-progress.php:266
+msgid "Title Style"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-tabs.php:48
+#: pagebuilders/elementor/widgets/amp-tabs.php:91
+#: pagebuilders/elementor/widgets/amp-tabs.php:171
+msgid "Tabs"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-tabs.php:102
+#: pagebuilders/elementor/widgets/amp-tabs.php:103
+msgid "Tab Title"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-tabs.php:112
+#: pagebuilders/elementor/widgets/amp-tabs.php:113
+msgid "Tab Content"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-tabs.php:125
+msgid "Tabs Items"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-tabs.php:130
+msgid "Tab #1"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-tabs.php:134
+msgid "Tab #2"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-tabs.php:158
+msgid "Horizontal"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-tabs.php:159
+msgid "Vertical"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-tabs.php:179
+msgid "Navigation Width"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-toggle.php:122
+msgid "Toggle Items"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-toggle.php:127
+msgid "Toggle #1"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-toggle.php:131
+msgid "Toggle #2"
+msgstr ""
+
+#: pagebuilders/elementor/widgets/amp-toggle.php:268
+msgid "Space Between"
+msgstr ""
+
+#: templates/astra-addon/amp-enhancer-astra-addon-functions.php:22
+msgid "Scroll to Top"
+msgstr ""
+
+#: templates/contact-form7/cf7_functions.php:82
+msgid "Not Found"
+msgstr ""
+
+#: templates/contact-form7/class_amp_enhancer_wpcf7_contactform.php:31
+msgid "Contact Forms"
+msgstr ""
+
+#: templates/contact-form7/class_amp_enhancer_wpcf7_contactform.php:32
+msgid "Contact Form"
+msgstr ""
+
+#: templates/contact-form7/class_amp_enhancer_wpcf7_contactform.php:80
+#: templates/contact-form7/class_amp_enhancer_wpcf7_contactform.php:263
+msgid "Untitled"
+msgstr ""
+
+#: templates/contact-form7/class_amp_enhancer_wpcf7_contactform.php:175
+#, php-format
+msgid ""
+"<code>%1$s</code> property of a <code>WPCF7_ContactForm</code> object is "
+"<strong>no longer accessible</strong>. Use <code>%2$s</code> method instead."
+msgstr ""
+
+#: templates/contact-form7/class_amp_enhancer_wpcf7_contactform.php:326
+#: templates/contact-form7/class_amp_enhancer_wpcf7_contactform.php:765
+msgid "This contact form is available only for logged in users."
+msgstr ""
+
+#: templates/cookie-law-info/cookie-law-info-functions.php:97
+msgid "Necessary"
+msgstr ""
+
+#: templates/cookie-law-info/cookie-law-info-functions.php:98
+msgid "Non-necessary"
+msgstr ""
+
+#: templates/cookie-law-info/cookie-law-shortcode.php:100
+msgid "Close the cookie bar"
+msgstr ""
+
+#: templates/cookie-law-info/cookie-law-shortcode.php:100
+msgid "Close and Accept"
+msgstr ""
+
+#: templates/cookie-law-info/views/cookie-law-info_popup_content.php:4
+msgid "Always Enabled"
+msgstr ""
+
+#: templates/cookie-law-info/views/cookie-law-info_popup_content.php:5
+msgid "Enabled"
+msgstr ""
+
+#: templates/cookie-law-info/views/cookie-law-info_popup_content.php:6
+msgid "Disabled"
+msgstr ""
+
+#: templates/cookie-law-info/views/cookie-law-info_popup_content.php:7
+#: templates/cookie-law-info/views/cookie-law-info_popup_content.php:41
+msgid "Show more"
+msgstr ""
+
+#: templates/cookie-law-info/views/cookie-law-info_popup_content.php:42
+msgid "Show Less"
+msgstr ""
+
+#: templates/kk-star/amp-enhancer-kkstar-functions.php:103
+msgid "votes"
+msgstr ""
+
+#: templates/ninja-forms/amp-ninja-forms-array-data.php:78
+msgid "No Fields Found."
+msgstr ""
+
+#: templates/ninja-forms/submission/submission.php:56
+msgid "Form does not exist."
+msgstr ""
+
+#: templates/ninja-forms/submission/submission.php:66
+msgid "Preview does not exist."
+msgstr ""
+
+#: templates/ninja-forms/submission/submission.php:494
+msgid "The server encountered an error during processing."
+msgstr ""
+
+#: templates/ninja-forms/submission/submission.php:515
+msgid "An unexpected error occurred."
+msgstr ""
+
+#: templates/shortcodes-ultimate/shortcodes-ultimate-functions.php:7
+msgid "Spoiler title"
+msgstr ""
+
+#: templates/woocommerce/amp-enhancer-ajaxcalls.php:74
+#, php-format
+msgid "You can only have 1 %s in your cart."
+msgstr ""
+
+#: templates/woocommerce/cart/cart.php:34
+msgid "Product"
+msgstr ""
+
+#: templates/woocommerce/cart/cart.php:35
+msgid "Price"
+msgstr ""
+
+#: templates/woocommerce/cart/cart.php:36
+msgid "Quantity"
+msgstr ""
+
+#: templates/woocommerce/cart/cart.php:37
+msgid "Subtotal"
+msgstr ""
+
+#: templates/woocommerce/cart/cart.php:60
+msgid "Remove this item"
+msgstr ""
+
+#: templates/woocommerce/cart/cart.php:96
+msgid "Available on backorder"
+msgstr ""
+
+#: templates/woocommerce/cart/cart.php:147
+msgid "Coupon:"
+msgstr ""
+
+#: templates/woocommerce/cart/cart.php:156
+msgid "Update cart"
+msgstr ""
+
+#: templates/woocommerce/cart/cart.php:171
+msgid "Please wait until it reloads..."
+msgstr ""
+
+#: templates/woocommerce/cart/cart.php:178
+msgid "Coupon code is not entered,Please Enter Coupon code."
+msgstr ""
+
+#: templates/woocommerce/loop/orderby.php:30
+msgid "Go"
+msgstr ""
+
+#: templates/woocommerce/single-product/add-to-cart/variable.php:62
+msgid "This product is currently out of stock and unavailable."
+msgstr ""
+
+#: templates/woocommerce/single-product/add-to-cart/variable.php:78
+msgid "Clear"
+msgstr ""
+
+#: templates/woocommerce/single-product/product-image.php:47
+msgid "Awaiting product image"
+msgstr ""

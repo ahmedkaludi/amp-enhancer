@@ -58,6 +58,22 @@ function amp_enhancer_add_custom_css(){
       if(defined('SMARTSLIDER3_LIBRARY_PATH')){
         wp_enqueue_style( 'amp_enhancer_smartslider3_css', trailingslashit(plugins_url()).'smart-slider-3/Public/SmartSlider3/Application/Frontend/Assets/dist/smartslider.min.css', false, AMP_ENHANCER_VERSION );
       }
+     // WPFront Notification Bar
+      if(class_exists('WPFront_Notification_Bar')){
+         $wpfront_bar = get_option('wpfront-notification-bar-options');
+         if(isset($wpfront_bar['enabled']) && ($wpfront_bar['enabled'] == 'on' || $wpfront_bar['enabled'] == true)){
+               wp_enqueue_style( 'amp_enhancer_wpfront_ntfc_bar_css', untrailingslashit(AMP_ENHANCER_PLUGIN_URI) . '/templates/wpfront-notification-bar/wpfront-notification-bar.css', false, AMP_ENHANCER_VERSION );
+
+                  if(isset($wpfront_bar['position']) && $wpfront_bar['position'] == '1'){
+
+                    $position_css = '#wpfront-notification-bar.wpfront-fixed{top:0px}';
+                  }else{
+                    $position_css = '#wpfront-notification-bar.wpfront-fixed{bottom:0px}';
+                  }
+
+               wp_add_inline_style( 'amp_enhancer_wpfront_ntfc_bar_css', $position_css );
+           }
+       }
 
     }// amp endpoint checking ends here...
 }
