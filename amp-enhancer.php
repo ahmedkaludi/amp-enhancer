@@ -125,4 +125,9 @@ function amp_enhancer_third_party_plugins_support(){
     	  		require_once(AMP_ENHANCER_TEMPLATE_DIR.'wpcf7-redirect/amp-enhancer-wpcf7-redirect-functions.php');	
     	  		add_action( 'wpcf7_submit','amp_enhancer_wpcf7_redirect_handle',99,1);
     	 }
+    	 //FooGallery
+    	 if(function_exists('foogallery_fs')){ 
+          require_once(AMP_ENHANCER_TEMPLATE_DIR.'foogallery/foogallery-functions.php');	
+     	 }
+
 }
