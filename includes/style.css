@@ -139,6 +139,8 @@ body .joinchat{    transform: unset;}
 body #qlwapp {display: inline;}
 .foogallery .fg-item .fg-item-inner{visibility: visible;opacity: 1;}
 .fg-item amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img {object-fit: cover;}
+.fiv-inner{width:90%}
+body .fg-image-viewer .fiv-inner .fiv-ctrls{display:none;}
 amp-script {
     opacity: 1;
 }

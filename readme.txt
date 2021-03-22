@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.7
-Stable tag: 1.0.33
+Stable tag: 1.0.34
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -124,6 +124,7 @@ Third Party Plugins Supported Features are listed below :-
   * Added Responsive Image Gallery Support.
   * Added Simple Portfolio Support.
   * Added Single Thumbnail Gallery Support.
+  * Added Image Viewer Gallery Support.
 
 == Icegram ==
   * Added Popups Support.
@@ -162,6 +163,9 @@ Third Party Plugins Supported Features are listed below :-
   * Connected with Enabled and Position Options.
 
 == Changelog ==
+
+= 1.0.34 (22 March 2021) =
+* Added Image Viewer Gallery Support of FooGallery Plugin.
 
 = 1.0.33 (16 March 2021) =
 * Added Pot File for string translation.

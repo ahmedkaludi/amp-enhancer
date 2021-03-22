@@ -203,6 +203,8 @@ function amp_enhancer_third_party_compatibililty(){
    
    if(function_exists('foogallery_fs')){ 
     add_filter('foogallery_attachment_html_image','amp_enhancer_foogallery_attachment_html_image',10,3);
+    add_action('amp_post_template_css', 'amp_enhancer_foo_gal_reader_css',999);
+    add_filter('foogallery_load_gallery_template','amp_enhancer_foogallery_load_gallery_template',10,3);
     }
     // Icegram HTML Generation
      if(defined('IG_PLUGIN_URL') && class_exists('Icegram')){
