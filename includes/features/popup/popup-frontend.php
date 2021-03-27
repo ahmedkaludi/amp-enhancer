@@ -1,6 +1,7 @@
 <?php
 if(!isset($_COOKIE['ampenhancer_popup'])){
    add_action('wp_footer','amp_enhancer_popup_feature_output');
+   add_action('amp_post_template_footer','amp_enhancer_popup_feature_output');
 }
 
 function amp_enhancer_popup_feature_output(){
@@ -103,4 +104,64 @@ function amp_enhancer_pop_up_post_type_data($contentArray=''){
    return false;
 }  
 
+add_action('amp_post_template_css','amp_enhancer_reader_mode_popup_css',20 );
+
+function amp_enhancer_reader_mode_popup_css(){?>
+    .en-afwp { 
+      position: fixed; 
+      top: 0; 
+      right: 0; 
+      bottom: 0; 
+      left: 0; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      width:800px;
+      margin:0 auto;
+      -webkit-overflow-scrolling: touch; 
+    }
+
+    .en-apcb {
+        border: 1px solid #ddd;
+        border-radius: 55px;
+        height: 36px;
+        top: 13px;
+        cursor: pointer;
+        width: 36px;
+        position: absolute;
+        font-size: 14px;
+        color: #333;
+        right: 13px;
+        background: transparent;
+    }
+    .en-apf amp-img { 
+      height: auto;
+        width: 170px;
+        margin: 0 auto;
+    }
+    .en-apft{
+      font-size:56px;
+      line-height:1.4;
+      font-weight:700;
+      color:#333333;
+      margin-bottom:10px;
+    }
+    .en-apf p{
+      font-size: 18px;
+        line-height: 1.6;
+        color: #555;
+        font-weight: 300;
+    }
+    .en-apbtn button { border:none; }
+
+    .en-cu-cls{
+      font-size: 15px;
+        line-height: 1.2;
+        border: none;
+        right: 13px;
+        width: auto;
+        letter-spacing: 1px;
+    }    
+
+<?php }
 

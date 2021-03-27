@@ -259,7 +259,14 @@ function amp_enhancer_third_party_compatibililty(){
         add_shortcode($shortCodeBase, 'amp_enhancer_render_ninja_table_shortcode');
      }
 
-	}
+   // UX Builder
+     if(function_exists('ux_builder')){
+
+        require_once AMP_ENHANCER_PLUGIN_DIR.'/pagebuilders/ux-builder/amp-enhancer-ux-builder-functions.php';
+        amp_enhancer_ux_builder_initialize();
+     }
+
+	}// amp endpoint
 }
 
 // Added Support Link
