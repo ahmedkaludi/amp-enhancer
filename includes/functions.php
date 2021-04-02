@@ -265,8 +265,14 @@ function amp_enhancer_third_party_compatibililty(){
         require_once AMP_ENHANCER_PLUGIN_DIR.'/pagebuilders/ux-builder/amp-enhancer-ux-builder-functions.php';
         amp_enhancer_ux_builder_initialize();
      }
+     
 
 	}// amp endpoint
+
+    // WP Cloudflare Super Page Cache
+    if(is_admin() && class_exists('SW_CLOUDFLARE_PAGECACHE') && defined('SWCFPC_PLUGIN_URL')){
+        add_action( 'admin_enqueue_scripts', 'amp_enhancer_load_custom_wp_admin_styles_and_script' );
+    }
 }
 
 // Added Support Link
@@ -546,3 +552,37 @@ function amp_enhancer_complete_html_after_dom_loaded( $content_buffer ) {
 
 
 add_action('wp', function(){ ob_start('amp_enhancer_complete_html_after_dom_loaded'); }, 999);
+
+// WP Cloudflare Super Page Cache
+ function amp_enhancer_load_custom_wp_admin_styles_and_script() {
+
+    global $pagenow;
+
+      if( $pagenow == 'options-general.php' && isset($_GET['page']) && esc_attr($_GET['page']) == 'wp-cloudflare-super-page-cache-index'){
+  
+
+            $sw_cloudflare =  new SW_CLOUDFLARE_PAGECACHE();
+
+            $css_version = '1.7.5';
+            $js_version = '1.5.2';
+
+            $wp_scripts = wp_scripts();
+
+            wp_register_style('swcfpc_sweetalert_css', SWCFPC_PLUGIN_URL . 'assets/css/sweetalert2.min.css', array(), $css_version);
+            wp_register_style('swcfpc_admin_css', SWCFPC_PLUGIN_URL . 'assets/css/style.css', array('swcfpc_sweetalert_css'), $css_version);
+            
+            wp_register_script('swcfpc_sweetalert_js', 'https://cdn.jsdelivr.net/npm/sweetalert2@10', array(), $js_version, true);
+            wp_register_script('swcfpc_admin_js', SWCFPC_PLUGIN_URL . 'assets/js/backend.js', array('swcfpc_sweetalert_js'), $js_version, true);
+
+                $inline_js = 'const swcfpc_ajax_url = "' . admin_url('admin-ajax.php') . '"; ';
+                $inline_js .= 'let swcfpc_cache_enabled = ' . $sw_cloudflare->get_single_config('cf_cache_enabled', 0) . ';';
+
+                wp_add_inline_script('swcfpc_admin_js', $inline_js, 'before');
+
+                wp_enqueue_style('swcfpc_admin_css');
+                wp_enqueue_script('swcfpc_admin_js');
+
+        }
+
+    }
+
