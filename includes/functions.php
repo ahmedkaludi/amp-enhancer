@@ -266,6 +266,10 @@ function amp_enhancer_third_party_compatibililty(){
         amp_enhancer_ux_builder_initialize();
      }
      
+     // AddToAny Share Buttons
+     if(function_exists('ADDTOANY_FOLLOW_KIT')){
+        add_filter('amp_enhancer_content_html_last_filter','amp_enhancer_addtoany_share_buttons',10,1); 
+     }
 
 	}// amp endpoint
 
@@ -586,3 +590,11 @@ add_action('wp', function(){ ob_start('amp_enhancer_complete_html_after_dom_load
 
     }
 
+// AddToAny Share Buttons
+ function amp_enhancer_addtoany_share_buttons($content_buffer){
+  
+  if(preg_match('/<a class="a2a_button_print"(.*?)>/si', $content_buffer)){
+    $content_buffer = preg_replace('/<a class="a2a_button_print"(.*?)>/si', '<a class="a2a_button_print" on="tap:AMP.print()"  $1>', $content_buffer);
+    }   
+    return $content_buffer;
+  }
