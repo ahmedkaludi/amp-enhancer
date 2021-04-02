@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.7
-Stable tag: 1.0.36
+Stable tag: 1.0.37
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -168,9 +168,16 @@ Third Party Plugins Supported Features are listed below :-
   * UX Image Support.
   * UX Logo Support.
   * UX Grid Support.
-  
+
+== AddToAny Share Buttons  ==
+  * Added Print functionality.
+
 
 == Changelog ==
+
+= 1.0.37 (2 April 2021) =
+* Fixed the issue of AddToAny Share Buttons Plugin Print functionality not working in amp.
+* Fixed the issue of WP Cloudflare Super Page Cache Plugins Setting's Page CSS & js scripts are not loading when AMP Plugin is active.
 
 = 1.0.36 (30 March 2021) =
 * Fixed the error of failed to open gallery-image-viewer.php file of Foogallery Plugin.
