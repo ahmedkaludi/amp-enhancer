@@ -270,6 +270,15 @@ function amp_enhancer_third_party_compatibililty(){
      if(function_exists('ADDTOANY_FOLLOW_KIT')){
         add_filter('amp_enhancer_content_html_last_filter','amp_enhancer_addtoany_share_buttons',10,1); 
      }
+      //Beaver Builder Pro
+       if(class_exists('FLBuilderLoader')){ 
+
+          require_once(AMP_ENHANCER_PAGEBUILDER_DIR.'beaver/amp-enhancer-beaver-builder-functions.php'); 
+          
+
+        add_filter('fl_builder_module_frontend_file','amp_enhancer_fl_builder_module_frontend_file',10,2); 
+      }
+     
 
 	}// amp endpoint
 
