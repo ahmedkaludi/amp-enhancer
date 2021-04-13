@@ -80,7 +80,7 @@ function  amp_enhancer_settings_page(){
 
 function amp_enhancer_plugin_comaptibilities_list(){ 
 
-  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = $smartslider3 = $fancy_comments =  $divi = $adapta_RGPD = $UAGB = $nj_tables = $wpcf7_redirect = $wpfront_bar = $ux_builder = false;
+  $woocommerce = $elementor = $contact_form7 = $GDPR_Cookie = $Cookie_Notice = $GDPR_Compliance = $toc_plus = $easy_toc = $lwp_toc = $shortcodes = $wpforms = $ninja_forms = $kkstar  = $cv = $coblocks = $astra = $joinchat = $wp_social =  $foogallery =  $icegram = $helpie = $convertkit = $smartslider3 = $fancy_comments =  $divi = $adapta_RGPD = $UAGB = $nj_tables = $wpcf7_redirect = $wpfront_bar = $ux_builder = $beaver = false;
     if(function_exists('WC')){
      $woocommerce = true;
     }
@@ -174,6 +174,9 @@ function amp_enhancer_plugin_comaptibilities_list(){
     }
     if(function_exists('ux_builder')){
        $ux_builder = true;
+    }
+    if(class_exists('FLBuilderLoader')){ 
+      $beaver = true;
     }
 
   ?>
@@ -431,6 +434,14 @@ function amp_enhancer_plugin_comaptibilities_list(){
                    <tr>
                     <td>UX Builder(Flatsome Theme)</td>
                         <?php if($ux_builder == true){ ?>
+                        <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
+                        <?php }else{ ?>
+                        <td>Inactive</td>  
+                        <?php } ?>
+                  </tr>
+                  <tr>
+                    <td>Beaver Builder Plugin (Pro Version)</td>
+                        <?php if($beaver == true){ ?>
                         <td><span class="dashicons dashicons-yes-alt enhr-yes"></span>Active</td>
                         <?php }else{ ?>
                         <td>Inactive</td>  

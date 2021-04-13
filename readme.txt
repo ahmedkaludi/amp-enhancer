@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.7
-Stable tag: 1.0.37
+Stable tag: 1.0.38
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -172,8 +172,15 @@ Third Party Plugins Supported Features are listed below :-
 == AddToAny Share Buttons  ==
   * Added Print functionality.
 
+== Beaver Builder Plugin  ==
+  * Added Accordion Support.
+  * Added Tabs Support.
+
 
 == Changelog ==
+
+= 1.0.38 (13 April 2021) =
+* Added Beaver Builder Plugin Support.
 
 = 1.0.37 (2 April 2021) =
 * Fixed the issue of AddToAny Share Buttons Plugin Print functionality not working in amp.
