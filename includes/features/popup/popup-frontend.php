@@ -161,7 +161,37 @@ function amp_enhancer_reader_mode_popup_css(){?>
         right: 13px;
         width: auto;
         letter-spacing: 1px;
-    }    
+    }
+    @media(max-width:768px){
+          .en-afwp{
+            width:100%;
+            padding:15px;
+          }
+          .en-apft {
+             font-size: 45px;
+          }
+          .en-apf p {
+            font-size: 15px;
+          }
+          .en-apbtn a{
+            font-size: 16px;
+          }
+          .en-apbtn button{
+            font-size: 14px;
+          }
+    }
+  @media(max-width:500px){
+      .en-apf{
+        padding:20px;
+      }
+      .en-apft {     
+          font-size: 30px;
+          margin-top:20px;
+      }
+      .en-apbtn a{
+        padding: 20px 25px;
+      }
+  }    
 
 <?php }
 
