@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.7
-Stable tag: 1.0.38
+Stable tag: 1.0.39
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -178,6 +178,9 @@ Third Party Plugins Supported Features are listed below :-
 
 
 == Changelog ==
+
+= 1.0.39 (17 April 2021) =
+* Fixed the issue of Close(x) mark is not visible on mobiles device of Popup feature.
 
 = 1.0.38 (13 April 2021) =
 * Added Beaver Builder Plugin Support.
