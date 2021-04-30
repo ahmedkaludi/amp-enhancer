@@ -21,6 +21,7 @@ class Amp_Enhancer_Elementor_Widgets_Loading {
 	     require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/amp-counter.php' );
 	     require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/amp-progress.php' );
 	     require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/amp-image-carousel.php' );
+	     require_once( AMP_ENHANCER_PLUGIN_DIR . 'pagebuilders/elementor/widgets/amp-video.php' );
 	 }
 
 	public function register_widgets($widgets_manager) {
@@ -36,6 +37,7 @@ class Amp_Enhancer_Elementor_Widgets_Loading {
 	        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\AMP_Counter() );
 	        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\AMP_Progress() );
 	        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Amp_Image_Carousel() );
+	        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Amp_Video() );
 		}
 	}
 
