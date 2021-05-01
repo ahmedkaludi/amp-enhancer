@@ -4,7 +4,7 @@ Tags: AMP,amp project, google amp,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.7.1
-Stable tag: 1.0.40
+Stable tag: 1.0.41
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -183,6 +183,9 @@ Third Party Plugins Supported Features are listed below :-
 Here is our repository on [GitHub](https://github.com/ahmedkaludi/amp-enhancer). Send us your pull requests, feature requests or issues, if any.
 
 == Changelog ==
+
+= 1.0.41 (1st May 2021) =
+* Added Elementor Video Module Support.
 
 = 1.0.40 (27 April 2021) =
 * Resolved the issue of WooCommerce Product images not being Cropped properly.
