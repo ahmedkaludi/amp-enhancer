@@ -305,7 +305,7 @@ function amp_enhancer_support_link( $links ) {
  add_action( 'admin_notices', 'amp_enhancer_admin_notice' );
 
 function amp_enhancer_admin_notice() {
-    global $pagenow;
+    global $pagenow,$current_screen;;
     $user_id = get_current_user_id();
     if ( (isset($pagenow) && $pagenow == 'plugins.php') && !get_user_meta( $user_id, 'amp_enhancer_dismiss_notice' ) ){ 
         echo '<div class="updated notice">
@@ -314,6 +314,12 @@ function amp_enhancer_admin_notice() {
 	                </p>
                 </div>';
         }
+
+    if ( (isset($pagenow) && $pagenow == 'plugins.php') || isset($current_screen->id) && (strpos($current_screen->id, 'amp-enhacer-settings') > -1 || strpos($current_screen->id, 'ampenhancerpopup') > -1 || strpos($current_screen->id, 'amp-enhancer-custom-css') > -1  )){
+      amp_enhancer_request_review();
+    }
+
+
 }
 
 add_action( 'admin_init', 'amp_enhancer_dismiss_notice' );
