@@ -1,4 +1,4 @@
-=== AMP Enhancer ===
+=== AMP Enhancer - Compatibility Layer for Official AMP Plugin ===
 Contributors: ampenhancer
 Tags: AMP,google amp,WooCommerce,Elementor,official amp
 Donate link: https://www.paypal.me/Kaludi/25
