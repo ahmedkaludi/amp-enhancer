@@ -509,7 +509,12 @@ function amp_enhancer_ajax_request_callbacks(){
 function amp_enhancer_popup_dismiss_consent(){
   $postId = $_POST['dismiss_id'];
   $timeInHour = get_post_meta($postId, 'en_cookie_time', true);
-  $expire_time = time() + intval($timeInHour[0])*3600;
+  $duration_type = get_post_meta($postId, 'en_popup_duration_type', true);
+  if($duration_type == 'en_popup_minute'){
+    $expire_time = time() + intval($timeInHour[0])*60;
+  }else{
+    $expire_time = time() + intval($timeInHour[0])*3600;
+  }
     setcookie('ampenhancer_popup','true', esc_attr( $expire_time) , "/");
     $current_url = $site_url = $site_host = $amp_site = '';
     $current_url  = wp_get_referer();

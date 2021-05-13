@@ -71,6 +71,7 @@
          input:checked + .slider:before {-webkit-transform: translateX(26px);-ms-transform: translateX(26px);transform: translateX(26px);}
           .slider.round {border-radius: 34px;}
          .slider.round:before {border-radius: 50%;}
+         .popup-switch .duration_input, body .popup-switch input[type="text"]{width: 46%;}
      </style>
       <table class="option-table-class">
       <tbody>
@@ -193,7 +194,9 @@ function amp_enhancer_pop_up_wysiwig_content($wis){
     global $post;
     $popup_cookie_duration = get_post_meta($post->ID, 'en_cookie_time', true);
     $popup_cookie_type  = get_post_meta($post->ID, 'en_popup_cookie_type', true);
-    $popup_with_cookie     = get_post_meta($post->ID, 'en_popup_set_time', true); ?>
+    $popup_with_cookie     = get_post_meta($post->ID, 'en_popup_set_time', true);
+    $popup_duration_type     = get_post_meta($post->ID, 'en_popup_duration_type', true);
+     ?>
     <script>
       jQuery(document).ready(function($){
           $("#en_popup_set_time").click(function(){
@@ -254,10 +257,27 @@ function amp_enhancer_pop_up_wysiwig_content($wis){
 
             <tr id="en_popup_with_cookie_txtwpr" <?php if((!isset($popup_with_cookie) || $popup_with_cookie !=1) || $popup_cookie_type == 'popup_without_cookie'){echo 'style="display:none"'; }?> >
             <td>
-              <label for="en_set_cookie_time_text"><?php echo esc_html__( 'Set the Time Interval in Hours, only in numerics ( eg: 12 )', 'amp-enhancer' ); ?></label>  
+              <label for="en_set_cookie_time_text"><?php echo esc_html__( 'Set Time Interval in Hours or Minutes, only in numerics ( eg: 12 )', 'amp-enhancer' ); ?></label>  
             </td>
             <td>
-              <input type="text" id="en_set_cookie_time_text" name="en_cookie_time" value="<?php if( isset($popup_cookie_duration) ){echo esc_attr($popup_cookie_duration); } else{ echo '12'; } ?>">
+              <input type="text" id="en_set_cookie_time_text" class="duration_input" name="en_cookie_time" value="<?php if( isset($popup_cookie_duration) ){echo esc_attr($popup_cookie_duration); } else{ echo '12'; } ?>">
+
+              <select id="en_popup_time_type" class="duration_input" name="en_popup_duration_type">
+                  <?php
+                    $time_array = array(
+                       'en_popup_hour' => 'Hour',
+                       'en_popup_minute' => 'Minute',
+                   );
+                    foreach ($time_array as $key => $value) {
+                      $sel = '';
+                      if($popup_duration_type==$key){
+                        $sel = 'selected';
+                      }
+                      echo "<option value='".esc_attr($key)."' ".esc_attr($sel).">".esc_html__($value, 'amp-enhancer' )."</option>";
+                    }
+                  ?>
+                </select>
+
             </td>
         </tr>
       </tbody>
@@ -282,6 +302,7 @@ function amp_enhancer_pop_up_editor_save_data ( $post_id ) {
     $post_popup_cookie_type =  sanitize_text_field($_POST['en_popup_cookie_type']);
     $post_popup_with_cookie =  sanitize_text_field($_POST['en_popup_set_time']);
     $popup_duration =  sanitize_text_field($_POST['en_cookie_time']);
+    $popup_duration_type =  sanitize_text_field($_POST['en_popup_duration_type']);
 
     update_post_meta(
       $post_id, 
@@ -312,6 +333,11 @@ function amp_enhancer_pop_up_editor_save_data ( $post_id ) {
       $post_id, 
       'en_cookie_time', 
       $popup_duration
+    );
+    update_post_meta(
+      $post_id, 
+      'en_popup_duration_type', 
+      $popup_duration_type
     );
 
 
