@@ -1,35 +1,37 @@
-=== AMP Enhancer ===
+=== AMP Enhancer - Compatibility Layer for Official AMP Plugin ===
 Contributors: ampenhancer
-Tags: AMP,amp project, google amp,official amp
+Tags: AMP,google amp,WooCommerce,Elementor,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
-Tested up to: 5.7.1
-Stable tag: 1.0.41
+Tested up to: 5.7.2
+Stable tag: 1.0.42
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+AMP Enhancer is a Compatibility Layer for Official AMP Plugin such as WooCommerce, Elementor, Contact form7, Divi, GDPR Plugins, TOC Plugins and many more.
+
 == Description ==
-AMP Enhancer is a Compatibility Layer for Official AMP Plugin.
+AMP Enhancer is a Compatibility Layer for Official AMP Plugin, So far we have the Compatibility with 34 Plugins & we are adding more plugins with every update.
 
 [Home](https://ampenhancer.com/) | [Documentation](https://ampenhancer.com/docs/) | [Help](https://ampenhancer.com/contact-us/)
 
-**Features** [More info](https://ampenhancer.com/docs/article-categories/features/)
+**Features**
 
-[**Popups**](https://ampenhancer.com/docs/article-categories/popup/) 
+[**Popups**](https://ampenhancer.com/docs/article/how-to-add-popup-feature-in-amp-pages/) 
 
  * Multiple Popups functionality in AMP Pages.
  * Display Popups based on Conditions such as Globally or Homepage.
  * Show popups on every time page loads or after a specific time condition logic.
  * Outputs AMP Compatible Code and Shortcodes of other plugins too. 
 
-[**Custom CSS**](https://ampenhancer.com/docs/article-categories/custom-css/)
+[**Custom CSS**](https://ampenhancer.com/docs/article/how-to-add-custom-css-in-amp-pages/)
 
 * Added CSS Editor to add Custom CSS to your AMP Post/Pages.  
 
 **Compatibilities** [More info](https://ampenhancer.com/docs/article-categories/compatibilities/):
 Third Party Plugins Supported Features are listed below-
 
-[**WooCommerce**](https://github.com/ahmedkaludi/amp-enhancer)
+[**WooCommerce**](https://ampenhancer.com/docs/article/how-to-add-up-woocommerce-support/)
 
   * Add to Cart Response.
   * Single Product Gallery Support.
@@ -39,165 +41,165 @@ Third Party Plugins Supported Features are listed below-
   * Variable Product Support.
   * Shop and Archives Page Orderby Sorting.
 
-[**Elementor**](https://ampenhancer.com/docs/article-categories/elementor/)
+[**Elementor**](https://ampenhancer.com/docs/article/how-to-add-on-elementor-pagebuilder-support/)
 
   * Added All Modules Support. 
 
-[**Contact Form 7**](https://ampenhancer.com/docs/article-categories/contact-form-7/)
+[**Contact Form 7**](https://ampenhancer.com/docs/article/how-to-enable-contact-form-7-support/)
 
   * Submit Response
   * Form Validation
   * reCAPTCHA(v3) Module support.
 
-[**GDPR Cookie Consent**](https://ampenhancer.com/docs/article-categories/gdpr-cookie-consent/)
+[**GDPR Cookie Consent**](https://ampenhancer.com/docs/article/how-to-enable-gdpr-cookie-consent-ccpa-ready-plugin-support/)
 
   * Added Support of All the 3 Cookies
   * viewed_cookie_policy
   * CookieLawInfoConsent
   * cookielawinfo-checkbox-necessary/cookielawinfo-checkbox-non-necessary 
 
-[**Divi**](https://ampenhancer.com/docs/article-categories/divi-theme/)
+[**Divi**](https://ampenhancer.com/docs/article/how-to-enable-divi-theme-support/)
 
   * Added Accordion Support.
   * Added Toggle Support.
 
-[**Cookie Notice**](https://ampenhancer.com/docs/article-categories/cookie-notice/)
+[**Cookie Notice**](https://ampenhancer.com/docs/article/how-to-enable-cookie-notice-for-gdpr-ccpa-plugin-support/)
 
   * Customizable message & Link to Privacy Policy page .
   * Connected with the Option to refuse & revoke the consent.
   * Full design Compatibility.
 
-[**GDPR Cookie Compliance (CCPA, PIPEDA ready)**](https://ampenhancer.com/docs/article-categories/gdpr-cookie-compliance-ccpa-pipeda-ready/)
+[**GDPR Cookie Compliance (CCPA, PIPEDA ready)**](https://ampenhancer.com/docs/article/how-to-add-gdpr-cookie-compliance-ccpa-pipeda-ready-plugin-support/)
 
   * Includes both ‘Accept’ and ‘Reject’ buttons Support.
   * Connected with the Option of Consent expiration settings.
   * Includes link to Privacy Policy page
   * Full design Compatibility.
 
-[**WordPress Zero Spam**](https://ampenhancer.com/docs/article-categories/wordpress-zero-spam/)
+[**WordPress Zero Spam**](https://ampenhancer.com/docs/article/how-to-add-up-wordpress-zero-spam-plugin-support/)
 
   * Added Contact Form 7 Plugin Compatibility. 
   * Added WordPress Zero Spam hidden Field in WordPress Comments to submit Comment Forms in AMP.
   * Included Formidable Form Builder Plugin Support with WordPress Zero Spam plugin in AMP Pages.
 
-[**Table of Contents Plus**](https://ampenhancer.com/docs/article-categories/table-of-contents-plus/)
+[**Table of Contents Plus**](https://ampenhancer.com/docs/article/how-to-enable-table-of-contents-plus-support/)
 
   * Added Toggle functionality. 
   * Connected with Show & Hide text option of TOC+ settings panel.
   * Also Connected  with the option of Hide the table of contents initially.
 
-[**Easy Table of Contents**](https://ampenhancer.com/docs/article-categories/easy-table-of-contents/)
+[**Easy Table of Contents**](https://ampenhancer.com/docs/article/how-to-enable-easy-table-of-contents-support/)
 
   * Added Toggle functionality. 
   * Connected with the Initial View option of Table of Content Settings Panel.
 
-[**LuckyWP Table of Contents**](https://ampenhancer.com/docs/article-categories/luckywp-table-of-contents/)
+[**LuckyWP Table of Contents**](https://ampenhancer.com/docs/article/how-to-enable-luckywp-table-of-contents-support/)
 
   * Added Toggle functionality. 
   * Connected with the option of Label Show & Label Hide text option from LuckyWP TOC Settings panel.
   * Also Connected  with the option of bydefault items of contents will be hidden.
 
-[**Shortcodes Ultimate**](https://ampenhancer.com/docs/article-categories/shortcodes-ultimate/)
+[**Shortcodes Ultimate**](https://ampenhancer.com/docs/article/how-to-enable-shortcodes-ultimate-support/)
 
   * Added Spoiler Shortcode Support. 
   * Added Accordion Shortcode Functionality.
 
-[**WPForms**](https://ampenhancer.com/docs/article-categories/wp-forms/)
+[**WPForms**](https://ampenhancer.com/docs/article/how-to-enable-wpforms-plugin-support/)
 
   * Renders Form HTML in AMP. 
   * Form Submission and form validation.
 
-[**Ninja Forms**](https://ampenhancer.com/docs/article-categories/ninja-forms/)
+[**Ninja Forms**](https://ampenhancer.com/docs/article/how-to-enable-ninja-forms-support/)
 
   * Renders Form HTML in AMP.
   * Form Submission and form validation.
 
-[**kk Star Ratings**](https://ampenhancer.com/docs/article-categories/kk-star-rating/)
+[**kk Star Ratings**](https://ampenhancer.com/docs/article/how-to-enable-kk-star-ratings-support/)
 
   * Added Rating feature in AMP
   * Connected with Globally activate/deactivate the star ratings Option.
   * Connected with Unique votes (based on IP Address) option of KK Star settings.
 
-[**Content Views – Post Grid & Filter for WordPress**](https://ampenhancer.com/docs/article-categories/content-views/)
+[**Content Views – Post Grid & Filter for WordPress**](https://ampenhancer.com/docs/article/how-to-enable-content-views-support/)
 
   * Added Collapsible List Layout Support.
   * Added Support of Scrollable List Layout.
 
-[**Page Builder Gutenberg Blocks – CoBlocks**](https://ampenhancer.com/docs/article-categories/coblocks/)
+[**Page Builder Gutenberg Blocks – CoBlocks**](https://ampenhancer.com/docs/article/how-to-enable-page-builder-gutenberg-blocks-coblocks-support/)
 
   * Form Module Proper Submit Response.
   * Form Validation.
 
-[**Astra Pro**](https://ampenhancer.com/docs/article-categories/astra-pro/)
+[**Astra Pro**](https://ampenhancer.com/docs/article/how-to-enable-astra-pro-support/)
 
   * Added Sticky Header Module Support and also connected with the options stick primary header & sticky header on devices
   * Added Scroll To Top Module Support.
   * Added advance search styles feature support for all the four options slide,full-screen,header cover and search box.
   * Off-Canvas Mobile Menu Module Full Support.
 
-[**Join.chat**](https://ampenhancer.com/docs/article-categories/join-chat/)
+[**Join.chat**](https://ampenhancer.com/docs/article/how-to-enable-join-chat-support/)
 
   * Rendering whatsapp floating button in AMP.
   * Dynamic variables support.
 
-[**WP Social Chat**](https://ampenhancer.com/docs/article-categories/wp-social-chat/)
+[**WP Social Chat**](https://ampenhancer.com/docs/article/how-to-add-wp-social-chat-support/)
 
   * Rendering whatsapp floating button in AMP.
 
-[**FooGallery**](https://ampenhancer.com/docs/article-categories/foogallery/)
+[**FooGallery**](https://ampenhancer.com/docs/article/how-to-enable-foogallery-support/)
 
   * Added Responsive Image Gallery Support.
   * Added Simple Portfolio Support.
   * Added Single Thumbnail Gallery Support.
   * Added Image Viewer Gallery Support.
 
-[**Icegram**](https://ampenhancer.com/docs/article-categories/icegram/)
+[**Icegram**](https://ampenhancer.com/docs/article/how-to-enable-icegram-support/)
 
   * Added Popups Support.
   * Displays campaigns on AMP Pages.
 
-[**Helpie FAQ**](https://ampenhancer.com/docs/article-categories/helpie-faq/)
+[**Helpie FAQ**](https://ampenhancer.com/docs/article/how-to-enable-helpie-faq-support/)
 
   * Fully responsive Accordion.
   * Basic FAQ Shortcode builder for all pages and posts.
   * Search Feature Support.
 
-[**ConvertKit**](https://ampenhancer.com/docs/article-categories/convertkit/)
+[**ConvertKit**](https://ampenhancer.com/docs/article/how-to-enable-convertkit-support/)
 
   * Added Shortcode Email Subscription Support.
 
-[**Smart Slider 3**](https://ampenhancer.com/docs/article-categories/smart-slider-3/)
+[**Smart Slider 3**](https://ampenhancer.com/docs/article/how-to-add-smart-slider-3-plugin-support/)
 
   * Added Shortcode Support.
 
-[**Fancy Comments WordPress**](https://ampenhancer.com/docs/article-categories/fancy-comments-wordpress/)
+[**Fancy Comments WordPress**](https://ampenhancer.com/docs/article/how-to-add-fancy-comments-wordpress-plugin-support/)
 
   * Full Plugin Support.
 
-[**Adapta RGPD**](https://ampenhancer.com/docs/article-categories/adapta-rgpd/)
+[**Adapta RGPD**](https://ampenhancer.com/docs/article/how-to-enable-adapta-rgpd-support/)
 
   * Cookie Banner Support.
 
-[**Gutenberg Blocks – Ultimate Addons for Gutenberg**](https://ampenhancer.com/docs/article-categories/gutenberg-blocks/)
+[**Gutenberg Blocks – Ultimate Addons for Gutenberg**](https://ampenhancer.com/docs/article/how-to-enable-gutenberg-blocks-support/)
 
   * Table of Contents Block Support.
   * FAQ-Schema Block Support.
 
-[**Ninja Tables**](https://ampenhancer.com/docs/article-categories/ninja-tables/)
+[**Ninja Tables**](https://ampenhancer.com/docs/article/how-to-use-ninja-tables-support/)
 
   * Shortcode Support.
   * Full design Compatibility.
 
-[**Redirection for Contact Form 7**](https://ampenhancer.com/docs/article-categories/redirection-for-contact-form7/)
+[**Redirection for Contact Form 7**](https://ampenhancer.com/docs/article/how-to-use-redirection-for-contact-form7-support/)
 
   * Redirect to any URL.
 
-[**WPFront Notification Bar**](https://ampenhancer.com/docs/article-categories/wpfront-notification-bar/)
+[**WPFront Notification Bar**](https://ampenhancer.com/docs/article/how-to-enable-wpfront-notification-bar-support/)
 
   * Added Notification Bar Support.
   * Connected with Enabled and Position Options.
 
-[**Flatsome Theme UX Builder**](https://ampenhancer.com/docs/article-categories/ux-builder/)
+[**Flatsome Theme UX Builder**](https://ampenhancer.com/docs/article/how-to-enable-flatsome-theme-ux-builder-support/)
 
   * UX Slider Support.
   * UX Banner Support.
@@ -205,11 +207,11 @@ Third Party Plugins Supported Features are listed below-
   * UX Logo Support.
   * UX Grid Support.
 
-[**AddToAny Share Buttons**](https://ampenhancer.com/docs/article-categories/addtoany/) 
+[**AddToAny Share Buttons**](https://ampenhancer.com/docs/article/how-to-add-addtoany-share-buttons-support/) 
 
   * Added Print functionality.
 
-[**Beaver Builder Plugin**](https://ampenhancer.com/docs/article-categories/beaver-builder/) 
+[**Beaver Builder Plugin**](https://ampenhancer.com/docs/article/how-to-enable-beaver-builder-plugin-support/) 
 
   * Added Accordion Support.
   * Added Tabs Support.
@@ -219,6 +221,10 @@ Third Party Plugins Supported Features are listed below-
 Here is our repository on [GitHub](https://github.com/ahmedkaludi/amp-enhancer). Send us your pull requests, feature requests or issues, if any.
 
 == Changelog ==
+
+= 1.0.42 (13 May 2021) =
+* Added Minute option In Popup reload after specific time feature.
+* Added the Biggest Plugin names in the Description and Tag.
 
 = 1.0.41 (1st May 2021) =
 * Added Elementor Video Module Support.

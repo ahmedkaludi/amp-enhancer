@@ -95,6 +95,7 @@ function amp_enhancer_pop_up_post_type_data($contentArray=''){
                     'cookie_type'  => get_post_meta( $post_id, 'en_popup_cookie_type', true), 
                     'en_popup_set_time' => get_post_meta( $post_id, 'en_popup_set_time', true),
                     'en_cookie_duration' => get_post_meta( $post_id, 'en_cookie_time', true),
+                    'en_popup_duration_type' => get_post_meta( $post_id, 'en_popup_duration_type', true),
                     'post_id'   => $post_id,
 
                   ); 
