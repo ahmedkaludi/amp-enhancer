@@ -4,7 +4,7 @@ Tags: AMP,google amp,WooCommerce,Elementor,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.7.2
-Stable tag: 1.0.42
+Stable tag: 1.0.43
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -221,6 +221,11 @@ Third Party Plugins Supported Features are listed below-
 Here is our repository on [GitHub](https://github.com/ahmedkaludi/amp-enhancer). Send us your pull requests, feature requests or issues, if any.
 
 == Changelog ==
+
+= 1.0.43 (25 May 2021) =
+* Fixed the issue of iubenda cookie consent is not loading prior to amp popup feature.
+* Added WooCommerce Compatibility with Reader Mode.
+* Added Custom Compatibility and Priority Support Links in Settings.
 
 = 1.0.42 (13 May 2021) =
 * Added Minute option In Popup reload after specific time feature.
