@@ -11,6 +11,9 @@ function amp_enhancer_popup_feature_output(){
      if(!$condition_logics){
          return ;
      }
+    if(class_exists('iubendaParser') && !iubendaParser::consent_given() ){
+      return;
+    }
     if($condition_logics){
       foreach( $condition_logics as $condition_logic ) { 
     

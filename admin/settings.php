@@ -16,6 +16,10 @@ function  amp_enhancer_settings_page(){
           echo '<a href="' . esc_url(amp_enhancer_admin_link('compatibilities')) . '" class="nav-tab ' . esc_attr( $tab == 'compatibilities' ? 'nav-tab-active' : '') . '">' . esc_html__('Compatibilities', 'amp-enhancer') . '</a>';
 
           echo '<a href="' . esc_url(amp_enhancer_admin_link('features')) . '" class="nav-tab ' . esc_attr( $tab == 'features' ? 'nav-tab-active' : '') . '">' . esc_html__('Features','amp-enhancer') . '</a>';
+
+          echo '<a href="' . esc_url('https://ampenhancer.com/custom-compatibility/') . '" class="nav-tab" target="_blank" >' . esc_html__('Hire us for Custom Compatibility','amp-enhancer') . '</a>';
+
+          echo '<a href="' . esc_url('https://ampenhancer.com/priority-support/') . '" class="nav-tab" target="_blank" >' . esc_html__('Priority Support','amp-enhancer') . '</a>';
             ?>
           </h2>
           <form action="options.php" method="post" enctype="multipart/form-data" class="amp-en-settings-form">
@@ -466,7 +470,7 @@ function amp_enhancer_settings_support_box_html(){ ?>
                     <p>
                     Our team will get back to your email address very shortly
                     </p>
-                    <a href="http://ampenhancer.com/contact-us/">Submit a Ticket »</a>               </div>
+                    <a href="https://ampenhancer.com/contact-us/" class="button">Submit a Ticket</a>               </div>
             </div>
 
             <div class="postbox">
@@ -479,7 +483,7 @@ function amp_enhancer_settings_support_box_html(){ ?>
                        If you have got the features which you are looking for in our plugin, then please rate us a 5 star review on WordPress.org.</p>
                     <p>This will help spread the word out about this plugin and will encourage us to continue the development.</p>
                     <p>Much appreciated, thank you very much.</p>
-                    <a href="https://wordpress.org/support/plugin/amp-enhancer/reviews/?rate=5#new-post" target="_blank">Give Us a 5 star</a>               </div>
+                    <a href="https://wordpress.org/support/plugin/amp-enhancer/reviews/?rate=5#new-post" target="_blank" class="button">Give Us a 5 star</a>               </div>
             </div>
             <?php
 }

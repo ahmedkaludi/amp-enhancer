@@ -123,3 +123,25 @@ function amp_enhancer_product_details_json($retunType=""){
 		}
 	return $json_detail;
 }
+
+  // Added ReaderMode Support for woocommerce
+	$amp_option = get_option('amp-options');
+
+  if(isset($amp_option['theme_support']) &&  $amp_option['theme_support'] == 'reader'){
+    add_filter( 'amp_post_template_file', 'amp_enhancer_reader_mode_product_template', 11, 3 );
+
+	require_once(AMP_ENHANCER_TEMPLATE_DIR.'woocommerce/reader-mode/styles.php');
+
+  }
+
+
+
+function amp_enhancer_reader_mode_product_template( $file, $type, $post ) {
+
+
+  if ( 'single' === $type && 'product' === $post->post_type ) {
+          $file = AMP_ENHANCER_TEMPLATE_DIR.'woocommerce/reader-mode/single.php';
+    }
+
+    return $file;
+  }  
