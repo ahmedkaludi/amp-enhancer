@@ -13,7 +13,7 @@ AMP Enhancer is a Compatibility Layer for Official AMP Plugin such as WooCommerc
 == Description ==
 AMP Enhancer is a Compatibility Layer for Official AMP Plugin, So far we have the Compatibility with 34 Plugins & we are adding more plugins with every update.
 
-[Home](https://ampenhancer.com/) | [Documentation](https://ampenhancer.com/docs/) | [Help](https://ampenhancer.com/contact-us/)
+[Home](https://ampenhancer.com/) | [Documentation](https://ampenhancer.com/docs/) | [Help](https://ampenhancer.com/contact-us/) | [Request a Compatibility](https://ampenhancer.com/custom-compatibility/)
 
 **Features**
 
