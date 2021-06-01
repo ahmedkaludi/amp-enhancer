@@ -23,7 +23,15 @@ function amp_enhancer_variation_calculation(e){
       for (var is_key in select) {
        attribute_data += select[is_key].name+"="+encodeURIComponent(select[is_key].value)+"&";
       }
-      if(attribute_data.indexOf("Choose an option") < 0 && attribute_data.indexOf("=&") < 0){
+      var choose_option = e.currentTarget.getAttribute('data-show_option_none');
+      var choose_value = 'Choose an option';
+      if(choose_option == 'yes'){
+          choose_value = e.currentTarget.getElementsByTagName( 'option' );
+          choose_value = choose_value[0].innerHTML;
+      }
+      choose_value = choose_value.replace(/ /g, '%20');
+
+      if(attribute_data.indexOf("Choose an option") < 0 && attribute_data.indexOf(choose_value) < 0  && attribute_data.indexOf("=&") < 0 ){
         all_attribute_set = true;
       }else{
         all_attribute_set = false;
