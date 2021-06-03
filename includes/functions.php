@@ -74,7 +74,10 @@ function amp_enhancer_add_custom_css(){
                wp_add_inline_style( 'amp_enhancer_wpfront_ntfc_bar_css', $position_css );
            }
        }
-
+       //iubenda Cookie Consent
+       if(class_exists('iubendaParser') && iubendaParser::consent_given() ){
+           wp_enqueue_style( 'amp_enhancer_iubenda_consent_css', untrailingslashit(AMP_ENHANCER_PLUGIN_URI) . '/templates/iubenda/iubenda.css', false, AMP_ENHANCER_VERSION );
+       }
     }// amp endpoint checking ends here...
 }
 
