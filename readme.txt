@@ -224,7 +224,7 @@ Here is our repository on [GitHub](https://github.com/ahmedkaludi/amp-enhancer).
 
 = 1.0.44 (3 June 2021) =
 * Added Proper Condition to Show Add to Cart Button When Correct Variation is Set. #55
-* Added the Condition to hide the Lubenda Consent throughout the site once it is accepted. #58
+* Added the Condition to hide the iubenda Consent throughout the site once it is accepted. #58
 
 = 1.0.43 (25 May 2021) =
 * Fixed the issue of iubenda cookie consent is not loading prior to amp popup feature.
