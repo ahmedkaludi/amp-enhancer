@@ -17,6 +17,11 @@ final class Amp_Enhancer_Elementor_Support {
 	function initialize(){
          //include files
 		 require_once( AMP_ENHANCER_PLUGIN_DIR.'/pagebuilders/elementor/load-elementor-widgets.php' );
+		   if(function_exists('elementor_pro_load_plugin') && (function_exists( 'is_amp_endpoint' ) && is_amp_endpoint())){
+                require_once( AMP_ENHANCER_PLUGIN_DIR.'/pagebuilders/elementor/themebuilder/theme-document.php' );
+                require_once( AMP_ENHANCER_PLUGIN_DIR.'/pagebuilders/elementor/themebuilder/theme-page-document.php' );
+                require_once( AMP_ENHANCER_PLUGIN_DIR.'/pagebuilders/elementor/themebuilder/theme-section-document.php' );
+            }
 	}
 
 }
