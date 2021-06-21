@@ -4,7 +4,7 @@ Tags: AMP,google amp,WooCommerce,Elementor,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.7.2
-Stable tag: 1.0.44
+Stable tag: 1.0.45
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -221,6 +221,12 @@ Third Party Plugins Supported Features are listed below-
 Here is our repository on [GitHub](https://github.com/ahmedkaludi/amp-enhancer). Send us your pull requests, feature requests or issues, if any.
 
 == Changelog ==
+
+= 1.0.45 (21st June 2021) =
+* Added TablePress Compatibility #45
+* Added Auto pre-load for core web vitals feature #60
+* Added Elementor's popup feature in amp pages #54
+* Fixed Debug Warnings - main_image in single product page #61
 
 = 1.0.44 (3 June 2021) =
 * Added Proper Condition to Show Add to Cart Button When Correct Variation is Set. #55

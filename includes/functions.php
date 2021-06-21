@@ -281,6 +281,15 @@ function amp_enhancer_third_party_compatibililty(){
 
         add_filter('fl_builder_module_frontend_file','amp_enhancer_fl_builder_module_frontend_file',10,2); 
       }
+      if (class_exists('TablePress')) {
+        add_action('amp_post_template_css','amp_enhancer_tablepress_css');
+      }
+     $amp_option = get_option('amp-options');
+     if(isset($amp_option['theme_support']) &&  $amp_option['theme_support'] == 'reader'){
+       add_action('amp_post_template_head', 'amp_enhancer_preload_image');
+     }else {
+       add_action('wp_head', 'amp_enhancer_preload_image');
+     }
      
 
 	}// amp endpoint
@@ -621,3 +630,33 @@ add_action('wp', function(){ ob_start('amp_enhancer_complete_html_after_dom_load
     }   
     return $content_buffer;
   }
+
+function amp_enhancer_preload_image(){
+  $settings = get_option( 'ampenhancer_settings');
+  if (isset( $settings['cwv']) && has_post_thumbnail()) {
+  $attachment_image = wp_get_attachment_url( get_post_thumbnail_id() );
+    if (!empty($attachment_image)) {
+      echo '<link rel="preload" as="image" href="'.esc_url($attachment_image).'">';
+    }
+  } 
+}  
+
+//Tablepress Compatibility
+function amp_enhancer_tablepress_css(){ ?>
+  .tablepress-table-description{clear:both;display:block}
+  .tablepress{border-collapse:collapse;border-spacing:0;width:100%;margin-bottom:1em;border:none}.tablepress td,.tablepress th{padding:8px;border:none;background:0 0;text-align:left}
+  .tablepress tbody td{vertical-align:top}
+  .tablepress tbody td,.tablepress tfoot th{border-top:1px solid #ddd}
+  .tablepress tbody tr:first-child td{border-top:0}
+  .tablepress thead th{border-bottom:1px solid #ddd}
+  .tablepress tfoot th,.tablepress thead th{background-color:#d9edf7;font-weight:700;vertical-align:middle}
+  .tablepress .odd td{background-color:#f9f9f9}
+  .tablepress .even td{background-color:#fff}
+  .tablepress .row-hover tr:hover td{background-color:#f3f3f3}
+  @media (min-width:768px) and (max-width:1600px){
+    .tablepress{overflow-x:none}
+  }
+  @media (min-width:320px) and (max-width:767px){
+    .tablepress{display:inline-block;overflow-x:scroll}
+  }
+<?php }

@@ -75,7 +75,7 @@ $wrapper_classes   = apply_filters(
 				 if($i == 1){
 				    $checked = 'checked="checked"';
 				 }
-
+				 	$main_image = false;
 					$flexslider        = (bool) apply_filters( 'woocommerce_single_product_flexslider_enabled', get_theme_support( 'wc-product-gallery-slider' ) );
 					$gallery_thumbnail = wc_get_image_size( 'gallery_thumbnail' );
 					$thumbnail_size    = apply_filters( 'woocommerce_gallery_thumbnail_size', array( $gallery_thumbnail['width'], $gallery_thumbnail['height'] ) );

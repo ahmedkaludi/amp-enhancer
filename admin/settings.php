@@ -66,6 +66,16 @@ function  amp_enhancer_settings_page(){
                     echo  '<span class="amp-en-popup-settings"><a href="'.esc_url_raw($css_settings_url).'"><i class="dashicons dashicons-admin-generic"></i> </a></span> ';
                    }
                  echo '</div>'; 
+                 // Optimize Core Web Vitals
+                 $cwv_help = 'Adds up Core Web Vitals for AMP Pages';
+                 $cwv_docs_url = 'http://ampenhancer.com/docs/article-categories/core-web-vitals/';
+                 echo '<div class="en-feature-sub">
+                        <h2 class="amp-en-label">Optimize Core Web Vitals '.amp_enhancer_tooltip($cwv_help,$cwv_docs_url).'</h2> 
+                           <label class="switch">
+                             <input type="checkbox" '.(isset( $settings['cwv'] ) && ($settings['cwv'] == 'on' || $settings['cwv'] == 1) ? 'checked="checked"' : '').' name="ampenhancer_settings[cwv]" />
+                              <span class="slider round"></span>
+                           </label>';
+                echo "</div>";
                 echo "</div>";
                ?>
                <?php 
