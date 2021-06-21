@@ -285,7 +285,12 @@ function amp_enhancer_third_party_compatibililty(){
       if (class_exists('TablePress')) {
          add_action('amp_post_template_css','amp_enhancer_tablepress_css');
       }
-     
+     $amp_option = get_option('amp-options');
+     if(isset($amp_option['theme_support']) &&  $amp_option['theme_support'] == 'reader'){
+       add_action('amp_post_template_head', 'amp_enhancer_preload_image');
+     }else {
+       add_action('wp_head', 'amp_enhancer_preload_image');
+     }
 
 	}// amp endpoint
 
@@ -645,3 +650,13 @@ function amp_enhancer_tablepress_css(){ ?>
     .tablepress{display:inline-block;overflow-x:scroll}
     }
 <?php }  
+
+function amp_enhancer_preload_image(){
+  $settings = get_option( 'ampenhancer_settings');
+  if (isset( $settings['cwv']) && has_post_thumbnail()) {
+  $attachment_image = wp_get_attachment_url( get_post_thumbnail_id() );
+    if (!empty($attachment_image)) {
+      echo '<link rel="preload" as="image" href="'.esc_url($attachment_image).'">';
+    }
+  } 
+}
