@@ -291,6 +291,9 @@ function amp_enhancer_third_party_compatibililty(){
        add_action('wp_head', 'amp_enhancer_preload_image');
      }
      
+      if(defined('EZOIC__PLUGIN_NAME')){
+        amp_enhancer_remove_filters_by_class( 'shutdown', 'Ezoic_Namespace\Ezoic_Integration_Public', 'ez_buffer_end', 0 );
+      }
 
 	}// amp endpoint
 
@@ -298,6 +301,25 @@ function amp_enhancer_third_party_compatibililty(){
     if(is_admin() && class_exists('SW_CLOUDFLARE_PAGECACHE') && defined('SWCFPC_PLUGIN_URL')){
         add_action( 'admin_enqueue_scripts', 'amp_enhancer_load_custom_wp_admin_styles_and_script' );
     }
+}
+
+function amp_enhancer_remove_filters_by_class( $hook_name = '', $class_name ='', $method_name = '', $priority = 0 ) {
+  global $wp_filter;
+  if ( !isset($wp_filter[$hook_name][$priority]) || !is_array($wp_filter[$hook_name][$priority]) )
+    return false;
+  foreach( (array) $wp_filter[$hook_name][$priority] as $unique_id => $filter_array ) {
+    if ( isset($filter_array['function']) && is_array($filter_array['function']) ) {
+      if ( is_object($filter_array['function'][0]) && get_class($filter_array['function'][0]) && get_class($filter_array['function'][0]) == $class_name && $filter_array['function'][1] == $method_name ) {
+          if( is_a( $wp_filter[$hook_name], 'WP_Hook' ) ) {
+              unset( $wp_filter[$hook_name]->callbacks[$priority][$unique_id] );
+          }
+          else {
+            unset($wp_filter[$hook_name][$priority][$unique_id]);
+          }
+      }
+    }
+  }
+  return false;
 }
 
 // Added Support Link
