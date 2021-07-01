@@ -4,7 +4,7 @@ Tags: AMP,google amp,WooCommerce,Elementor,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
 Tested up to: 5.7.2
-Stable tag: 1.0.45
+Stable tag: 1.0.46
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -221,6 +221,9 @@ Third Party Plugins Supported Features are listed below-
 Here is our repository on [GitHub](https://github.com/ahmedkaludi/amp-enhancer). Send us your pull requests, feature requests or issues, if any.
 
 == Changelog ==
+
+= 1.0.46 (1st July 2021) =
+* Added Ezoic Compatibility #64
 
 = 1.0.45 (21st June 2021) =
 * Added TablePress Compatibility #45
