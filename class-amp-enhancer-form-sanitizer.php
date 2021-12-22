@@ -9,7 +9,6 @@
 
 use AmpProject\DevMode;
 use AmpProject\Dom\Document;
-use AmpProject\Dom\Document\Filter\MustacheScriptTemplates;
 
 /**
  * Class AMP_Form_Sanitizer
@@ -220,7 +219,7 @@ class AMP_Enhancer_Form_Sanitizer extends AMP_Form_Sanitizer {
 				$form->appendChild( $input_span );
 		    }
 
-		$templates = $this->dom->xpath->query( MustacheScriptTemplates::XPATH_MUSTACHE_TEMPLATE_ELEMENTS_QUERY, $form );
+		$templates = $this->dom->xpath->query( './/self::template[ @type = "amp-mustache" ]|//self::script[ @type = "text/plain" and @template = "amp-mustache" ]', $form );
 		foreach ( $templates as $template ) {
 			$parent = $template->parentNode;
 			if ( $parent instanceof DOMElement ) {
