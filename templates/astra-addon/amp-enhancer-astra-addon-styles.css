@@ -3,6 +3,9 @@
     font-size: 15px;
     font-size: 1rem;
 }
+.ast-primary-header-bar{
+	overflow: inherit;
+}
 body #ast-scroll-top {display: block;}
 body .ast-mobile-header-wrap .ast-mobile-header-content,body .ast-mobile-header-wrap .menu-toggle .ast-close-svg{display: block;}
 @media (max-width: 921px){
