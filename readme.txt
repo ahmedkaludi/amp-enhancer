@@ -3,8 +3,8 @@ Contributors: ampenhancer
 Tags: AMP,google amp,WooCommerce,Elementor,official amp
 Donate link: https://www.paypal.me/Kaludi/25
 Requires at least: 3.0
-Tested up to: 6.2
-Stable tag: 1.0.48
+Tested up to: 6.5
+Stable tag: 1.0.49
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -221,6 +221,9 @@ Third Party Plugins Supported Features are listed below-
 Here is our repository on [GitHub](https://github.com/ahmedkaludi/amp-enhancer). Send us your pull requests, feature requests or issues, if any.
 
 == Changelog ==
+
+= 1.0.49 (10th April 2024) =
+* Enhancement: Test with WordPress v6.5 and update readme #80
 
 = 1.0.48 (9th June 2023) =
 * Fixed: Getting PHP deprecated error messages when enabling the elementor #73
